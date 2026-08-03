@@ -4,7 +4,7 @@
     "description": "A researched database of competitions, internships, programs and resources for high school students interested in finance, business, economics and investing.",
     "compiled": "2026-08-03",
     "schoolYear": "2026-27",
-    "count": 47,
+    "count": 46,
     "disclaimer": "Deadlines and eligibility change every year. Always confirm on the official site before you rely on anything here."
   },
   "ratingScales": {
@@ -74,37 +74,6 @@
         "accessibility": 8
       },
       "difficultyIndex": 7.0,
-      "clubStatus": "not-started",
-      "clubNotes": "",
-      "lastVerified": "2026-08-03"
-    },
-    {
-      "id": "yis-chapter",
-      "name": "YIS Chapter (start one at your school)",
-      "type": "Club / Membership",
-      "category": "Investing & Portfolio Management",
-      "organizer": "Young Investors Society",
-      "prestigeTier": "Infrastructure (not a credential itself)",
-      "cost": "Free to charter",
-      "commitment": "Ongoing, weekly meetings",
-      "eligibility": "Any high school; needs a faculty sponsor",
-      "format": "Chartered club chapter with curriculum, meeting guides, volunteer industry mentors, and access to all YIS programs",
-      "description": "Rather than a competition, this is infrastructure. YIS provides a ready-made club curriculum, 'How to Run a Club Meeting' guides, instructional videos, and a network of volunteer finance professionals. Chartering gives your members access to the full YIS program suite -- the Stock Pitch Competition, the Finance Knowledge Bowl, the Dollar-a-Day Challenge, and the CYIA designation -- under one umbrella.",
-      "timing": "Rolling -- charter any time",
-      "payoff": "Structure, curriculum, mentors, and a pipeline into every other YIS program",
-      "notes": "If your club doesn't already have a formal curriculum, this is the fastest way to get one for free. It also gives officers a legitimate leadership title on applications.",
-      "url": "https://yis.org/join-young-investors-society/start-your-own-chapter/",
-      "confidence": "Verified Aug 2026",
-      "verified": true,
-      "ratings": {
-        "effort": 4,
-        "competitiveness": 1,
-        "skills": 2,
-        "prestige": 3,
-        "clubFit": 10,
-        "accessibility": 10
-      },
-      "difficultyIndex": 2.3,
       "clubStatus": "not-started",
       "clubNotes": "",
       "lastVerified": "2026-08-03"
