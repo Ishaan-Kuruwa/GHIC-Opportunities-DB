@@ -1,0 +1,14 @@
+// This file configures deployment to Cloudflare. The site itself is still a
+// fully static Astro build (output goes to ./dist, no server-side code) --
+// this config exists only because Cloudflare now deploys everything through
+// "Workers Builds" rather than a separate "Pages" product. There is no
+// Astro adapter involved and no actual Worker code; Cloudflare just serves
+// the files in ./dist directly as static assets.
+{
+  "name": "ghic-opportunities-db",
+  "compatibility_date": "2026-08-03",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  }
+}

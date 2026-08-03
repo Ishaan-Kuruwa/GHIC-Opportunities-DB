@@ -101,6 +101,13 @@ the JSON, the filters should pick it up with no code change.
 - Prose content (guides, about) lives in Markdown under `src/content/`, not in `.astro` files.
 - Dates in data are ISO (`YYYY-MM-DD`); dates shown to users are human-readable.
 - Commit messages: short, imperative, plain English.
+- TypeScript is used for the data layer only (`src/data/types.ts` types the shape of
+  `opportunities.json`) and for `scripts/check-data.mjs`'s own typing where useful. `.astro`
+  components are not required to be strictly typed beyond their `Props` interface — the goal is
+  catching data-shape bugs early, not enforcing TS everywhere.
+- `npm run check` (`scripts/check-data.mjs`) is a plain, dependency-free Node script by
+  deliberate choice, not an oversight — consistent with "prefer zero dependencies over one more
+  dependency" above. Don't replace it with a schema library (Zod, etc.) without discussing first.
 
 ## Commands
 
