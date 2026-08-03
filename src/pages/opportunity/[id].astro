@@ -1,0 +1,154 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import data from "../../data/opportunities.json";
+import type { Opportunity, OpportunitiesData } from "../../data/types";
+
+export function getStaticPaths() {
+  const { opportunities } = data as OpportunitiesData;
+  return opportunities.map((opportunity, index) => ({
+    params: { id: opportunity.id },
+    props: {
+      opportunity,
+      // Wrap around so every page has both a prev and a next -- nobody hits a dead end.
+      previous: opportunities[(index - 1 + opportunities.length) % opportunities.length],
+      next: opportunities[(index + 1) % opportunities.length],
+    },
+  }));
+}
+
+interface Props {
+  opportunity: Opportunity;
+  previous: Opportunity;
+  next: Opportunity;
+}
+
+const { opportunity, previous, next } = Astro.props;
+
+const ratingEntries: [string, number][] = [
+  ["Effort", opportunity.ratings.effort],
+  ["Competitiveness", opportunity.ratings.competitiveness],
+  ["Skills", opportunity.ratings.skills],
+  ["Prestige", opportunity.ratings.prestige],
+  ["Club fit", opportunity.ratings.clubFit],
+  ["Accessibility", opportunity.ratings.accessibility],
+  ["Difficulty index", opportunity.difficultyIndex],
+];
+
+const lastVerifiedDisplay = new Date(opportunity.lastVerified + "T00:00:00").toLocaleDateString(
+  "en-US",
+  { year: "numeric", month: "long", day: "numeric" },
+);
+
+const pageTitle = `${opportunity.name} | ${opportunity.category}`;
+const pageDescription = `${opportunity.name} -- a ${opportunity.category.toLowerCase()} ${opportunity.type.toLowerCase()} for high school students, run by ${opportunity.organizer}.`;
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <main class="mx-auto max-w-3xl px-4 py-8">
+    <nav aria-label="Breadcrumb">
+      <a
+        href="/"
+        class="text-sm text-blue-700 underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+      >
+        &larr; Back to all opportunities
+      </a>
+    </nav>
+
+    <article class="mt-4">
+      <h1 class="text-2xl font-bold text-gray-900">{opportunity.name}</h1>
+      <p class="mt-1 text-gray-600">
+        {opportunity.type} &middot; {opportunity.category} &middot; {opportunity.organizer}
+      </p>
+
+      {!opportunity.verified && (
+        <div class="mt-4 rounded-md border border-amber-400 bg-amber-50 p-4 text-sm text-amber-900">
+          <p class="font-semibold">Not yet verified</p>
+          <p class="mt-1">
+            This entry hasn't been confirmed against the organizer's official site recently.
+            Please double-check deadlines, eligibility, and cost yourself before relying on it.
+          </p>
+        </div>
+      )}
+
+      <p class="mt-4 text-sm text-gray-500">
+        {opportunity.confidence} &middot; last verified {lastVerifiedDisplay}
+      </p>
+
+      {opportunity.url && (
+        <a
+          href={opportunity.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-4 inline-block rounded-md bg-blue-700 px-4 py-2 font-semibold text-white hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+        >
+          Visit the official site
+        </a>
+      )}
+
+      <p class="mt-6 whitespace-pre-line text-gray-800">{opportunity.description}</p>
+
+      <dl class="mt-6 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2">
+        <div>
+          <dt class="text-sm font-semibold text-gray-500">Eligibility</dt>
+          <dd class="mt-1 text-gray-800">{opportunity.eligibility}</dd>
+        </div>
+        <div>
+          <dt class="text-sm font-semibold text-gray-500">Format</dt>
+          <dd class="mt-1 text-gray-800">{opportunity.format}</dd>
+        </div>
+        <div>
+          <dt class="text-sm font-semibold text-gray-500">Timing</dt>
+          <dd class="mt-1 text-gray-800">{opportunity.timing}</dd>
+        </div>
+        <div>
+          <dt class="text-sm font-semibold text-gray-500">Cost</dt>
+          <dd class="mt-1 text-gray-800">{opportunity.cost}</dd>
+        </div>
+        <div>
+          <dt class="text-sm font-semibold text-gray-500">Commitment</dt>
+          <dd class="mt-1 text-gray-800">{opportunity.commitment}</dd>
+        </div>
+        <div>
+          <dt class="text-sm font-semibold text-gray-500">Payoff</dt>
+          <dd class="mt-1 text-gray-800">{opportunity.payoff}</dd>
+        </div>
+      </dl>
+
+      {opportunity.notes && (
+        <div class="mt-6">
+          <h2 class="text-sm font-semibold text-gray-500">Notes</h2>
+          <p class="mt-1 text-gray-800">{opportunity.notes}</p>
+        </div>
+      )}
+
+      <div class="mt-8">
+        <h2 class="text-sm font-semibold text-gray-500">Ratings</h2>
+        <dl class="mt-2 grid grid-cols-2 gap-x-6 gap-y-2 sm:grid-cols-3">
+          {ratingEntries.map(([label, value]) => (
+            <div class="flex justify-between gap-2 text-sm">
+              <dt class="text-gray-600">{label}</dt>
+              <dd class="font-medium text-gray-900">{value}/10</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </article>
+
+    <nav aria-label="Opportunity navigation" class="mt-10 grid grid-cols-2 gap-4 border-t border-gray-200 pt-6">
+      <a
+        href={`/opportunity/${previous.id}`}
+        class="rounded-md p-2 text-sm hover:bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+      >
+        <span class="block text-gray-500">&larr; Previous</span>
+        <span class="mt-1 block font-medium text-gray-900">{previous.name}</span>
+      </a>
+      <a
+        href={`/opportunity/${next.id}`}
+        class="rounded-md p-2 text-right text-sm hover:bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+      >
+        <span class="block text-gray-500">Next &rarr;</span>
+        <span class="mt-1 block font-medium text-gray-900">{next.name}</span>
+      </a>
+    </nav>
+  </main>
+</BaseLayout>

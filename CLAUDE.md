@@ -131,8 +131,10 @@ npm run check    # validate opportunities.json against the expected shape
 
 Update this section as you go so the next session has context.
 
-- [ ] Phase 1 — scaffold + browse page deployed
-- [ ] Phase 2 — detail pages
+- [x] Phase 1 — scaffold + browse page deployed. Live at
+      https://ghic-opportunities-db.ishaan-wizard.workers.dev (Cloudflare Workers Builds,
+      auto-deploys on push to `main`).
+- [x] Phase 2 — detail pages
 - [ ] Phase 3 — filters + search
 - [ ] Phase 4 — deadline calendar + .ics export
 - [ ] Phase 5 — design pass
