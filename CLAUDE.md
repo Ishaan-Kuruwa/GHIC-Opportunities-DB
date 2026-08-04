@@ -139,7 +139,14 @@ Update this section as you go so the next session has context.
 - [x] Phase 4 — deadline calendar + .ics export
 - [x] Phase 5 — design pass. Design tokens live in `src/styles/global.css` (`@theme`); use those,
       not raw Tailwind colors. Amber is reserved strictly for caution states.
-- [ ] Phase 6 — guide content
+- [~] Phase 6 — guide content. Built and live: `src/content.config.ts` defines a `guides`
+      collection over `src/content/guides/*.md`, rendered by `src/pages/guides/[slug].astro`
+      through `BaseLayout`. All four guides exist (Start Here, Free Learning Stack, How We
+      Verify, About) and every opportunity link in them was checked against
+      `src/data/opportunities.json` and verified live. What's left is filling in two
+      `[PLACEHOLDER ...]` spots that no data file can supply: the club's full name and
+      description in `about.md`, and the club email in `how-we-verify.md` (the GitHub issues
+      link there is already real). Both are plain Markdown edits — no code change needed.
 - [~] Phase 7 — Google Sheet as CMS. Automation is built and tested locally (`scripts/sync-sheet.mjs`,
       `.github/workflows/sync-sheet.yml`, `src/data/site-config.json`). What's left is the manual,
       human-only part: actually create the Google Sheet and wire it up — see

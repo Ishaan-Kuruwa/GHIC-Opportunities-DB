@@ -1,0 +1,65 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+// Fixed order (matches SPEC.md's Phase 6 list) rather than whatever order the
+// filesystem returns guides in -- so "More guides" below reads deliberately,
+// not alphabetically.
+const GUIDE_ORDER = ["start-here", "free-learning-stack", "how-we-verify", "about"];
+
+export async function getStaticPaths() {
+  const guides = await getCollection("guides");
+  return guides.map((guide) => ({
+    params: { slug: guide.id },
+    props: { guide },
+  }));
+}
+
+interface Props {
+  guide: Awaited<ReturnType<typeof getCollection<"guides">>>[number];
+}
+
+const { guide } = Astro.props;
+const { Content } = await render(guide);
+
+const allGuides = await getCollection("guides");
+const otherGuides = GUIDE_ORDER.filter((slug) => slug !== guide.id).map(
+  (slug) => allGuides.find((g) => g.id === slug)!,
+);
+---
+
+<BaseLayout title={`${guide.data.title} | Guides`} description={guide.data.description}>
+  <main class="mx-auto max-w-3xl px-4 py-12">
+    <nav aria-label="Breadcrumb">
+      <a
+        href="/"
+        class="text-sm text-accent underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+      >
+        &larr; Back to all opportunities
+      </a>
+    </nav>
+
+    <article class="mt-6">
+      <h1 class="font-serif text-3xl font-semibold text-ink">{guide.data.title}</h1>
+      <div class="guide-content mt-4">
+        <Content />
+      </div>
+    </article>
+
+    <nav aria-label="More guides" class="mt-12 border-t border-rule pt-6">
+      <p class="text-sm font-semibold text-ink-faint">More guides</p>
+      <ul class="mt-2 list-none space-y-1.5 p-0 text-sm">
+        {otherGuides.map((other) => (
+          <li>
+            <a
+              href={`/guides/${other.id}`}
+              class="font-medium text-accent underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            >
+              {other.data.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </main>
+</BaseLayout>
