@@ -1,0 +1,56 @@
+id,label,date,precision,kind,estimated,estimatedFrom
+wharton-global-high-school-investment-competition,Advisor registration deadline,2026-09-11,day,deadline,FALSE,
+wharton-global-high-school-investment-competition,Competition begins,2026-09-28,day,milestone,FALSE,
+wharton-global-high-school-investment-competition,Roster due,2026-10-09,day,deadline,FALSE,
+wharton-global-high-school-investment-competition,Global Finale,2027-04-25,month-part,milestone,TRUE,Described only as '~late April 2027'
+young-investors-society-global-stock-pitch-competition,Registration opens,2026-12-12,day,milestone,TRUE,2025-26 cycle opened Dec 12
+young-investors-society-global-stock-pitch-competition,Registration closes,2027-02-20,day,deadline,TRUE,2025-26 cycle closed Feb 20
+young-investors-society-global-stock-pitch-competition,NYC Summit,2027-05-28,day,milestone,TRUE,2025-26 Summit was May 28-29
+capitol-hill-challenge,Roster deadline,2027-03-06,day,deadline,TRUE,2026 roster deadline was March 6
+imc-prosperity,Registration opens,2027-03-15,month-part,milestone,TRUE,Described only as '~mid-March'
+imc-prosperity,Competition,2027-04-20,month-part,milestone,TRUE,Described only as 'mid-to-late April'
+ascend-berkeley-stock-pitch-competition,Priority deadline,2026-11-15,month-part,deadline,TRUE,Described only as '~mid-November'
+ascend-berkeley-stock-pitch-competition,Regular deadline,2026-12-05,month-part,deadline,TRUE,Described only as '~early December'
+ascend-berkeley-stock-pitch-competition,Late deadline,2027-01-05,month-part,deadline,TRUE,Described only as '~early January'
+national-economics-challenge,Online semifinals,2027-04-20,day,milestone,TRUE,2026 semifinals were Apr 20-24
+national-economics-challenge,National finals (Atlanta),2027-05-27,day,milestone,TRUE,2026 finals were May 27-29
+high-school-fed-challenge,Theme announced,2026-09-09,day,milestone,TRUE,2025-26 theme announced Sept 9
+high-school-fed-challenge,Registration deadline,2027-02-17,day,deadline,TRUE,2025-26 registration deadline was Feb 17
+high-school-fed-challenge,Papers due,2027-03-16,day,deadline,TRUE,2025-26 papers were due Mar 16
+high-school-fed-challenge,Decisions announced,2027-05-15,day,milestone,TRUE,2025-26 decisions announced May 15
+usa-economics-and-business-olympiad-international-economics-,USAEBO registration opens,2027-01-15,month,milestone,TRUE,Described only as 'typically opens in winter'
+usa-economics-and-business-olympiad-international-economics-,IEO,2027-07-15,month,milestone,TRUE,Described only as 'each July'
+economics-olympiad-americas-challenge,School Round,2027-02-25,month-part,milestone,TRUE,Described only as 'late February'
+national-personal-finance-challenge,Advancement notifications,2027-04-28,day,milestone,TRUE,2026 notifications went out by Apr 28
+national-personal-finance-challenge,National finals (Atlanta),2027-05-31,day,milestone,TRUE,2026 finals were May 31 - Jun 1
+nc-personal-finance-challenge,NC round opens,2027-01-20,day,milestone,TRUE,2026 window opened Jan 20
+nc-personal-finance-challenge,NC round closes,2027-03-28,day,deadline,TRUE,2026 window closed Mar 28
+nc-personal-finance-challenge,State championship,2027-04-15,month,milestone,TRUE,Described only as 'in April'
+knowledge-matters-virtual-business-challenge,Team registration opens,2026-09-29,day,milestone,FALSE,
+knowledge-matters-virtual-business-challenge,Round 1 begins,2026-10-13,day,milestone,FALSE,
+knowledge-matters-virtual-business-challenge,Round 1 ends,2026-10-23,day,deadline,FALSE,
+knowledge-matters-virtual-business-challenge,Round 2 begins,2027-01-12,day,milestone,FALSE,
+knowledge-matters-virtual-business-challenge,Round 2 ends,2027-01-22,day,deadline,FALSE,
+knowledge-matters-virtual-business-challenge,ICDC team confirmation due,2027-03-05,day,deadline,FALSE,
+deca,ICDC prepared-event submissions open,2027-03-25,month-part,milestone,TRUE,Described only as 'late March 2027'
+fbla,Competitive event guidelines post,2026-09-05,month-part,milestone,TRUE,Described only as 'early September 2026'
+fbla,NLC (National Leadership Conference),2027-06-23,day,milestone,FALSE,
+modeling-the-future-challenge,Registration reopens,2026-08-15,month,milestone,TRUE,Described only as 'August 2026'
+mathworks-math-modeling-challenge,Registration deadline,2027-02-20,day,deadline,TRUE,2026 registration deadline was Feb 20
+mathworks-math-modeling-challenge,Challenge weekend begins,2027-02-27,day,milestone,TRUE,2026 challenge weekend was Feb 27 - Mar 2
+amc-10-12-aime-usamo,AMC 10/12 A and B,2026-11-10,month,milestone,TRUE,Described only as 'in November'
+amc-10-12-aime-usamo,AIME,2027-02-10,month,milestone,TRUE,Described only as 'in February'
+john-locke-institute-global-essay-prize-economics-category,Global prize deadline,2027-06-25,month-part,deadline,TRUE,Described only as 'typically late June'
+marshall-society-essay-competition,Deadline,2026-08-25,month-part,deadline,TRUE,Described only as 'typically late August'
+royal-economic-society-young-economist-of-the-year,Essays due,2027-06-15,month,deadline,TRUE,Described only as 'typically due in June'
+diamond-challenge,Registration opens,2026-09-17,day,milestone,TRUE,2025 cycle opened Sept 17
+diamond-challenge,Registration closes,2027-01-15,day,deadline,TRUE,2026 cycle closed Jan 15
+diamond-challenge,Finalists named,2027-03-15,month,milestone,TRUE,Described only as 'in March'
+diamond-challenge,Summit,2027-04-25,month-part,milestone,TRUE,Described only as 'late April'
+blue-ocean-student-entrepreneur-competition,Deadline,2027-02-22,day,deadline,TRUE,2026 deadline was Feb 22
+conrad-challenge,Innovation Stage judging,2027-02-15,month,milestone,TRUE,Described only as 'in February'
+nfte-world-series-of-innovation,Challenges launch,2026-09-09,day,milestone,TRUE,"Described only as '~Sept 9', year not stated"
+nfte-world-series-of-innovation,Submissions due,2026-12-12,day,deadline,TRUE,"Described only as '~Dec 12', year not stated"
+jane-street-academy-of-math-and-programming,Application deadline,2027-03-11,day,deadline,TRUE,2026 application deadline was Mar 11
+jane-street-academy-of-math-and-programming,Program begins,2027-06-29,day,milestone,TRUE,2026 program began Jun 29
+bank-of-america-student-leaders,Applications close,2027-03-15,month-part,deadline,TRUE,Described only as 'close mid-March'

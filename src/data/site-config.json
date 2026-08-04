@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "title": "High School Finance, Business & Investing Opportunities",
+    "description": "A researched database of competitions, internships, programs and resources for high school students interested in finance, business, economics and investing.",
+    "schoolYear": "2026-27",
+    "disclaimer": "Deadlines and eligibility change every year. Always confirm on the official site before you rely on anything here."
+  },
+  "ratingScales": {
+    "effort": "Total time and work required. 1 = an afternoon. 10 = a months-long research project.",
+    "competitiveness": "How hard it is to place or win. 1 = everyone entering is recognized. 10 = single-digit selection rates.",
+    "skills": "Technical floor to be competitive. 1 = no background needed. 10 = advanced math, modeling or economics.",
+    "prestige": "How much weight this carries with colleges and employers.",
+    "clubFit": "How well it works as a group activity. 10 = whole club participates. 1 = solo pursuit.",
+    "accessibility": "How easy it is to get in and start. Low = costly, invite-only, or restrictive eligibility."
+  }
+}

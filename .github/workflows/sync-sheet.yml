@@ -1,0 +1,74 @@
+# Pulls the club's Google Sheet into src/data/opportunities.json nightly, so
+# a non-technical officer can edit opportunities and deadlines by typing into
+# rows -- no git, no code -- and the site updates on its own. See
+# scripts/sheet-setup/README.md for how the sheet itself is set up.
+#
+# scripts/sync-sheet.mjs does the real work and refuses to write anything if
+# the sheet looks broken (zero rows, or a sudden >20% drop in row count) or
+# if `npm run check` fails on the result -- so a bad edit or a broken publish
+# URL can never reach the live site. This workflow only commits and pushes
+# when the script actually wrote a change.
+#
+# The push itself is the deploy: Cloudflare Workers Builds auto-deploys on
+# every push to `main` (see wrangler.jsonc) -- same as scheduled-rebuild.yml,
+# no separate deploy hook exists or is needed.
+#
+# Before the sheet exists yet (SHEET_*_CSV_URL repo variables unset), the
+# first step below skips the rest of the job with a green checkmark instead
+# of a red X. A workflow that's expected to be red for weeks trains everyone
+# to ignore it, which is exactly backwards from the point of failing loudly
+# once the sheet is real and something in it actually breaks.
+
+name: Sync Google Sheet
+
+on:
+  schedule:
+    - cron: "0 12 * * *" # every day at 12:00 UTC
+  workflow_dispatch: # lets a human trigger it manually from the Actions tab
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check the sheet is configured
+        id: configured
+        run: |
+          if [ -z "${{ vars.SHEET_OPPORTUNITIES_CSV_URL }}" ] || [ -z "${{ vars.SHEET_DEADLINES_CSV_URL }}" ]; then
+            echo "Sheet URLs not configured — skipping sync. See scripts/sheet-setup/README.md."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/setup-node@v4
+        if: steps.configured.outputs.ready == 'true'
+        with:
+          node-version: 20
+
+      - name: Sync opportunities.json from the sheet
+        if: steps.configured.outputs.ready == 'true'
+        env:
+          SHEET_OPPORTUNITIES_CSV_URL: ${{ vars.SHEET_OPPORTUNITIES_CSV_URL }}
+          SHEET_DEADLINES_CSV_URL: ${{ vars.SHEET_DEADLINES_CSV_URL }}
+        run: node scripts/sync-sheet.mjs
+
+      - name: Validate the result
+        if: steps.configured.outputs.ready == 'true'
+        run: npm run check
+
+      - name: Commit and push if opportunities.json changed
+        if: steps.configured.outputs.ready == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- src/data/opportunities.json; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git add src/data/opportunities.json
+          git commit -m "chore: sync opportunities.json from Google Sheet"
+          git push

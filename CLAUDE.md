@@ -140,5 +140,11 @@ Update this section as you go so the next session has context.
 - [x] Phase 5 — design pass. Design tokens live in `src/styles/global.css` (`@theme`); use those,
       not raw Tailwind colors. Amber is reserved strictly for caution states.
 - [ ] Phase 6 — guide content
-- [ ] Phase 7 — Google Sheet as CMS
+- [~] Phase 7 — Google Sheet as CMS. Automation is built and tested locally (`scripts/sync-sheet.mjs`,
+      `.github/workflows/sync-sheet.yml`, `src/data/site-config.json`). What's left is the manual,
+      human-only part: actually create the Google Sheet and wire it up — see
+      `scripts/sheet-setup/README.md` for the exact steps. Until that's done, the workflow will run
+      nightly and fail (no `SHEET_*_CSV_URL` repo variables set yet) with nothing committed — safe,
+      just noisy. `opportunities.json` is still the file the site builds from; nothing about a normal
+      `npm run build` changed.
 - [ ] Phase 8 — handoff documentation

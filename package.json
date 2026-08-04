@@ -11,6 +11,7 @@
     "build": "npm run check && node scripts/generate-ics.mjs && astro build",
     "preview": "astro preview",
     "check": "node scripts/check-data.mjs",
+    "sync-sheet": "node scripts/sync-sheet.mjs",
     "astro": "astro"
   },
   "dependencies": {
