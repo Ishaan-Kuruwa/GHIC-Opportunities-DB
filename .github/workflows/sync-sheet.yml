@@ -71,4 +71,11 @@ jobs:
           fi
           git add src/data/opportunities.json
           git commit -m "chore: sync opportunities.json from Google Sheet"
+          # Rebase onto whatever's newest on main before pushing -- this
+          # step can otherwise lose a push race if another run (or a
+          # re-run of an older, stale checkout) already pushed a sync
+          # commit in between. Since this is always a single generated
+          # file, rebasing onto a newer tip applies cleanly in the
+          # overwhelming common case.
+          git pull --rebase origin main
           git push
