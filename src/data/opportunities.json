@@ -2,10 +2,10 @@
   "meta": {
     "title": "High School Finance, Business & Investing Opportunities",
     "description": "A researched database of competitions, internships, programs and resources for high school students interested in finance, business, economics and investing.",
-    "compiled": "2026-08-03",
     "schoolYear": "2026-27",
-    "count": 46,
-    "disclaimer": "Deadlines and eligibility change every year. Always confirm on the official site before you rely on anything here."
+    "disclaimer": "Deadlines and eligibility change every year. Always confirm on the official site before you rely on anything here.",
+    "compiled": "2026-08-04",
+    "count": 46
   },
   "ratingScales": {
     "effort": "Total time and work required. 1 = an afternoon. 10 = a months-long research project.",
@@ -133,7 +133,7 @@
         "clubFit": 9,
         "accessibility": 8
       },
-      "difficultyIndex": 7.0,
+      "difficultyIndex": 7,
       "clubStatus": "not-started",
       "clubNotes": "",
       "lastVerified": "2026-08-03"
@@ -302,7 +302,7 @@
         "clubFit": 7,
         "accessibility": 3
       },
-      "difficultyIndex": 4.0,
+      "difficultyIndex": 4,
       "clubStatus": "not-started",
       "clubNotes": "",
       "lastVerified": "2026-08-03"
@@ -504,7 +504,7 @@
         "clubFit": 9,
         "accessibility": 5
       },
-      "difficultyIndex": 6.0,
+      "difficultyIndex": 6,
       "clubStatus": "not-started",
       "clubNotes": "",
       "lastVerified": "2026-08-03"
@@ -585,7 +585,7 @@
         "clubFit": 8,
         "accessibility": 9
       },
-      "difficultyIndex": 7.0,
+      "difficultyIndex": 7,
       "clubStatus": "not-started",
       "clubNotes": "",
       "lastVerified": "2026-08-03"
@@ -638,7 +638,7 @@
         }
       ],
       "payoff": "Publication in the Journal of Future Economists, certificates for all participants, Federal Reserve recognition",
-      "notes": "'Published by the Federal Reserve' is a rare and durable line for a 17-year-old. The creative theme means strong writers can beat stronger economists. Watch for the September 2026 theme announcement.",
+      "notes": "Published by the Federal Reserve' is a rare and durable line for a 17-year-old. The creative theme means strong writers can beat stronger economists. Watch for the September 2026 theme announcement.",
       "url": "https://www.federalreserve.gov/aboutthefed/educational-tools/national-high-school-fed-challenge.htm",
       "confidence": "Verified Aug 2026",
       "verified": true,
@@ -699,7 +699,7 @@
         "clubFit": 5,
         "accessibility": 7
       },
-      "difficultyIndex": 9.0,
+      "difficultyIndex": 9,
       "clubStatus": "not-started",
       "clubNotes": "",
       "lastVerified": "2026-08-03"
@@ -740,7 +740,7 @@
         "clubFit": 5,
         "accessibility": 7
       },
-      "difficultyIndex": 7.0,
+      "difficultyIndex": 7,
       "clubStatus": "not-started",
       "clubNotes": "",
       "lastVerified": "2026-08-03"
@@ -878,7 +878,7 @@
         "clubFit": 9,
         "accessibility": 9
       },
-      "difficultyIndex": 4.0,
+      "difficultyIndex": 4,
       "clubStatus": "not-started",
       "clubNotes": "",
       "lastVerified": "2026-08-03"
@@ -1000,7 +1000,7 @@
         "clubFit": 9,
         "accessibility": 7
       },
-      "difficultyIndex": 6.0,
+      "difficultyIndex": 6,
       "clubStatus": "not-started",
       "clubNotes": "",
       "lastVerified": "2026-08-03"
@@ -1081,7 +1081,7 @@
         "clubFit": 7,
         "accessibility": 6
       },
-      "difficultyIndex": 5.0,
+      "difficultyIndex": 5,
       "clubStatus": "not-started",
       "clubNotes": "",
       "lastVerified": "2026-08-03"
@@ -1171,7 +1171,7 @@
         "clubFit": 6,
         "accessibility": 8
       },
-      "difficultyIndex": 8.0,
+      "difficultyIndex": 8,
       "clubStatus": "not-started",
       "clubNotes": "",
       "lastVerified": "2026-08-03"
@@ -1220,7 +1220,7 @@
         "clubFit": 4,
         "accessibility": 8
       },
-      "difficultyIndex": 9.0,
+      "difficultyIndex": 9,
       "clubStatus": "not-started",
       "clubNotes": "",
       "lastVerified": "2026-08-03"
@@ -1261,7 +1261,7 @@
         "clubFit": 4,
         "accessibility": 9
       },
-      "difficultyIndex": 8.0,
+      "difficultyIndex": 8,
       "clubStatus": "not-started",
       "clubNotes": "",
       "lastVerified": "2026-08-03"
@@ -1449,7 +1449,7 @@
         "clubFit": 8,
         "accessibility": 10
       },
-      "difficultyIndex": 5.0,
+      "difficultyIndex": 5,
       "clubStatus": "not-started",
       "clubNotes": "",
       "lastVerified": "2026-08-03"
@@ -1490,7 +1490,7 @@
         "clubFit": 5,
         "accessibility": 8
       },
-      "difficultyIndex": 8.0,
+      "difficultyIndex": 8,
       "clubStatus": "not-started",
       "clubNotes": "",
       "lastVerified": "2026-08-03"
@@ -1748,7 +1748,7 @@
         "clubFit": 10,
         "accessibility": 9
       },
-      "difficultyIndex": 2.0,
+      "difficultyIndex": 2,
       "clubStatus": "not-started",
       "clubNotes": "",
       "lastVerified": "2026-08-03"
@@ -1812,7 +1812,7 @@
         "clubFit": 7,
         "accessibility": 10
       },
-      "difficultyIndex": 2.0,
+      "difficultyIndex": 2,
       "clubStatus": "not-started",
       "clubNotes": "",
       "lastVerified": "2026-08-03"
@@ -1853,7 +1853,7 @@
         "clubFit": 1,
         "accessibility": 2
       },
-      "difficultyIndex": 6.0,
+      "difficultyIndex": 6,
       "clubStatus": "not-started",
       "clubNotes": "",
       "lastVerified": "2026-08-03"
@@ -1885,7 +1885,7 @@
         "clubFit": 8,
         "accessibility": 8
       },
-      "difficultyIndex": 4.0,
+      "difficultyIndex": 4,
       "clubStatus": "not-started",
       "clubNotes": "",
       "lastVerified": "2026-08-03"
