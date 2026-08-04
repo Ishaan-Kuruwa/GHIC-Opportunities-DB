@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//GHIC Opportunities DB//Deadlines//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:young-investors-society-global-stock-pitch-competition--registration-closes@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20270220
+DTEND;VALUE=DATE:20270221
+SUMMARY:Young Investors Society (YIS) Global Stock Pitch Competition - Registration closes
+DESCRIPTION:Deadline for Young Investors Society (YIS) Global Stock Pitch Competition. Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/young-investors-society-global-stock-pitch-competition
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/young-investors-society-global-stock-pitch-competition
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//GHIC Opportunities DB//Deadlines//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:national-personal-finance-challenge--national-finals-atlanta@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20270531
+DTEND;VALUE=DATE:20270601
+SUMMARY:National Personal Finance Challenge (NPFC) - National finals (Atlanta)
+DESCRIPTION:Milestone for National Personal Finance Challenge (NPFC). Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/national-personal-finance-challenge
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/national-personal-finance-challenge
+END:VEVENT
+END:VCALENDAR

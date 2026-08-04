@@ -23,12 +23,78 @@ function isFree(cost: string): boolean {
 function searchText(opportunity: (typeof opportunities)[number]): string {
   return `${opportunity.name} ${opportunity.organizer} ${opportunity.description} ${opportunity.category}`.toLowerCase();
 }
+
+// "Closing soon" banner: computed once, right now, when the site builds --
+// not in the visitor's browser. That's why the scheduled weekly rebuild
+// (.github/workflows/scheduled-rebuild.yml) exists: without it, this list
+// would quietly go stale between edits to opportunities.json.
+//
+// Only kind: "deadline" (not "milestone" -- "Theme announced" isn't
+// something to warn about) and only precision: "day" (a countdown against a
+// fuzzy "late June" guess would be misleading in the same way an .ics file
+// for it would be -- see src/data/types.ts).
+const today = new Date();
+const in45Days = new Date(today);
+in45Days.setDate(in45Days.getDate() + 45);
+const todayIso = today.toISOString().slice(0, 10);
+const cutoffIso = in45Days.toISOString().slice(0, 10);
+
+const upcomingDeadlines = opportunities
+  .flatMap((opportunity) =>
+    opportunity.deadlines
+      .filter((d) => d.kind === "deadline" && d.precision === "day")
+      .map((d) => ({
+        opportunityId: opportunity.id,
+        opportunityName: opportunity.name,
+        label: d.label,
+        date: d.date,
+      })),
+  )
+  // Plain ISO string comparison works here because YYYY-MM-DD sorts the same
+  // lexicographically as chronologically -- no need for Date math.
+  .filter((d) => d.date >= todayIso && d.date <= cutoffIso)
+  .sort((a, b) => a.date.localeCompare(b.date))
+  .slice(0, 3);
+
+const DEADLINE_MONTH_NAMES = [
+  "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+];
+
+function shortDate(iso: string): string {
+  const [y, m, d] = iso.split("-").map((n) => parseInt(n, 10));
+  return `${DEADLINE_MONTH_NAMES[m - 1]} ${d}`;
+}
 ---
 
 <BaseLayout title={meta.title} description={meta.description}>
   <main class="mx-auto max-w-6xl px-4 py-8">
     <h1 class="text-2xl font-bold text-gray-900">{meta.title}</h1>
     <p class="mt-2 max-w-2xl text-gray-600">{meta.description}</p>
+
+    {upcomingDeadlines.length > 0 && (
+      <div class="mt-6 rounded-md border border-gray-200 bg-gray-50 p-4">
+        <p class="text-sm font-semibold text-gray-900">Closing soon</p>
+        <ul class="mt-2 list-none space-y-1.5 p-0 text-sm">
+          {upcomingDeadlines.map((d) => (
+            <li>
+              <a
+                href={`/opportunity/${d.opportunityId}`}
+                class="font-medium text-blue-700 underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+              >
+                {d.opportunityName}
+              </a>
+              <span class="text-gray-600"> -- {d.label}, {shortDate(d.date)}</span>
+            </li>
+          ))}
+        </ul>
+        <a
+          href="/calendar"
+          class="mt-2 inline-block text-sm text-blue-700 underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+        >
+          See the full calendar &rarr;
+        </a>
+      </div>
+    )}
 
     <FilterBar facets={facets} total={opportunities.length} />
 

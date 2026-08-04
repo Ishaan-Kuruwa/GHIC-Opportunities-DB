@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//GHIC Opportunities DB//Deadlines//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:nc-personal-finance-challenge--nc-round-opens@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20270120
+DTEND;VALUE=DATE:20270121
+SUMMARY:NC Personal Finance Challenge - NC round opens
+DESCRIPTION:Milestone for NC Personal Finance Challenge. Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/nc-personal-finance-challenge
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/nc-personal-finance-challenge
+END:VEVENT
+END:VCALENDAR

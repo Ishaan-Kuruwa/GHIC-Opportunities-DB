@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//GHIC Opportunities DB//Deadlines//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:national-economics-challenge--online-semifinals@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20270420
+DTEND;VALUE=DATE:20270421
+SUMMARY:National Economics Challenge (NEC) - Online semifinals
+DESCRIPTION:Milestone for National Economics Challenge (NEC). Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/national-economics-challenge
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/national-economics-challenge
+END:VEVENT
+END:VCALENDAR

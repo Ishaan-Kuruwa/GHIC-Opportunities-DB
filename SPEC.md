@@ -78,6 +78,14 @@ phone.
   (a URL you POST to), triggered by a scheduled GitHub Actions workflow running weekly. Store the
   hook URL as a GitHub repository secret, never in the repo.
 
+  > **Update, Phase 4 implementation:** this project deploys via **Cloudflare Workers Builds**
+  > (see `wrangler.jsonc`), not the separate Pages product this bullet assumed — that pivot
+  > happened back in Phase 1. Workers Builds auto-deploys on every push to `main` and doesn't
+  > expose an equivalent standalone deploy-hook URL, so there's no hook to store as a secret.
+  > Instead, `.github/workflows/scheduled-rebuild.yml` pushes a weekly empty commit to `main`,
+  > and the existing auto-deploy does the rest. Simpler, and no secret to manage. Per this file's
+  > own header: trust the provider over this text when they disagree.
+
 **Done when:** a student can add every Wharton deadline to their phone calendar in two taps.
 
 ---

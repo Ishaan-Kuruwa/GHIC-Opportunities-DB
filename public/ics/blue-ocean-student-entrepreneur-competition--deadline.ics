@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//GHIC Opportunities DB//Deadlines//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:blue-ocean-student-entrepreneur-competition--deadline@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20270222
+DTEND;VALUE=DATE:20270223
+SUMMARY:Blue Ocean Student Entrepreneur Competition - Deadline
+DESCRIPTION:Deadline for Blue Ocean Student Entrepreneur Competition. Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/blue-ocean-student-entrepreneur-competition
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/blue-ocean-student-entrepreneur-competition
+END:VEVENT
+END:VCALENDAR

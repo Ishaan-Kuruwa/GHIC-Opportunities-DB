@@ -35,6 +35,25 @@ export interface Ratings {
 
 export type ClubStatus = "not-started" | "planned" | "entered" | "placed";
 
+// "day": full date is real -- safe to show and to generate a .ics file for.
+// "month-part": source only said "early/mid/late <month>" -- render as that,
+//   never as a specific day; no .ics file (would assert a day that isn't real).
+// "kind" separates "you can miss this" (deadline) from "fyi" (milestone) --
+// the home page banner only pulls from "deadline".
+export type DeadlinePrecision = "day" | "month-part" | "month";
+export type DeadlineKind = "deadline" | "milestone";
+
+export interface Deadline {
+  label: string;
+  date: string; // ISO YYYY-MM-DD; only as precise as `precision` claims
+  estimated: boolean;
+  precision: DeadlinePrecision;
+  kind: DeadlineKind;
+  // Short human-readable reason a date is a guess, e.g. "2025-26 cycle closed
+  // Feb 20". Always null when estimated is false.
+  estimatedFrom: string | null;
+}
+
 export interface Opportunity {
   id: string;
   name: string;
@@ -48,6 +67,7 @@ export interface Opportunity {
   format: string;
   description: string;
   timing: string;
+  deadlines: Deadline[];
   payoff: string;
   notes: string;
   url: string;

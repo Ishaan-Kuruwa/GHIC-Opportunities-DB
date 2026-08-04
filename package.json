@@ -7,8 +7,8 @@
     "node": ">=20"
   },
   "scripts": {
-    "dev": "astro dev",
-    "build": "npm run check && astro build",
+    "dev": "node scripts/generate-ics.mjs && astro dev",
+    "build": "npm run check && node scripts/generate-ics.mjs && astro build",
     "preview": "astro preview",
     "check": "node scripts/check-data.mjs",
     "astro": "astro"

@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//GHIC Opportunities DB//Deadlines//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:high-school-fed-challenge--papers-due@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20270316
+DTEND;VALUE=DATE:20270317
+SUMMARY:High School Fed Challenge - Papers due
+DESCRIPTION:Deadline for High School Fed Challenge. Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/high-school-fed-challenge
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/high-school-fed-challenge
+END:VEVENT
+END:VCALENDAR

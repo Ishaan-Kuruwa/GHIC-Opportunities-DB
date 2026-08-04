@@ -1,0 +1,302 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//GHIC Opportunities DB//Deadlines//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:wharton-global-high-school-investment-competition--advisor-registration-deadline@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20260911
+DTEND;VALUE=DATE:20260912
+SUMMARY:Wharton Global High School Investment Competition - Advisor registration deadline
+DESCRIPTION:Deadline for Wharton Global High School Investment Competition. Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/wharton-global-high-school-investment-competition
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/wharton-global-high-school-investment-competition
+END:VEVENT
+BEGIN:VEVENT
+UID:wharton-global-high-school-investment-competition--competition-begins@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20260928
+DTEND;VALUE=DATE:20260929
+SUMMARY:Wharton Global High School Investment Competition - Competition begins
+DESCRIPTION:Milestone for Wharton Global High School Investment Competition. Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/wharton-global-high-school-investment-competition
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/wharton-global-high-school-investment-competition
+END:VEVENT
+BEGIN:VEVENT
+UID:wharton-global-high-school-investment-competition--roster-due@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20261009
+DTEND;VALUE=DATE:20261010
+SUMMARY:Wharton Global High School Investment Competition - Roster due
+DESCRIPTION:Deadline for Wharton Global High School Investment Competition. Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/wharton-global-high-school-investment-competition
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/wharton-global-high-school-investment-competition
+END:VEVENT
+BEGIN:VEVENT
+UID:young-investors-society-global-stock-pitch-competition--registration-opens@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20261212
+DTEND;VALUE=DATE:20261213
+SUMMARY:Young Investors Society (YIS) Global Stock Pitch Competition - Registration opens
+DESCRIPTION:Milestone for Young Investors Society (YIS) Global Stock Pitch Competition. Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/young-investors-society-global-stock-pitch-competition
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/young-investors-society-global-stock-pitch-competition
+END:VEVENT
+BEGIN:VEVENT
+UID:young-investors-society-global-stock-pitch-competition--registration-closes@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20270220
+DTEND;VALUE=DATE:20270221
+SUMMARY:Young Investors Society (YIS) Global Stock Pitch Competition - Registration closes
+DESCRIPTION:Deadline for Young Investors Society (YIS) Global Stock Pitch Competition. Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/young-investors-society-global-stock-pitch-competition
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/young-investors-society-global-stock-pitch-competition
+END:VEVENT
+BEGIN:VEVENT
+UID:young-investors-society-global-stock-pitch-competition--nyc-summit@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20270528
+DTEND;VALUE=DATE:20270529
+SUMMARY:Young Investors Society (YIS) Global Stock Pitch Competition - NYC Summit
+DESCRIPTION:Milestone for Young Investors Society (YIS) Global Stock Pitch Competition. Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/young-investors-society-global-stock-pitch-competition
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/young-investors-society-global-stock-pitch-competition
+END:VEVENT
+BEGIN:VEVENT
+UID:capitol-hill-challenge--roster-deadline@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20270306
+DTEND;VALUE=DATE:20270307
+SUMMARY:Capitol Hill Challenge - Roster deadline
+DESCRIPTION:Deadline for Capitol Hill Challenge. Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/capitol-hill-challenge
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/capitol-hill-challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:national-economics-challenge--online-semifinals@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20270420
+DTEND;VALUE=DATE:20270421
+SUMMARY:National Economics Challenge (NEC) - Online semifinals
+DESCRIPTION:Milestone for National Economics Challenge (NEC). Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/national-economics-challenge
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/national-economics-challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:national-economics-challenge--national-finals-atlanta@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20270527
+DTEND;VALUE=DATE:20270528
+SUMMARY:National Economics Challenge (NEC) - National finals (Atlanta)
+DESCRIPTION:Milestone for National Economics Challenge (NEC). Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/national-economics-challenge
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/national-economics-challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:high-school-fed-challenge--theme-announced@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20260909
+DTEND;VALUE=DATE:20260910
+SUMMARY:High School Fed Challenge - Theme announced
+DESCRIPTION:Milestone for High School Fed Challenge. Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/high-school-fed-challenge
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/high-school-fed-challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:high-school-fed-challenge--registration-deadline@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20270217
+DTEND;VALUE=DATE:20270218
+SUMMARY:High School Fed Challenge - Registration deadline
+DESCRIPTION:Deadline for High School Fed Challenge. Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/high-school-fed-challenge
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/high-school-fed-challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:high-school-fed-challenge--papers-due@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20270316
+DTEND;VALUE=DATE:20270317
+SUMMARY:High School Fed Challenge - Papers due
+DESCRIPTION:Deadline for High School Fed Challenge. Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/high-school-fed-challenge
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/high-school-fed-challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:high-school-fed-challenge--decisions-announced@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20270515
+DTEND;VALUE=DATE:20270516
+SUMMARY:High School Fed Challenge - Decisions announced
+DESCRIPTION:Milestone for High School Fed Challenge. Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/high-school-fed-challenge
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/high-school-fed-challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:national-personal-finance-challenge--advancement-notifications@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20270428
+DTEND;VALUE=DATE:20270429
+SUMMARY:National Personal Finance Challenge (NPFC) - Advancement notifications
+DESCRIPTION:Milestone for National Personal Finance Challenge (NPFC). Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/national-personal-finance-challenge
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/national-personal-finance-challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:national-personal-finance-challenge--national-finals-atlanta@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20270531
+DTEND;VALUE=DATE:20270601
+SUMMARY:National Personal Finance Challenge (NPFC) - National finals (Atlanta)
+DESCRIPTION:Milestone for National Personal Finance Challenge (NPFC). Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/national-personal-finance-challenge
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/national-personal-finance-challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:nc-personal-finance-challenge--nc-round-opens@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20270120
+DTEND;VALUE=DATE:20270121
+SUMMARY:NC Personal Finance Challenge - NC round opens
+DESCRIPTION:Milestone for NC Personal Finance Challenge. Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/nc-personal-finance-challenge
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/nc-personal-finance-challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:nc-personal-finance-challenge--nc-round-closes@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20270328
+DTEND;VALUE=DATE:20270329
+SUMMARY:NC Personal Finance Challenge - NC round closes
+DESCRIPTION:Deadline for NC Personal Finance Challenge. Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/nc-personal-finance-challenge
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/nc-personal-finance-challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:knowledge-matters-virtual-business-challenge--team-registration-opens@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20260929
+DTEND;VALUE=DATE:20260930
+SUMMARY:Knowledge Matters Virtual Business Challenge (VBC) - Team registration opens
+DESCRIPTION:Milestone for Knowledge Matters Virtual Business Challenge (VBC). Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/knowledge-matters-virtual-business-challenge
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/knowledge-matters-virtual-business-challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:knowledge-matters-virtual-business-challenge--round-1-begins@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20261013
+DTEND;VALUE=DATE:20261014
+SUMMARY:Knowledge Matters Virtual Business Challenge (VBC) - Round 1 begins
+DESCRIPTION:Milestone for Knowledge Matters Virtual Business Challenge (VBC). Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/knowledge-matters-virtual-business-challenge
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/knowledge-matters-virtual-business-challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:knowledge-matters-virtual-business-challenge--round-1-ends@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20261023
+DTEND;VALUE=DATE:20261024
+SUMMARY:Knowledge Matters Virtual Business Challenge (VBC) - Round 1 ends
+DESCRIPTION:Deadline for Knowledge Matters Virtual Business Challenge (VBC). Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/knowledge-matters-virtual-business-challenge
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/knowledge-matters-virtual-business-challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:knowledge-matters-virtual-business-challenge--round-2-begins@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20270112
+DTEND;VALUE=DATE:20270113
+SUMMARY:Knowledge Matters Virtual Business Challenge (VBC) - Round 2 begins
+DESCRIPTION:Milestone for Knowledge Matters Virtual Business Challenge (VBC). Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/knowledge-matters-virtual-business-challenge
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/knowledge-matters-virtual-business-challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:knowledge-matters-virtual-business-challenge--round-2-ends@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20270122
+DTEND;VALUE=DATE:20270123
+SUMMARY:Knowledge Matters Virtual Business Challenge (VBC) - Round 2 ends
+DESCRIPTION:Deadline for Knowledge Matters Virtual Business Challenge (VBC). Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/knowledge-matters-virtual-business-challenge
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/knowledge-matters-virtual-business-challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:knowledge-matters-virtual-business-challenge--icdc-team-confirmation-due@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20270305
+DTEND;VALUE=DATE:20270306
+SUMMARY:Knowledge Matters Virtual Business Challenge (VBC) - ICDC team confirmation due
+DESCRIPTION:Deadline for Knowledge Matters Virtual Business Challenge (VBC). Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/knowledge-matters-virtual-business-challenge
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/knowledge-matters-virtual-business-challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:fbla--nlc-national-leadership-conference@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20270623
+DTEND;VALUE=DATE:20270624
+SUMMARY:FBLA (Securities & Investments and finance events) - NLC (National Leadership Conference)
+DESCRIPTION:Milestone for FBLA (Securities & Investments and finance events). Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/fbla
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/fbla
+END:VEVENT
+BEGIN:VEVENT
+UID:mathworks-math-modeling-challenge--registration-deadline@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20270220
+DTEND;VALUE=DATE:20270221
+SUMMARY:MathWorks Math Modeling (M3) Challenge - Registration deadline
+DESCRIPTION:Deadline for MathWorks Math Modeling (M3) Challenge. Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/mathworks-math-modeling-challenge
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/mathworks-math-modeling-challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:mathworks-math-modeling-challenge--challenge-weekend-begins@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20270227
+DTEND;VALUE=DATE:20270228
+SUMMARY:MathWorks Math Modeling (M3) Challenge - Challenge weekend begins
+DESCRIPTION:Milestone for MathWorks Math Modeling (M3) Challenge. Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/mathworks-math-modeling-challenge
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/mathworks-math-modeling-challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:diamond-challenge--registration-opens@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20260917
+DTEND;VALUE=DATE:20260918
+SUMMARY:Diamond Challenge - Registration opens
+DESCRIPTION:Milestone for Diamond Challenge. Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/diamond-challenge
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/diamond-challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:diamond-challenge--registration-closes@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20270115
+DTEND;VALUE=DATE:20270116
+SUMMARY:Diamond Challenge - Registration closes
+DESCRIPTION:Deadline for Diamond Challenge. Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/diamond-challenge
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/diamond-challenge
+END:VEVENT
+BEGIN:VEVENT
+UID:blue-ocean-student-entrepreneur-competition--deadline@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20270222
+DTEND;VALUE=DATE:20270223
+SUMMARY:Blue Ocean Student Entrepreneur Competition - Deadline
+DESCRIPTION:Deadline for Blue Ocean Student Entrepreneur Competition. Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/blue-ocean-student-entrepreneur-competition
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/blue-ocean-student-entrepreneur-competition
+END:VEVENT
+BEGIN:VEVENT
+UID:nfte-world-series-of-innovation--challenges-launch@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20260909
+DTEND;VALUE=DATE:20260910
+SUMMARY:NFTE World Series of Innovation - Challenges launch
+DESCRIPTION:Milestone for NFTE World Series of Innovation. Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/nfte-world-series-of-innovation
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/nfte-world-series-of-innovation
+END:VEVENT
+BEGIN:VEVENT
+UID:nfte-world-series-of-innovation--submissions-due@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20261212
+DTEND;VALUE=DATE:20261213
+SUMMARY:NFTE World Series of Innovation - Submissions due
+DESCRIPTION:Deadline for NFTE World Series of Innovation. Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/nfte-world-series-of-innovation
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/nfte-world-series-of-innovation
+END:VEVENT
+BEGIN:VEVENT
+UID:jane-street-academy-of-math-and-programming--application-deadline@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20270311
+DTEND;VALUE=DATE:20270312
+SUMMARY:Jane Street Academy of Math and Programming (AMP) - Application deadline
+DESCRIPTION:Deadline for Jane Street Academy of Math and Programming (AMP). Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/jane-street-academy-of-math-and-programming
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/jane-street-academy-of-math-and-programming
+END:VEVENT
+BEGIN:VEVENT
+UID:jane-street-academy-of-math-and-programming--program-begins@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20270629
+DTEND;VALUE=DATE:20270630
+SUMMARY:Jane Street Academy of Math and Programming (AMP) - Program begins
+DESCRIPTION:Milestone for Jane Street Academy of Math and Programming (AMP). Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/jane-street-academy-of-math-and-programming
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/jane-street-academy-of-math-and-programming
+END:VEVENT
+END:VCALENDAR

@@ -136,7 +136,7 @@ Update this section as you go so the next session has context.
       auto-deploys on push to `main`).
 - [x] Phase 2 — detail pages
 - [x] Phase 3 — filters + search
-- [ ] Phase 4 — deadline calendar + .ics export
+- [x] Phase 4 — deadline calendar + .ics export
 - [ ] Phase 5 — design pass
 - [ ] Phase 6 — guide content
 - [ ] Phase 7 — Google Sheet as CMS

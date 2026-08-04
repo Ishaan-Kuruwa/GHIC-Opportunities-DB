@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//GHIC Opportunities DB//Deadlines//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:nfte-world-series-of-innovation--submissions-due@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20261212
+DTEND;VALUE=DATE:20261213
+SUMMARY:NFTE World Series of Innovation - Submissions due
+DESCRIPTION:Deadline for NFTE World Series of Innovation. Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/nfte-world-series-of-innovation
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/nfte-world-series-of-innovation
+END:VEVENT
+END:VCALENDAR

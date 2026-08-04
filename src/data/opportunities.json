@@ -29,6 +29,40 @@
       "format": "10-week team portfolio simulation (Wharton Investment Simulator) + written deliverables -> semifinal presentations -> Global Finale at Wharton",
       "description": "The single best-known investing competition for high schoolers. Each team gets a real Wharton alum as a 'client' with a fictional-but-realistic financial situation, then builds a long-term investment strategy for that client using a $500,000 simulated portfolio (stocks and ETFs only). Crucially, teams are NOT judged on raw returns -- they are judged on the quality and consistency of their strategy versus the client's stated goals and risk tolerance. Deliverables include a team roster, an Investment Policy Statement, and a final report. Roughly 5,400 teams entered the 2025-26 cycle; 49 reached virtual semifinals and 11 made the Global Finale in Philadelphia. Stuyvesant High School won 2026.",
       "timing": "2026-27: Registration opens August 2026. ADVISOR REGISTRATION DEADLINE 5:00pm ET Fri Sept 11, 2026. Competition runs Sept 28 - Dec 4, 2026. Roster due Oct 9, 2026. Finale ~late April 2027.",
+      "deadlines": [
+        {
+          "label": "Advisor registration deadline",
+          "date": "2026-09-11",
+          "estimated": false,
+          "precision": "day",
+          "kind": "deadline",
+          "estimatedFrom": null
+        },
+        {
+          "label": "Competition begins",
+          "date": "2026-09-28",
+          "estimated": false,
+          "precision": "day",
+          "kind": "milestone",
+          "estimatedFrom": null
+        },
+        {
+          "label": "Roster due",
+          "date": "2026-10-09",
+          "estimated": false,
+          "precision": "day",
+          "kind": "deadline",
+          "estimatedFrom": null
+        },
+        {
+          "label": "Global Finale",
+          "date": "2027-04-25",
+          "estimated": true,
+          "precision": "month-part",
+          "kind": "milestone",
+          "estimatedFrom": "Described only as '~late April 2027'"
+        }
+      ],
       "payoff": "Global Finale trip to Wharton, Wharton online course fee waiver for finalists, champion school gets a fast-track semifinal slot next year, strong resume/essay material",
       "notes": "THE highest-priority item on this list for your club and the deadline is in ~5 weeks. You need a teacher advisor locked in before Sept 11. Run multiple teams -- there's no cap that hurts you, and it gives more members a real role. The judging-on-strategy-not-returns point is where most teams lose: write the Investment Policy Statement first and make every trade traceable back to it.",
       "url": "https://globalyouth.wharton.upenn.edu/competitions/investment-competition/",
@@ -60,6 +94,32 @@
       "format": "Submit a written stock pitch report + PowerPoint + YouTube video of your presentation -> state/territory judging -> top 100 invited to NYC quarterfinals -> semis (24) -> finals (5)",
       "description": "The closest thing to a genuine professional equity research experience available at the high school level. Students pick one publicly traded company, do real fundamental research (some teams even get calls with company investor relations or management), build an intrinsic value model, and issue a Buy or Sell recommendation. All three components -- report, deck, and video -- are required. Winners advance to the Global Youth Investment Summit in New York City, a two-day event with workshops, industry speakers, case competitions, and networking. YIS also publishes free templates, an intrinsic value model, a Stock Investing 101 eBook, and past winning pitches on YouTube.",
       "timing": "2025-26 cycle: registration opened Dec 12, closed Feb 20; NYC Summit May 28-29. Expect a near-identical 2026-27 calendar -- watch for December registration.",
+      "deadlines": [
+        {
+          "label": "Registration opens",
+          "date": "2026-12-12",
+          "estimated": true,
+          "precision": "day",
+          "kind": "milestone",
+          "estimatedFrom": "2025-26 cycle opened Dec 12"
+        },
+        {
+          "label": "Registration closes",
+          "date": "2027-02-20",
+          "estimated": true,
+          "precision": "day",
+          "kind": "deadline",
+          "estimatedFrom": "2025-26 cycle closed Feb 20"
+        },
+        {
+          "label": "NYC Summit",
+          "date": "2027-05-28",
+          "estimated": true,
+          "precision": "day",
+          "kind": "milestone",
+          "estimatedFrom": "2025-26 Summit was May 28-29"
+        }
+      ],
       "payoff": "NYC Global Youth Investment Summit invite, industry networking, a portfolio-quality work product you can show any admissions officer or future employer",
       "notes": "Highest skill ceiling per dollar on this list. The written pitch is a genuinely reusable artifact -- students can put the PDF in a portfolio. Note NYC travel is family-funded; start fundraising in the fall if you want to send teams.",
       "url": "https://yis.org/programs/stock-pitch-competition/",
@@ -91,6 +151,7 @@
       "format": "Quiz-bowl style rapid-fire finance and investing questions",
       "description": "A team trivia-style competition on investing and finance fundamentals -- terminology, market mechanics, valuation basics, financial history. Lower barrier than the Stock Pitch Competition and a good way to get newer or younger club members competing early, and to build the shared vocabulary the rest of your club activities depend on.",
       "timing": "Runs during the school year; check the MyYIS calendar",
+      "deadlines": [],
       "payoff": "Recognition, team-building, foundational knowledge",
       "notes": "Excellent onboarding activity for freshmen and sophomores. Use it as your club's fall recruiting hook.",
       "url": "https://yis.org/programs/finance-knowledge-bowl/",
@@ -122,6 +183,7 @@
       "format": "Self-paced coursework and assessment leading to a designation",
       "description": "A structured, credential-bearing curriculum for high schoolers that mirrors -- at an introductory level -- the logic of professional designations like the CFA. Useful as a concrete, verifiable line on a resume that shows sustained study rather than one-off participation.",
       "timing": "Self-paced",
+      "deadlines": [],
       "payoff": "A named designation and a defensible knowledge base",
       "notes": "Good club-wide goal: 'every member earns CYIA by spring.' Creates a measurable club outcome you can report to your school.",
       "url": "https://yis.org/programs/cyia-designation/",
@@ -153,6 +215,7 @@
       "format": "Online portfolio simulation, $100,000 hypothetical, real-time pricing, stocks/bonds/ETFs/mutual funds",
       "description": "The oldest and most widely used investing simulation in American schools -- nearly 20 million students since 1977. Teams manage a hypothetical $100,000 portfolio against real market data and compete on portfolio performance within their state and grade division. Lower analytical rigor than the research-and-pitch competitions, but it is free, easy to run, has excellent teacher support materials, and works as a semester-long backbone activity that everyone in a club can participate in simultaneously.",
       "timing": "Fall and spring sessions plus a year-long option; register through NCCEE",
+      "deadlines": [],
       "payoff": "State/regional recognition, awards banquets, hands-on market familiarity",
       "notes": "Use this as your club's 'everyone plays' baseline activity while your strongest teams do Wharton and YIS. It also unlocks InvestWrite eligibility.",
       "url": "https://www.stockmarketgame.org/",
@@ -184,6 +247,7 @@
       "format": "National essay competition responding to an annual prompt; advisors submit the best essays",
       "description": "The written companion to the Stock Market Game. Students write an essay applying investing concepts -- long-term strategy, diversification, risk -- to a prompt set each session. Essays are scored on rationale, subject-matter understanding, and writing style by volunteer industry judges. It rewards students who can explain their reasoning, which is a different and often rarer skill than picking stocks.",
       "timing": "Fall and spring deadlines tied to SMG sessions",
+      "deadlines": [],
       "payoff": "National and state recognition, awards ceremonies, judged by finance professionals",
       "notes": "Cheap add-on: if you're already running SMG, entering InvestWrite costs you nothing extra and doubles the recognition surface. Good for members who write well but aren't quant-oriented.",
       "url": "https://sifmafoundation.org/investwrite/",
@@ -215,6 +279,16 @@
       "format": "Special edition of the Stock Market Game; each team is paired with your local Member of Congress",
       "description": "A national version of the Stock Market Game that reaches every US Congressional district, pairing student teams with their Representative or Senator. Top-10 teams nationally earn recognition and the opportunity to meet with government officials in Washington. The 2026 edition ran Jan 26 - May 1 with a June celebration. Rules include a $5-per-trade commission, so it rewards discipline rather than churn.",
       "timing": "Roughly late January - early May; roster deadline was March 6 in 2026",
+      "deadlines": [
+        {
+          "label": "Roster deadline",
+          "date": "2027-03-06",
+          "estimated": true,
+          "precision": "day",
+          "kind": "deadline",
+          "estimatedFrom": "2026 roster deadline was March 6"
+        }
+      ],
       "payoff": "National top-10 recognition, meetings with Members of Congress, DC celebration",
       "notes": "You cannot simply apply -- you have to be invited. If your school is public and Title I eligible, have your advisor email capitolhill@sifma.org to express interest. Otherwise treat this as aspirational.",
       "url": "https://www.stockmarketgame.org/capitol-hill-challenge.html",
@@ -246,6 +320,7 @@
       "format": "Statewide Stock Market Game variant pairing student teams with NC General Assembly members",
       "description": "North Carolina's own version of the Capitol Hill Challenge. Student teams across the state are paired with members of the NC General Assembly and compete on portfolio growth. Sponsored at the high school level by State Farm, with credit union and Fidelity support. A genuinely local way to get your club in front of state legislators -- which is unusual access for a high school investing club and makes for excellent local press.",
       "timing": "Runs during the school year; contact NCCEE for the 2026-27 window",
+      "deadlines": [],
       "payoff": "Recognition at regional awards banquets, contact with state legislators",
       "notes": "NCCEE is headquartered right in Raleigh (8380 Six Forks Road). Get your advisor on their mailing list -- they run the state qualifiers for the national Econ and Personal Finance Challenges too. This is your single highest-leverage local relationship.",
       "url": "https://www.nccee.org/financial-literacy-programs/academic-competitions/",
@@ -277,6 +352,7 @@
       "format": "One-week futures trading simulation on a professional platform, plus required CME Institute coursework",
       "description": "A recurring (roughly monthly) simulated futures trading competition. Participants trade CME products -- equity index, energy, metals, agricultural futures, including micro contracts -- in a live-market simulator, with cash prizes for top leaderboard finishers and daily P&L winners. Requires completing CME Institute courses to qualify for prizes. Even where students are ineligible for prizes, the free CME Institute curriculum on futures and derivatives is genuinely good and hard to find elsewhere at this level.",
       "timing": "Recurring monthly windows; e.g. Aug 9-14, 2026",
+      "deadlines": [],
       "payoff": "Free derivatives education; cash prizes only for eligible (adult) participants",
       "notes": "READ THE TERMS before your members register -- age restrictions vary by cycle. Use it as a club learning module on derivatives rather than a credential. Nothing else free teaches futures this well.",
       "url": "https://www.cmegroup.com/education/trading-challenge.html",
@@ -308,6 +384,24 @@
       "format": "Two-week Python-based algorithmic + manual trading simulation across five rounds",
       "description": "A large, well-run global trading challenge where teams write Python trading algorithms to compete in a simulated market covering market making, options, and risk. Over 48,000 players have participated across editions. High school students can sign up and play for learning purposes -- and this is one of the best available introductions to quantitative trading -- but only 18+ university students are eligible for the $50,000 prize pool and official ranking.",
       "timing": "Registration opens ~mid-March, competition mid-to-late April",
+      "deadlines": [
+        {
+          "label": "Registration opens",
+          "date": "2027-03-15",
+          "estimated": true,
+          "precision": "month-part",
+          "kind": "milestone",
+          "estimatedFrom": "Described only as '~mid-March'"
+        },
+        {
+          "label": "Competition",
+          "date": "2027-04-20",
+          "estimated": true,
+          "precision": "month-part",
+          "kind": "milestone",
+          "estimatedFrom": "Described only as 'mid-to-late April'"
+        }
+      ],
       "payoff": "Real algorithmic trading experience, active Discord community, Python portfolio work",
       "notes": "Be honest with members: they cannot win. But for anyone considering quant, this plus AMC/AIME is the real pipeline. A club 'quant track' could do the tutorial round together in the spring.",
       "url": "https://prosperity.imc.com/",
@@ -339,6 +433,32 @@
       "format": "Preliminary pitch deck submission -> top 8 per category present live on Zoom to judges",
       "description": "A paid pitch-deck competition with a high school track focused on stock picking toward a defined investment goal. Finalists present live to a judging panel of professors and industry experts. Legitimate as practice and feedback, but understand what you are buying: entry fees run $45-$55 per student and the organizer is a for-profit education company, not the university itself.",
       "timing": "Priority deadline ~mid-November, regular ~early December, late ~early January",
+      "deadlines": [
+        {
+          "label": "Priority deadline",
+          "date": "2026-11-15",
+          "estimated": true,
+          "precision": "month-part",
+          "kind": "deadline",
+          "estimatedFrom": "Described only as '~mid-November'"
+        },
+        {
+          "label": "Regular deadline",
+          "date": "2026-12-05",
+          "estimated": true,
+          "precision": "month-part",
+          "kind": "deadline",
+          "estimatedFrom": "Described only as '~early December'"
+        },
+        {
+          "label": "Late deadline",
+          "date": "2027-01-05",
+          "estimated": true,
+          "precision": "month-part",
+          "kind": "deadline",
+          "estimatedFrom": "Described only as '~early January'"
+        }
+      ],
       "payoff": "Judge feedback, certificates, live presentation practice",
       "notes": "Skip this if budget is tight -- YIS gives you more for $25. Included here so you can recognize the category: many 'university-branded' high school competitions are run by third-party companies. Always check who actually operates the event.",
       "url": "https://www.algoed.co/competitions/ascend-berkeley-stock-pitch-competition",
@@ -370,6 +490,7 @@
       "format": "Live pitch competitions judged by local finance executives",
       "description": "A fast-growing category worth tracking. The inaugural Wall Street South Stock Pitch Competition (Palm Beach County, Jan 2026) brought 21 high schools to pitch live to 15 finance executives including the Head of Florida for Point72, with a traveling trophy and career talks. Stevens Institute runs a Trading Day for high school sophomores and juniors using StockTrak. These events offer something national competitions cannot: direct, in-person contact with working professionals who hire.",
       "timing": "Varies by region",
+      "deadlines": [],
       "payoff": "Face time with local finance professionals, internship leads, local press",
       "notes": "ACTION ITEM: nothing like this exists in the Triangle yet as far as I found. Given Fidelity's large RTP campus, Raleigh's banking presence, and NCCEE being local, your club could credibly propose founding one. That would be a far stronger leadership story than winning any single competition.",
       "url": "https://pbcedu.org/wall-street-south-stock-pitch-competition-brings-regions-top-students-face-to-face-with-finance-leaders/",
@@ -401,6 +522,24 @@
       "format": "Online state qualifying exams -> state finals -> online national semifinals -> in-person national finals",
       "description": "America's premier high school economics competition, and it is genuinely hard. Content covers microeconomics, macroeconomics, international economics, and current events. The national semifinal is a 45-question multiple-choice exam; the finals add a critical thinking/case round and a rapid-fire quiz bowl where teams answer in about 20 seconds per question. The two-division structure is the key strategic feature -- David Ricardo gives beginners a real shot without facing AP veterans.",
       "timing": "2026 cycle: state exams Jan-Mar, online semifinals Apr 20-24, national finals Atlanta May 27-29. Expect a similar 2027 calendar; NC registration through NCCEE opens in winter.",
+      "deadlines": [
+        {
+          "label": "Online semifinals",
+          "date": "2027-04-20",
+          "estimated": true,
+          "precision": "day",
+          "kind": "milestone",
+          "estimatedFrom": "2026 semifinals were Apr 20-24"
+        },
+        {
+          "label": "National finals (Atlanta)",
+          "date": "2027-05-27",
+          "estimated": true,
+          "precision": "day",
+          "kind": "milestone",
+          "estimatedFrom": "2026 finals were May 27-29"
+        }
+      ],
       "payoff": "Cash prizes ($1,000 / $500 / $250 / $200 per team member plus coach), national recognition, CNBC coverage",
       "notes": "Enter BOTH divisions if you have the members -- Ricardo is a realistic medal shot for underclassmen while Smith develops your AP Econ students. Pair with AP Macro/Micro coursework so the studying does double duty.",
       "url": "https://www.councilforeconed.org/programs/for-students/national-economic-challenge/",
@@ -432,6 +571,7 @@
       "format": "Online qualifying exam -> NC Live State Championship -> national semifinals",
       "description": "North Carolina's qualifying pathway to the National Economics Challenge. Top eight scoring teams per division from the online round are invited to the live state championship. Winners advance to the national semifinals. Because it runs through NCCEE in Raleigh, this is one of the most locally accessible high-prestige competitions available to you.",
       "timing": "Online testing window in winter/spring; watch NCCEE for 2026-27 dates",
+      "deadlines": [],
       "payoff": "State championship title, path to nationals",
       "notes": "Note the 'no more than two teams per school' cap at the state championship level -- pick your strongest two rosters rather than diluting across many.",
       "url": "https://econchallenge.unl.edu/North%20Carolina/Schedule",
@@ -463,6 +603,40 @@
       "format": "Research and writing competition -- teams write an economics podcast script on an annual theme",
       "description": "Now in its 31st year, this is a research-and-writing competition rather than a live debate. Each year the Fed announces a theme (2025-26 was 'Economics of Music') and teams write a podcast script analyzing any topic connected to it. Reviewers select the best submissions for publication in the Journal of Future Economists. In 2026, 207 papers were submitted and 12 were selected for publication. All participating schools receive recognition in the Journal. The creative-theme format makes it unusually accessible to students who haven't taken economics.",
       "timing": "2025-26 cycle: theme announced Sept 9, registration deadline Feb 17, papers due Mar 16, decisions May 15. Expect a similar 2026-27 calendar with a September theme announcement.",
+      "deadlines": [
+        {
+          "label": "Theme announced",
+          "date": "2026-09-09",
+          "estimated": true,
+          "precision": "day",
+          "kind": "milestone",
+          "estimatedFrom": "2025-26 theme announced Sept 9"
+        },
+        {
+          "label": "Registration deadline",
+          "date": "2027-02-17",
+          "estimated": true,
+          "precision": "day",
+          "kind": "deadline",
+          "estimatedFrom": "2025-26 registration deadline was Feb 17"
+        },
+        {
+          "label": "Papers due",
+          "date": "2027-03-16",
+          "estimated": true,
+          "precision": "day",
+          "kind": "deadline",
+          "estimatedFrom": "2025-26 papers were due Mar 16"
+        },
+        {
+          "label": "Decisions announced",
+          "date": "2027-05-15",
+          "estimated": true,
+          "precision": "day",
+          "kind": "milestone",
+          "estimatedFrom": "2025-26 decisions announced May 15"
+        }
+      ],
       "payoff": "Publication in the Journal of Future Economists, certificates for all participants, Federal Reserve recognition",
       "notes": "'Published by the Federal Reserve' is a rare and durable line for a 17-year-old. The creative theme means strong writers can beat stronger economists. Watch for the September 2026 theme announcement.",
       "url": "https://www.federalreserve.gov/aboutthefed/educational-tools/national-high-school-fed-challenge.htm",
@@ -494,6 +668,24 @@
       "format": "Round 1 open multiple-choice exam -> Round 2 final round -> 5 students selected for Team USA -> IEO (economics/finance MCQ, open questions, and a business case presented to an international jury)",
       "description": "The most academically demanding option on this list and the only true international olympiad in economics. USAEBO is the sole pathway onto Team USA. At the IEO itself, contestants sit an economics and finance multiple-choice exam, answer open-ended questions, and present a business case to an international jury. In 2026 the IEO was held July 12-19 in Shenzhen, China, with 52 national teams; it was the first year the US competed in person and Team USA placed 6th. Over 74 countries have participated historically.",
       "timing": "USAEBO registration typically opens in winter; IEO each July",
+      "deadlines": [
+        {
+          "label": "USAEBO registration opens",
+          "date": "2027-01-15",
+          "estimated": true,
+          "precision": "month",
+          "kind": "milestone",
+          "estimatedFrom": "Described only as 'typically opens in winter'"
+        },
+        {
+          "label": "IEO",
+          "date": "2027-07-15",
+          "estimated": true,
+          "precision": "month",
+          "kind": "milestone",
+          "estimatedFrom": "Described only as 'each July'"
+        }
+      ],
       "payoff": "Team USA selection, international medals, elite recognition",
       "notes": "Individual, not team, so it's a personal-glory track rather than a club activity -- but sponsor your strongest econ student into it. NAMING WARNING: several unrelated organizations use similar names ('International Economics Olympiad' at econolympiad.org, 'Economics Olympiad' at economicsolympiad.org). The official IEO is ieo-official.org and the only US pathway is usaebo.org. Verify before paying anyone.",
       "url": "https://www.usaebo.org/",
@@ -525,6 +717,16 @@
       "format": "School Round online exam -> Intercontinental Round in person -> International Finals",
       "description": "A separate international economics competition from the IEO, structured as School, Regional, National, and International rounds. The 2026 Americas Challenge ran a School Round online in late February, invited the top 100 students to an in-person Intercontinental Round at Universidad Francisco Marroquin in Guatemala City in May, and sent the top 10 to International Finals in August. Legitimate, but distinct from and less established in the US than USAEBO/IEO.",
       "timing": "School Round late February; later rounds spring/summer",
+      "deadlines": [
+        {
+          "label": "School Round",
+          "date": "2027-02-25",
+          "estimated": true,
+          "precision": "month-part",
+          "kind": "milestone",
+          "estimatedFrom": "Described only as 'late February'"
+        }
+      ],
       "payoff": "International travel rounds, recognition",
       "notes": "Don't confuse this with the IEO. If a student is choosing one, USAEBO/IEO carries more weight in the US. This is a reasonable second shot.",
       "url": "https://economicsolympiad.us/about-eo/",
@@ -556,6 +758,24 @@
       "format": "Online 30-question qualifying round -> state finals -> in-person national finals (case study financial plan + quiz bowl for the top 16)",
       "description": "The national counterpart to the Economics Challenge, focused on practical money management: earning, spending, saving, investing, credit, insurance, and risk. The national finals require teams to build a complete financial plan for a fictitious family and present it to judges, then the top 16 advance to a quiz bowl. CEE covers lodging and group meals for national finalists (transportation excluded). 38 teams reached the 2026 finals in Atlanta on June 1.",
       "timing": "2026 cycle: state rounds through the school year, advancement notifications by Apr 28, national finals Atlanta May 31 - Jun 1. NC round ran Jan 20 - Mar 28, 2026 via NCCEE.",
+      "deadlines": [
+        {
+          "label": "Advancement notifications",
+          "date": "2027-04-28",
+          "estimated": true,
+          "precision": "day",
+          "kind": "milestone",
+          "estimatedFrom": "2026 notifications went out by Apr 28"
+        },
+        {
+          "label": "National finals (Atlanta)",
+          "date": "2027-05-31",
+          "estimated": true,
+          "precision": "day",
+          "kind": "milestone",
+          "estimatedFrom": "2026 finals were May 31 - Jun 1"
+        }
+      ],
       "payoff": "All-expenses-covered national finals (excl. travel), national championship title, cash prizes",
       "notes": "Materially easier than the Economics Challenge but nearly as recognized, so the effort-to-reward ratio is excellent. North Carolina now requires a standalone personal finance course to graduate, which means your members are already studying the content. The NC state championship was hosted at Fidelity's Durham campus in 2026 -- that is a networking room worth being in.",
       "url": "https://www.councilforeconed.org/programs/for-students/national-personal-finance-challenge/",
@@ -587,6 +807,32 @@
       "format": "Online multiple-choice exam -> state championship (written assessment, 48-hour family case study, quiz bowl)",
       "description": "North Carolina's qualifier for the NPFC. The state championship has three phases: an individual timed written assessment aggregated into a team score, a detailed fictitious family scenario with 48 hours to prepare a financial plan presented to expert judges, and a quiz bowl for the top two teams per division. The 2026 championship was held at Fidelity Investments in Durham, with the State Treasurer in attendance.",
       "timing": "2026 window was Jan 20 - Mar 28; state championship in April",
+      "deadlines": [
+        {
+          "label": "NC round opens",
+          "date": "2027-01-20",
+          "estimated": true,
+          "precision": "day",
+          "kind": "milestone",
+          "estimatedFrom": "2026 window opened Jan 20"
+        },
+        {
+          "label": "NC round closes",
+          "date": "2027-03-28",
+          "estimated": true,
+          "precision": "day",
+          "kind": "deadline",
+          "estimatedFrom": "2026 window closed Mar 28"
+        },
+        {
+          "label": "State championship",
+          "date": "2027-04-15",
+          "estimated": true,
+          "precision": "month",
+          "kind": "milestone",
+          "estimatedFrom": "Described only as 'in April'"
+        }
+      ],
       "payoff": "State championship, national qualification, exposure to Fidelity and state officials",
       "notes": "Realistically your club's most winnable high-visibility state title. Contact Amber Thomas at NCCEE (acthomas@nccee.org, 919-791-1995) before the fall to get on the list early.",
       "url": "https://financechallenge.unl.edu/North%20Carolina/About",
@@ -618,6 +864,7 @@
       "format": "TBA",
       "description": "Treasurer Brad Briner announced in April 2026 that his office would launch a new statewide financial literacy competition for students, alongside a high school internship and a network of school-based financial literacy clubs built on the Finance Fridays newsletter curriculum. The department was named 2026 Government Organization of the Year by the Institute for Financial Literacy. Details were slated to be announced in fall 2026 -- meaning right now.",
       "timing": "Announcement expected fall 2026",
+      "deadlines": [],
       "payoff": "State-level recognition; first-mover advantage as an inaugural participant",
       "notes": "HIGH-PRIORITY WATCH ITEM. Being among the first schools in an inaugural statewide competition is disproportionately valuable -- less competition, more organizer attention, and a real chance at founding-participant recognition. Email the Treasurer's office now and ask to be notified.",
       "url": "https://www.nctreasurer.gov/",
@@ -649,6 +896,56 @@
       "format": "Online business simulation across eight tracks including Personal Finance, Accounting, and Entrepreneurship; two qualifying rounds then live competition at ICDC",
       "description": "A set of online business simulations where students run a virtual business or manage virtual personal finances, scored competitively. Eight tracks are available to DECA members. Two internet-based qualifying rounds run during the school year, with live timed sessions in the exhibit hall at DECA's International Career Development Conference. Scholarships awarded to the top three at ICDC.",
       "timing": "2026-27: team registration opens Sept 29, 2026. Round 1: Oct 13-23, 2026. Round 2: Jan 12-22, 2027. ICDC team confirmation by Mar 5, 2027.",
+      "deadlines": [
+        {
+          "label": "Team registration opens",
+          "date": "2026-09-29",
+          "estimated": false,
+          "precision": "day",
+          "kind": "milestone",
+          "estimatedFrom": null
+        },
+        {
+          "label": "Round 1 begins",
+          "date": "2026-10-13",
+          "estimated": false,
+          "precision": "day",
+          "kind": "milestone",
+          "estimatedFrom": null
+        },
+        {
+          "label": "Round 1 ends",
+          "date": "2026-10-23",
+          "estimated": false,
+          "precision": "day",
+          "kind": "deadline",
+          "estimatedFrom": null
+        },
+        {
+          "label": "Round 2 begins",
+          "date": "2027-01-12",
+          "estimated": false,
+          "precision": "day",
+          "kind": "milestone",
+          "estimatedFrom": null
+        },
+        {
+          "label": "Round 2 ends",
+          "date": "2027-01-22",
+          "estimated": false,
+          "precision": "day",
+          "kind": "deadline",
+          "estimatedFrom": null
+        },
+        {
+          "label": "ICDC team confirmation due",
+          "date": "2027-03-05",
+          "estimated": false,
+          "precision": "day",
+          "kind": "deadline",
+          "estimatedFrom": null
+        }
+      ],
       "payoff": "Scholarships, state and international recognition",
       "notes": "Requires a DECA chapter. Low effort per round and multiple tracks means several club members can qualify. Good complement to the heavier written competitions.",
       "url": "https://www.knowledgematters.com/high-school/competitions/deca/",
@@ -680,6 +977,16 @@
       "format": "District -> state (association) -> International Career Development Conference (ICDC). Role-plays and case studies, prepared written events, and online simulations.",
       "description": "The largest business-focused competitive organization for high schoolers, with roughly 60 event options across marketing, finance, hospitality, management, entrepreneurship, and personal financial literacy. Finance-relevant events include Personal Financial Literacy, Financial Consulting, Accounting Applications, Business Finance Series, Financial Literacy Project, Financial Services Team Decision Making, and the DECA Stock Market Game. Role-play events give students 10-15 minutes to solve a case in front of a judge; prepared events require a written project plus presentation and must be started early in the fall.",
       "timing": "Year-round. 2026-27 ICDC prepared-event submissions open in late March 2027.",
+      "deadlines": [
+        {
+          "label": "ICDC prepared-event submissions open",
+          "date": "2027-03-25",
+          "estimated": true,
+          "precision": "month-part",
+          "kind": "milestone",
+          "estimatedFrom": "Described only as 'late March 2027'"
+        }
+      ],
       "payoff": "ICDC medals, scholarships, networking with 80+ corporate and university partners",
       "notes": "If your school has a DECA chapter, your investing club should feed it -- the finance cluster events are the natural competitive outlet. If it doesn't, starting one is a legitimate club project. Budget matters: conference costs are the real barrier, so plan fundraising early.",
       "url": "https://www.deca.org/compete",
@@ -711,6 +1018,24 @@
       "format": "Chapter/region -> State Leadership Conference -> National Leadership Conference. Objective tests, role plays, and presentation events.",
       "description": "FBLA runs 70+ competitive events. The accounting and finance cluster includes Securities & Investments (an objective test covering investment fundamentals, stocks, bonds, mutual funds, derivatives, portfolio management, risk analysis, and financial services regulation), Accounting I and II, Banking & Financial Systems (test plus role play), and Personal Finance. Placing top 10 at nationals makes you ineligible to re-enter that event, which pushes students to broaden. The NLC draws roughly 12,000-15,000 attendees.",
       "timing": "2026-27 competitive event guidelines post in early September 2026. NLC 2027: Columbus, OH, June 23-26.",
+      "deadlines": [
+        {
+          "label": "Competitive event guidelines post",
+          "date": "2026-09-05",
+          "estimated": true,
+          "precision": "month-part",
+          "kind": "milestone",
+          "estimatedFrom": "Described only as 'early September 2026'"
+        },
+        {
+          "label": "NLC (National Leadership Conference)",
+          "date": "2027-06-23",
+          "estimated": false,
+          "precision": "day",
+          "kind": "milestone",
+          "estimatedFrom": null
+        }
+      ],
       "payoff": "National placement, scholarships, employer and university judging exposure",
       "notes": "Securities & Investments is the most directly relevant event to an investing club and it's a pure objective test -- which means it is highly coachable. Build a study group around it; that alone can justify weekly club meetings.",
       "url": "https://www.fbla.org/high-school/competitive-events/",
@@ -742,6 +1067,7 @@
       "format": "Regional -> State -> National Leadership Conference. Also national-only Virtual Competitions requiring no regional/state qualification.",
       "description": "A third CTSO with a Workplace Skills Assessment Program organized into six areas including Finance. Smaller than DECA and FBLA, which cuts both ways -- less prestige, but meaningfully better odds of placing. Notably, BPA offers Virtual Competitions available at the national level only, open to all student members with no qualifying rounds, specifically designed for students whose schools can't fund travel.",
       "timing": "Regionals in winter, state in early spring, NLC in May",
+      "deadlines": [],
       "payoff": "National placement, workplace skills credentials",
       "notes": "The virtual-only national competitions are underrated if travel budget is your constraint -- a genuine national placement without a plane ticket.",
       "url": "https://bpa.org/students/compete/",
@@ -773,6 +1099,16 @@
       "format": "Scenario Phase (dataset + up to 30 questions) -> Semifinalists advance to Project Phase (original actuarial research project) -> regional -> national finals",
       "description": "A risk-analysis and actuarial modeling competition that is far more rigorous than most business competitions. Teams first work through a structured scenario with a provided dataset, then semifinalists conduct their own original research project modeling real-world data to analyze risks and make recommendations to a company, industry group, or government. About $60,000 in scholarship prizes. 593 students participated in 2025-26. Free training webinars and Excel training materials are provided.",
       "timing": "Registration reopens August 2026 for the 2026-27 season",
+      "deadlines": [
+        {
+          "label": "Registration reopens",
+          "date": "2026-08-15",
+          "estimated": true,
+          "precision": "month",
+          "kind": "milestone",
+          "estimatedFrom": "Described only as 'August 2026'"
+        }
+      ],
       "payoff": "Up to $60,000 in scholarship prizes, real research experience, actuarial career pathway",
       "notes": "Registration is opening RIGHT NOW. This is the best option on the list for a mathematically strong member who wants to produce original research rather than analysis of someone else's prompt. Also the clearest on-ramp to actuarial science, which is an underrated finance career.",
       "url": "https://www.mtfchallenge.org/",
@@ -804,6 +1140,24 @@
       "format": "Teams choose any 14-hour window during Challenge weekend to solve an unseen real-world problem and submit a written paper",
       "description": "A 14-hour intensive applied math modeling sprint. The problem is unknown until teams log in on Challenge weekend, and it is always a genuine open-ended real-world question -- past topics have covered remote work impacts, the digital divide, and extreme heat. Papers are judged by PhD applied mathematicians in three phases, with triage eliminating two-thirds or more. Over $100,000 in scholarship awards annually and nearly 80,000 students served over two decades.",
       "timing": "2026 cycle: registration deadline Feb 20, Challenge weekend Feb 27 - Mar 2. Expect similar 2027 dates.",
+      "deadlines": [
+        {
+          "label": "Registration deadline",
+          "date": "2027-02-20",
+          "estimated": true,
+          "precision": "day",
+          "kind": "deadline",
+          "estimatedFrom": "2026 registration deadline was Feb 20"
+        },
+        {
+          "label": "Challenge weekend begins",
+          "date": "2027-02-27",
+          "estimated": true,
+          "precision": "day",
+          "kind": "milestone",
+          "estimatedFrom": "2026 challenge weekend was Feb 27 - Mar 2"
+        }
+      ],
       "payoff": "Over $100,000 in scholarships, national media coverage for top teams",
       "notes": "Not finance-specific, but modeling and data skills are exactly what quant finance recruits on -- and it is free with real scholarship money. The two-team-per-school cap means you should choose rosters deliberately. Practice on past problems in January.",
       "url": "https://m3challenge.siam.org/",
@@ -835,6 +1189,24 @@
       "format": "Multiple-choice exams -> AIME qualification -> USAMO/USAJMO",
       "description": "Not a finance competition, but included deliberately: the top quantitative trading firms literally sponsor these exams (Jane Street sponsors the AMC 12 prizes, Citadel Securities the AMC 10 A, Two Sigma the AMC 10 B). AIME qualification is the most reliable single signal a high schooler can produce for quant trading and research recruiting later on. If any of your members are aiming at Jane Street, Citadel, Optiver, or SIG, this matters more than any investing competition on this list.",
       "timing": "AMC 10/12 A and B in November, AIME in February",
+      "deadlines": [
+        {
+          "label": "AMC 10/12 A and B",
+          "date": "2026-11-10",
+          "estimated": true,
+          "precision": "month",
+          "kind": "milestone",
+          "estimatedFrom": "Described only as 'in November'"
+        },
+        {
+          "label": "AIME",
+          "date": "2027-02-10",
+          "estimated": true,
+          "precision": "month",
+          "kind": "milestone",
+          "estimatedFrom": "Described only as 'in February'"
+        }
+      ],
       "payoff": "AIME/USAMO qualification, direct recruiting visibility with quant firms",
       "notes": "Worth saying out loud at a club meeting: students who want quant should treat math contests as the main event and investing competitions as the supplement. Students who want investment banking, asset management, or corporate finance should do the reverse.",
       "url": "https://maa.org/student-programs/amc/",
@@ -866,6 +1238,16 @@
       "format": "Independent essay on a set prompt, submitted online",
       "description": "One of the most prestigious essay competitions available to secondary students internationally, with an Economics category alongside philosophy, politics, history, psychology and others. Recent economics prompts have explored personalised pricing, wealth creation, and the implications of a cashless society. Winners are invited to an awards ceremony in Oxford and shortlisting alone is a meaningful distinction. Highly competitive, with entries from academically elite students worldwide.",
       "timing": "Multiple deadlines per year; the main global prize deadline is typically late June with registration in spring",
+      "deadlines": [
+        {
+          "label": "Global prize deadline",
+          "date": "2027-06-25",
+          "estimated": true,
+          "precision": "month-part",
+          "kind": "deadline",
+          "estimatedFrom": "Described only as 'typically late June'"
+        }
+      ],
       "payoff": "Prizes, Oxford ceremony invitation, exceptional college essay and interview material",
       "notes": "Individual pursuit, not a club activity -- but running a club workshop on 'how to argue in economics' using past John Locke prompts is a genuinely good meeting. Verify the exact 2026-27 deadlines and age limits directly; this competition has changed its structure repeatedly.",
       "url": "https://www.johnlockeinstitute.com/essay-competition",
@@ -897,6 +1279,16 @@
       "format": "Single economics essay on one of several set prompts",
       "description": "Run by Cambridge's undergraduate economics society. The 2026 prompts included whether it is fair to always call tariffs 'bad', the extent to which central banks can stabilise an economy facing external energy shocks, the role of Britain leaving the gold standard in its 1930s recovery, and an analysis of the claim that 'the stock market is not the economy'. Winning essays receive prizes and selected entries are published in The Dismal Scientist, the society's magazine.",
       "timing": "Deadline typically late August",
+      "deadlines": [
+        {
+          "label": "Deadline",
+          "date": "2026-08-25",
+          "estimated": true,
+          "precision": "month-part",
+          "kind": "deadline",
+          "estimatedFrom": "Described only as 'typically late August'"
+        }
+      ],
       "payoff": "Cash prizes, publication in The Dismal Scientist",
       "notes": "Free to enter and the prompts are excellent discussion material even for members who never submit. The 'stock market is not the economy' prompt in particular is a perfect club debate topic. Deadline is imminent -- late August.",
       "url": "https://marshallsoc.org/marshall-society-essay-competition-2026/",
@@ -928,6 +1320,16 @@
       "format": "1,500-word short research paper on one of several announced topics",
       "description": "A long-running and highly selective economics essay prize. In 2019, 1,300 submissions yielded 36 shortlisted entries -- roughly a 2.7% shortlisting rate. The best overall essay historically received GBP 1,000 with GBP 200 for the best essay on each topic. Shortlisted authors are named on the RES website and are colloquially regarded as winners. The 1,500-word limit is unusually tight, which rewards precision over volume.",
       "timing": "Essays typically due in June",
+      "deadlines": [
+        {
+          "label": "Essays due",
+          "date": "2027-06-15",
+          "estimated": true,
+          "precision": "month",
+          "kind": "deadline",
+          "estimatedFrom": "Described only as 'typically due in June'"
+        }
+      ],
       "payoff": "Cash prizes, RES recognition, publication of names",
       "notes": "The tight word count makes this less time-intensive than John Locke while still being highly selective. Good option for a strong writer with limited bandwidth. UK-oriented, so US shortlistings stand out.",
       "url": "https://res.org.uk/",
@@ -959,6 +1361,40 @@
       "format": "Written concept + short video submission -> pitch round (live or virtual) -> semifinals -> Diamond Challenge Summit finals",
       "description": "One of the most established global entrepreneurship competitions for high schoolers, running since 2012 with academic grounding from a real university entrepreneurship program. Two tracks: Business Innovation (revenue and market focused) and Social Innovation (impact driven). Over $100,000 in prizes, with grand prizes around $12,000 / $8,000 / $4,500 per track plus topical awards in areas like waste and recycling innovation and technology application. Attracts students from 50+ countries. No entry fee, and free resources are provided to students and educators.",
       "timing": "2026 cycle opened Sept 17, 2025 and closed Jan 15, 2026; finalists named in March, summit late April. Expect a similar Sept 2026 - Jan 2027 window.",
+      "deadlines": [
+        {
+          "label": "Registration opens",
+          "date": "2026-09-17",
+          "estimated": true,
+          "precision": "day",
+          "kind": "milestone",
+          "estimatedFrom": "2025 cycle opened Sept 17"
+        },
+        {
+          "label": "Registration closes",
+          "date": "2027-01-15",
+          "estimated": true,
+          "precision": "day",
+          "kind": "deadline",
+          "estimatedFrom": "2026 cycle closed Jan 15"
+        },
+        {
+          "label": "Finalists named",
+          "date": "2027-03-15",
+          "estimated": true,
+          "precision": "month",
+          "kind": "milestone",
+          "estimatedFrom": "Described only as 'in March'"
+        },
+        {
+          "label": "Summit",
+          "date": "2027-04-25",
+          "estimated": true,
+          "precision": "month-part",
+          "kind": "milestone",
+          "estimatedFrom": "Described only as 'late April'"
+        }
+      ],
       "payoff": "Over $100,000 total prize pool, Summit trip, global network, real startup funding",
       "notes": "Free, high prestige, and real money -- the effort is the only barrier. If any club members have a business idea sitting idle, this is the vehicle. The Social Innovation track is typically less crowded than Business Innovation.",
       "url": "https://diamondchallenge.org/",
@@ -990,6 +1426,16 @@
       "format": "Fully virtual. Submit a recorded pitch of a 'blue ocean' business concept.",
       "description": "A fully virtual global pitch competition built around blue ocean strategy -- creating uncontested market space rather than competing in existing markets. Deliberately low-barrier: students with nothing but an idea can enter, no prototype or revenue needed. Participation has grown fast, from about 2,500 students in 2022 to more than 23,000 in 2026. Cash prizes for students and prizes for their schools, with certificates for all participants.",
       "timing": "2026 deadline was Feb 22; 2027 registration already open",
+      "deadlines": [
+        {
+          "label": "Deadline",
+          "date": "2027-02-22",
+          "estimated": true,
+          "precision": "day",
+          "kind": "deadline",
+          "estimatedFrom": "2026 deadline was Feb 22"
+        }
+      ],
       "payoff": "Cash prizes, school prizes, entrepreneur feedback, certificates",
       "notes": "The single lowest-barrier real competition on this list. Excellent for getting every club member one legitimate competition entry under their belt. Registration for 2027 is open now.",
       "url": "https://blueoceancompetition.org/",
@@ -1021,6 +1467,16 @@
       "format": "Activation Stage -> Innovation Stage (business plan and technical submission) -> Innovation Summit finals (top 5 per category)",
       "description": "A STEM-plus-entrepreneurship competition running August through April in three phases. Teams identify a real problem, develop a technical innovation, and build a full business plan around it, competing in categories such as Aerospace & Aviation, Cyber-Technology & Security, Energy & Environment, and Health & Nutrition. Winners earn 'Pete Conrad Scholar' recognition, college scholarships, international trips, and discounted access to professional services for launching their venture.",
       "timing": "Runs August through April; Innovation Stage judging in February, Summit in spring",
+      "deadlines": [
+        {
+          "label": "Innovation Stage judging",
+          "date": "2027-02-15",
+          "estimated": true,
+          "precision": "month",
+          "kind": "milestone",
+          "estimatedFrom": "Described only as 'in February'"
+        }
+      ],
       "payoff": "Pete Conrad Scholar title, scholarships, international trips, venture support",
       "notes": "Heavy lift and more engineering than finance. Only worth it if you have a team genuinely committed for the full school year and with a technical member. The business-plan component is where finance-minded students add value.",
       "url": "https://conrad.spacecenter.org/the-challenge/",
@@ -1052,6 +1508,24 @@
       "format": "Free online submission responding to sponsored challenge prompts tied to UN Sustainable Development Goals",
       "description": "A free, fully online global competition where young people design solutions to real-world problems aligned with the UN Sustainable Development Goals. Each challenge is sponsored by a major company. NFTE provides optional virtual workshops, webinars, and Innovation Labs teaching design thinking. Prize pool exceeds $20,000, with the three highest-scoring entries per category typically receiving $1,500, $600, and $300.",
       "timing": "Challenges launch ~Sept 9; submissions due ~Dec 12; judging Feb-Apr",
+      "deadlines": [
+        {
+          "label": "Challenges launch",
+          "date": "2026-09-09",
+          "estimated": true,
+          "precision": "day",
+          "kind": "milestone",
+          "estimatedFrom": "Described only as '~Sept 9', year not stated"
+        },
+        {
+          "label": "Submissions due",
+          "date": "2026-12-12",
+          "estimated": true,
+          "precision": "day",
+          "kind": "deadline",
+          "estimatedFrom": "Described only as '~Dec 12', year not stated"
+        }
+      ],
       "payoff": "Cash prizes up to $1,500 per category, corporate sponsor exposure",
       "notes": "Multiple categories means multiple shots -- run different club members at different challenges. Fall launch aligns well with early-year club momentum.",
       "url": "https://nfte.com/",
@@ -1083,6 +1557,7 @@
       "format": "On-campus and online summer sessions. Application requires transcript, one recommendation, two short essays (~150-200 words), and a 90-second video or 500-word alternate.",
       "description": "The best-known business pre-college program in the US. Leadership in the Business World (LBW) is a three-week on-campus program for rising seniors, running since 1999, covering business fundamentals and organizational strategy through team projects, simulations, and debates, ending in a capstone case competition. Other tracks include Essentials of Finance, Moneyball Academy (sports analytics), Data Science Academy, and the online Future of the Business World. Flagship tracks admit roughly 17-20% of applicants. Need-based scholarships are available.",
       "timing": "Applications typically open in the fall with priority deadlines in winter for the following summer",
+      "deadlines": [],
       "payoff": "Wharton certificate of completion, faculty instruction, strong peer network",
       "notes": "Be honest with your members about the tradeoff: Wharton itself states participation does not guarantee Penn admission, and admissions officers know these programs are largely pay-to-attend. A student who wins a free national competition often signals more than one who paid $10,000 for a summer. Apply for the need-based aid if cost is a barrier -- it exists and is underused.",
       "url": "https://globalyouth.wharton.upenn.edu/",
@@ -1114,6 +1589,24 @@
       "format": "Five-week residential summer program in New York with a student-to-teacher ratio under 4:1",
       "description": "A fully funded five-week residential program run by one of the world's top quantitative trading firms. Tuition, housing, meals, travel, and social activities are all covered, and each participant receives a $5,000 scholarship. Days consist of interactive classes, game playing, and problem solving with intensive instructor support. Explicitly designed for students who have faced barriers to advanced STEM education -- this is a genuine access program, not a marketing exercise.",
       "timing": "2026: application deadline Mar 11, program Jun 29 - Jul 31. Expect similar 2027 timing.",
+      "deadlines": [
+        {
+          "label": "Application deadline",
+          "date": "2027-03-11",
+          "estimated": true,
+          "precision": "day",
+          "kind": "deadline",
+          "estimatedFrom": "2026 application deadline was Mar 11"
+        },
+        {
+          "label": "Program begins",
+          "date": "2027-06-29",
+          "estimated": true,
+          "precision": "day",
+          "kind": "milestone",
+          "estimatedFrom": "2026 program began Jun 29"
+        }
+      ],
       "payoff": "$5,000 scholarship, elite instruction, direct relationship with Jane Street",
       "notes": "Only for graduating seniors, and the eligibility criteria are specific -- read them carefully rather than assuming. For a member who fits, this is arguably the single highest-value opportunity in this entire database. Mark March 11 on your calendar for current juniors.",
       "url": "https://www.janestreet.com/join-jane-street/programs-and-events/amp/",
@@ -1145,6 +1638,7 @@
       "format": "Intensive summer startup accelerator -- teams validate customer needs, prototype, and pitch to investors",
       "description": "A venture-creation program rather than a business class. Participants form startup teams, do customer discovery, build a minimum viable product, and pitch to real investors and mentors on a structured timeline with published build milestones. More execution-focused than most university pre-college business programs, which tend toward lectures and case studies.",
       "timing": "Summer sessions; applications in winter/spring",
+      "deadlines": [],
       "payoff": "An actual launched venture, investor pitch experience, founder network",
       "notes": "Better value than a passive lecture-based program if a member actually wants to build something. Still paid, so weigh it against free competitions with real prize money like Diamond Challenge.",
       "url": "https://www.launchx.com/",
@@ -1176,6 +1670,7 @@
       "format": "One- to two-week intensive courses in financial markets, investing, and Wall Street fundamentals",
       "description": "A large category of paid, largely non-selective programs teaching finance basics -- markets, stocks, bonds, currencies, commodities, valuation. NYIF's two-week Wall Street program includes a team equity research exercise where students screen companies and build a small portfolio. Bentley's Wall Street 101 offers residential, commuter, and online formats. The instruction can be legitimately good; the admissions signal is close to zero because acceptance is essentially guaranteed.",
       "timing": "Summer, rolling admissions",
+      "deadlines": [],
       "payoff": "Genuine foundational knowledge, some industry exposure, certificate",
       "notes": "Included so your members can price-compare honestly. Everything taught in these programs is available free through CME Institute, YIS resources, Khan Academy, and Forage. Spend the money on travel to a national competition finals instead -- that's a better use of the same dollars.",
       "url": "https://precollegeprograms.nyif.com/",
@@ -1207,6 +1702,7 @@
       "format": "Virtual internship. One student selected each for fall, spring, and summer terms.",
       "description": "Announced by Treasurer Brad Briner in April 2026 at the NC Personal Finance Challenge state championship. The internship includes one-on-one mentorship with leadership across the department, a day of shadowing at Fidelity Investments in RTP, and hands-on work developing curriculum for the state's new high school financial literacy clubs. Completing students receive a $500 scholarship. The department won the Institute for Financial Literacy's 2026 national Government Organization of the Year award for its Finance Fridays newsletter.",
       "timing": "Fall, spring, and summer cohorts -- one student each. Fall 2026 selection likely happening now.",
+      "deadlines": [],
       "payoff": "$500 scholarship, mentorship with state financial leadership, Fidelity shadow day, curriculum-building credit",
       "notes": "THE standout local opportunity, and structurally very hard to find elsewhere: genuine paid-equivalent finance internships for 16-17 year olds barely exist. Only one student per term, so it's competitive -- but the applicant pool is limited to NC students who happen to know about it, which is a small number. Contact the Treasurer's office directly and ask about the fall cycle.",
       "url": "https://www.nctreasurer.gov/",
@@ -1238,6 +1734,7 @@
       "format": "School-based clubs using curriculum adapted from the Finance Fridays newsletter",
       "description": "The Treasurer's office is launching a network of financial literacy clubs in high schools across the state, built on an architecture that expands each Finance Fridays newsletter article into discussion prompts and activities. Rolling out starting fall 2026. For a club that already exists, this is free curriculum plus a direct line to the state Treasurer's office.",
       "timing": "Launching fall 2026",
+      "deadlines": [],
       "payoff": "Free curriculum, state affiliation, likely priority for the new statewide competition and internship",
       "notes": "Strongly recommend affiliating early. Being one of the first chartered clubs gives your members an inside track on the internship, the new statewide competition, and any Fidelity/RTP connections the office builds. Low cost, high optionality.",
       "url": "https://www.nctreasurer.gov/",
@@ -1269,6 +1766,7 @@
       "format": "Year-long program: fall financial/investment literacy workshops (5 weeks) taught by female finance professionals, a 'Wall Street Experience' field trip, spring mentorship pairing, and a scholarship/internship/job board",
       "description": "A free nonprofit program bringing working female finance professionals into schools to teach financial and investment mathematics, with an explicit mission of widening the pipeline into finance careers. The four components are workshops with hands-on financial projects, a field trip to a financial institution, one-to-one mentorship with a seasoned professional, and access to an internship and job board. Students also build resumes and LinkedIn profiles. There is a Student CEO role for students who lead their school's cohort.",
       "timing": "Fall workshop sessions and spring mentorship; Student CEO applications run for the following school year",
+      "deadlines": [],
       "payoff": "Direct professional mentorship, industry field trip, internship/job board access, leadership title",
       "notes": "The mentorship and job board are the real value here, not the credential. If your school doesn't have a chapter, requesting one is a concrete, achievable club project -- it costs the school nothing. The Student CEO role is a genuine leadership line for a member.",
       "url": "https://rockthestreetwallstreet.com/rtsws-programs/high-school-program/",
@@ -1300,6 +1798,7 @@
       "format": "Self-paced online modules (typically 5-7 hours each) with real employer-designed tasks and model answers",
       "description": "Free, self-paced simulations built by actual employers. The J.P. Morgan investment banking track covers M&A, financial modeling, and DCF analysis; other finance tracks include asset management, markets, and quantitative research. Each module gives you a task, lets you submit work, then shows the company's own model answer so you can compare. Completion yields a shareable certificate. There is no selection process at all -- which is exactly why it carries limited admissions weight but real learning value.",
       "timing": "Available year-round, no deadlines",
+      "deadlines": [],
       "payoff": "Certificates, concrete exposure to real analyst tasks, DCF and modeling practice",
       "notes": "Represent these honestly. They are simulations, not internships, and a resume line reading 'J.P. Morgan Investment Banking Virtual Experience (via Forage)' is accurate while 'J.P. Morgan intern' is not -- admissions officers and recruiters know the difference and misrepresenting it backfires badly. As a club activity, doing the JPM IB module together and comparing model answers is an excellent free workshop.",
       "url": "https://www.theforage.com/",
@@ -1331,6 +1830,16 @@
       "format": "Paid six-week full-time internship at a local nonprofit plus a three-day national Leadership Summit",
       "description": "A well-known paid leadership internship placing students with local nonprofit organizations, combined with an all-expenses-paid Leadership Summit. Historically it was open to high school juniors and seniors, and many listicles still describe it that way -- but the 2026 cycle explicitly requires applicants to be at least 18, hold a high school diploma earned within the last 24 months, and have completed 12-18 hours of post-secondary credit. Applications for 2026 closed March 16.",
       "timing": "Applications typically open in winter, close mid-March, program June-July",
+      "deadlines": [
+        {
+          "label": "Applications close",
+          "date": "2027-03-15",
+          "estimated": true,
+          "precision": "month-part",
+          "kind": "deadline",
+          "estimatedFrom": "Described only as 'close mid-March'"
+        }
+      ],
       "payoff": "Paid internship, Leadership Summit, national network",
       "notes": "Included specifically as a CORRECTION. Many blog posts aimed at high schoolers still list this as a HS program and your members will waste time on it. It is now a college-freshman program -- worth knowing about for seniors planning ahead, not for current underclassmen.",
       "url": "https://about.bankofamerica.com/en/making-an-impact/student-leaders",
@@ -1362,6 +1871,7 @@
       "format": "Direct outreach to local firms for part-time, summer, or shadowing arrangements",
       "description": "The most reliable path to an actual high school finance internship is the one nobody advertises. Registered investment advisors, community banks, credit unions, insurance and wealth management offices, and local financial planning and accounting practices regularly take on a high school helper for data entry, research support, client mailings, and administrative work. These roles are rarely posted -- they appear because a student asked. The Raleigh-Durham area has a dense concentration of financial services employers including a large Fidelity campus in RTP.",
       "timing": "Year-round; best outreach windows are February-April for summer roles",
+      "deadlines": [],
       "payoff": "Genuine work experience, a professional reference, sometimes pay",
       "notes": "Turn this into a club project: build a shared spreadsheet of every RIA, credit union, and planning firm within 20 miles, draft one good outreach email template together, and have every member send ten. If 5% respond, several members get real experience. This is more likely to produce a genuine internship than any national program on this list.",
       "url": "",
@@ -1393,6 +1903,7 @@
       "format": "Free online courses, videos, templates, and reference material",
       "description": "A curated free curriculum a club can run without spending anything: CME Institute courses on futures and derivatives (genuinely rigorous and hard to find at this level), YIS instructional videos, the intrinsic value model, the stock pitch report template, and the Stock Investing 101 eBook, plus SEC and FINRA investor education materials on market structure, fees, and fraud. Combined, this covers more ground than most paid pre-college programs.",
       "timing": "Anytime",
+      "deadlines": [],
       "payoff": "Actual competence, which is what makes the competitions winnable",
       "notes": "Build your club's fall meeting syllabus out of this. Competitions are the output; this is the input. A club that competes without teaching tends to have one strong senior carrying everything and nothing left behind when they graduate.",
       "url": "https://www.cmegroup.com/education.html",
@@ -1424,6 +1935,7 @@
       "format": "Self-paced online courses with certificates",
       "description": "Two recognized entry-level finance credentials. Bloomberg Market Concepts is a self-paced course covering economic indicators, currencies, fixed income, and equities using Bloomberg terminal data, and is a widely recognized name in finance recruiting. The CFA Institute's introductory investment foundations program covers the structure and function of the investment industry. Both are more commonly taken by university students but neither restricts high schoolers.",
       "timing": "Self-paced",
+      "deadlines": [],
       "payoff": "Recognized certificate, industry vocabulary",
       "notes": "I did not verify current pricing or the exact status of the CFA introductory program -- both have been restructured in recent years. Check directly before committing club funds. Ask whether NC State, UNC, or Duke would extend BMC access to a local high school club; institutional access is sometimes shareable and it costs them nothing to say yes.",
       "url": "https://portal.bloombergforeducation.com/",

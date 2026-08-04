@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//GHIC Opportunities DB//Deadlines//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:diamond-challenge--registration-closes@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20270115
+DTEND;VALUE=DATE:20270116
+SUMMARY:Diamond Challenge - Registration closes
+DESCRIPTION:Deadline for Diamond Challenge. Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/diamond-challenge
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/diamond-challenge
+END:VEVENT
+END:VCALENDAR

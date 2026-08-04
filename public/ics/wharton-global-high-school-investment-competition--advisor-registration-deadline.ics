@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//GHIC Opportunities DB//Deadlines//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:wharton-global-high-school-investment-competition--advisor-registration-deadline@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20260911
+DTEND;VALUE=DATE:20260912
+SUMMARY:Wharton Global High School Investment Competition - Advisor registration deadline
+DESCRIPTION:Deadline for Wharton Global High School Investment Competition. Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/wharton-global-high-school-investment-competition
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/wharton-global-high-school-investment-competition
+END:VEVENT
+END:VCALENDAR

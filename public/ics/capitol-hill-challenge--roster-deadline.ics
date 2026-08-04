@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//GHIC Opportunities DB//Deadlines//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:capitol-hill-challenge--roster-deadline@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20270306
+DTEND;VALUE=DATE:20270307
+SUMMARY:Capitol Hill Challenge - Roster deadline
+DESCRIPTION:Deadline for Capitol Hill Challenge. Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/capitol-hill-challenge
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/capitol-hill-challenge
+END:VEVENT
+END:VCALENDAR

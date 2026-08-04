@@ -20,6 +20,10 @@ const RATING_FIELDS = [
   "accessibility",
 ];
 
+const DEADLINE_PRECISIONS = ["day", "month-part", "month"];
+const DEADLINE_KINDS = ["deadline", "milestone"];
+const ISO_DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
+
 const errors = [];
 
 function isValidHttpsUrl(value) {
@@ -28,6 +32,12 @@ function isValidHttpsUrl(value) {
   } catch {
     return false;
   }
+}
+
+function isValidIsoDate(value) {
+  if (typeof value !== "string" || !ISO_DATE_PATTERN.test(value)) return false;
+  const date = new Date(value + "T00:00:00Z");
+  return !Number.isNaN(date.getTime()) && date.toISOString().slice(0, 10) === value;
 }
 
 let raw;
@@ -92,6 +102,56 @@ for (const [index, opportunity] of opportunities.entries()) {
     errors.push(
       `${label}: "url" must be an empty string or a valid https:// URL (got ${JSON.stringify(url)}).`,
     );
+  }
+
+  const deadlines = opportunity && opportunity.deadlines;
+  if (!Array.isArray(deadlines)) {
+    errors.push(`${label}: "deadlines" must be an array (use [] if there are none).`);
+  } else {
+    deadlines.forEach((deadline, deadlineIndex) => {
+      const deadlineLabel = `${label}, deadlines[${deadlineIndex}]`;
+
+      if (!deadline || typeof deadline.label !== "string" || deadline.label.trim() === "") {
+        errors.push(`${deadlineLabel}: missing or empty "label".`);
+      }
+
+      if (!deadline || !isValidIsoDate(deadline.date)) {
+        errors.push(
+          `${deadlineLabel}: "date" must be a real ISO date YYYY-MM-DD (got ${JSON.stringify(deadline && deadline.date)}).`,
+        );
+      }
+
+      if (!deadline || typeof deadline.estimated !== "boolean") {
+        errors.push(`${deadlineLabel}: "estimated" must be a boolean.`);
+      }
+
+      if (!deadline || !DEADLINE_PRECISIONS.includes(deadline.precision)) {
+        errors.push(
+          `${deadlineLabel}: "precision" must be one of ${JSON.stringify(DEADLINE_PRECISIONS)} (got ${JSON.stringify(deadline && deadline.precision)}).`,
+        );
+      }
+
+      if (!deadline || !DEADLINE_KINDS.includes(deadline.kind)) {
+        errors.push(
+          `${deadlineLabel}: "kind" must be one of ${JSON.stringify(DEADLINE_KINDS)} (got ${JSON.stringify(deadline && deadline.kind)}).`,
+        );
+      }
+
+      if (deadline && typeof deadline.estimated === "boolean") {
+        const estimatedFrom = deadline.estimatedFrom;
+        if (deadline.estimated) {
+          if (typeof estimatedFrom !== "string" || estimatedFrom.trim() === "") {
+            errors.push(
+              `${deadlineLabel}: "estimated" is true, so "estimatedFrom" must be a non-empty string explaining why (got ${JSON.stringify(estimatedFrom)}).`,
+            );
+          }
+        } else if (estimatedFrom !== null) {
+          errors.push(
+            `${deadlineLabel}: "estimated" is false, so "estimatedFrom" must be null (got ${JSON.stringify(estimatedFrom)}).`,
+          );
+        }
+      }
+    });
   }
 }
 

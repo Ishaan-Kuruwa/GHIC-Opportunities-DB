@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//GHIC Opportunities DB//Deadlines//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:mathworks-math-modeling-challenge--registration-deadline@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20270220
+DTEND;VALUE=DATE:20270221
+SUMMARY:MathWorks Math Modeling (M3) Challenge - Registration deadline
+DESCRIPTION:Deadline for MathWorks Math Modeling (M3) Challenge. Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/mathworks-math-modeling-challenge
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/mathworks-math-modeling-challenge
+END:VEVENT
+END:VCALENDAR

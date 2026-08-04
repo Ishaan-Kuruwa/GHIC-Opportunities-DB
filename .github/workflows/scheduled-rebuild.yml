@@ -1,0 +1,39 @@
+# Why this workflow exists: the home page banner and calendar page compute
+# "closing soon" / estimated-vs-confirmed at BUILD time, not when a visitor
+# loads the page. If nobody edits the data for a while, the site quietly goes
+# stale -- a deadline that's now 40 days out won't show up until someone
+# happens to push a change. This workflow forces a rebuild every week by
+# pushing an empty commit to `main`; Cloudflare Workers Builds is already
+# configured to auto-deploy on every push (see wrangler.jsonc), so that's all
+# it takes to trigger a fresh build.
+#
+# If you're reading this because you found a weekly "chore: scheduled
+# rebuild" commit with no file changes and assumed it was a mistake or a bug
+# -- it isn't. Leave it running. Deleting it means "closing soon" and the
+# calendar will silently drift out of date until the next real content edit.
+#
+# Deliberately weekly, not daily: frequent enough that dates don't go stale
+# for long, infrequent enough that it doesn't spam the commit history or (if
+# Cloudflare's build minutes are ever metered) run up usage for no reason.
+
+name: Scheduled rebuild
+
+on:
+  schedule:
+    - cron: "0 13 * * 1" # every Monday at 13:00 UTC
+  workflow_dispatch: # lets a human trigger it manually from the Actions tab too
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Push an empty commit to trigger Cloudflare's auto-deploy
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit --allow-empty -m "chore: scheduled rebuild"
+          git push

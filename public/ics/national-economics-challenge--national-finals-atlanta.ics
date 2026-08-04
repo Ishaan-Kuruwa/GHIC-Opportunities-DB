@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//GHIC Opportunities DB//Deadlines//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:national-economics-challenge--national-finals-atlanta@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20270527
+DTEND;VALUE=DATE:20270528
+SUMMARY:National Economics Challenge (NEC) - National finals (Atlanta)
+DESCRIPTION:Milestone for National Economics Challenge (NEC). Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/national-economics-challenge
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/national-economics-challenge
+END:VEVENT
+END:VCALENDAR

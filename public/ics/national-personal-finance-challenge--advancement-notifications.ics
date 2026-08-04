@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//GHIC Opportunities DB//Deadlines//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:national-personal-finance-challenge--advancement-notifications@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20270428
+DTEND;VALUE=DATE:20270429
+SUMMARY:National Personal Finance Challenge (NPFC) - Advancement notifications
+DESCRIPTION:Milestone for National Personal Finance Challenge (NPFC). Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/national-personal-finance-challenge
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/national-personal-finance-challenge
+END:VEVENT
+END:VCALENDAR

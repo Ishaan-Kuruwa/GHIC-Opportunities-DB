@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//GHIC Opportunities DB//Deadlines//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:mathworks-math-modeling-challenge--challenge-weekend-begins@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20270227
+DTEND;VALUE=DATE:20270228
+SUMMARY:MathWorks Math Modeling (M3) Challenge - Challenge weekend begins
+DESCRIPTION:Milestone for MathWorks Math Modeling (M3) Challenge. Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/mathworks-math-modeling-challenge
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/mathworks-math-modeling-challenge
+END:VEVENT
+END:VCALENDAR

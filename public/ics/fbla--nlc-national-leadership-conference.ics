@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//GHIC Opportunities DB//Deadlines//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:fbla--nlc-national-leadership-conference@ghic-opportunities-db.ishaan-wizard.workers.dev
+DTSTAMP:20260804T123640Z
+DTSTART;VALUE=DATE:20270623
+DTEND;VALUE=DATE:20270624
+SUMMARY:FBLA (Securities & Investments and finance events) - NLC (National Leadership Conference)
+DESCRIPTION:Milestone for FBLA (Securities & Investments and finance events). Details: https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/fbla
+URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/fbla
+END:VEVENT
+END:VCALENDAR
