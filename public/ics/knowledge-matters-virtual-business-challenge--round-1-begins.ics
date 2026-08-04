@@ -4,7 +4,7 @@ PRODID:-//GHIC Opportunities DB//Deadlines//EN
 CALSCALE:GREGORIAN
 BEGIN:VEVENT
 UID:knowledge-matters-virtual-business-challenge--round-1-begins@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
 SUMMARY:Knowledge Matters Virtual Business Challenge (VBC) - Round 1 begins

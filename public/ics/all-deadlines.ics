@@ -4,7 +4,7 @@ PRODID:-//GHIC Opportunities DB//Deadlines//EN
 CALSCALE:GREGORIAN
 BEGIN:VEVENT
 UID:wharton-global-high-school-investment-competition--advisor-registration-deadline@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20260911
 DTEND;VALUE=DATE:20260912
 SUMMARY:Wharton Global High School Investment Competition - Advisor registration deadline
@@ -13,7 +13,7 @@ URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/wharton-
 END:VEVENT
 BEGIN:VEVENT
 UID:wharton-global-high-school-investment-competition--competition-begins@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20260928
 DTEND;VALUE=DATE:20260929
 SUMMARY:Wharton Global High School Investment Competition - Competition begins
@@ -22,7 +22,7 @@ URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/wharton-
 END:VEVENT
 BEGIN:VEVENT
 UID:wharton-global-high-school-investment-competition--roster-due@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261010
 SUMMARY:Wharton Global High School Investment Competition - Roster due
@@ -31,7 +31,7 @@ URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/wharton-
 END:VEVENT
 BEGIN:VEVENT
 UID:young-investors-society-global-stock-pitch-competition--registration-opens@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20261212
 DTEND;VALUE=DATE:20261213
 SUMMARY:Young Investors Society (YIS) Global Stock Pitch Competition - Registration opens
@@ -40,7 +40,7 @@ URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/young-in
 END:VEVENT
 BEGIN:VEVENT
 UID:young-investors-society-global-stock-pitch-competition--registration-closes@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20270220
 DTEND;VALUE=DATE:20270221
 SUMMARY:Young Investors Society (YIS) Global Stock Pitch Competition - Registration closes
@@ -49,7 +49,7 @@ URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/young-in
 END:VEVENT
 BEGIN:VEVENT
 UID:young-investors-society-global-stock-pitch-competition--nyc-summit@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20270528
 DTEND;VALUE=DATE:20270529
 SUMMARY:Young Investors Society (YIS) Global Stock Pitch Competition - NYC Summit
@@ -58,7 +58,7 @@ URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/young-in
 END:VEVENT
 BEGIN:VEVENT
 UID:capitol-hill-challenge--roster-deadline@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20270306
 DTEND;VALUE=DATE:20270307
 SUMMARY:Capitol Hill Challenge - Roster deadline
@@ -67,7 +67,7 @@ URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/capitol-
 END:VEVENT
 BEGIN:VEVENT
 UID:national-economics-challenge--online-semifinals@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20270420
 DTEND;VALUE=DATE:20270421
 SUMMARY:National Economics Challenge (NEC) - Online semifinals
@@ -76,7 +76,7 @@ URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/national
 END:VEVENT
 BEGIN:VEVENT
 UID:national-economics-challenge--national-finals-atlanta@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20270527
 DTEND;VALUE=DATE:20270528
 SUMMARY:National Economics Challenge (NEC) - National finals (Atlanta)
@@ -85,7 +85,7 @@ URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/national
 END:VEVENT
 BEGIN:VEVENT
 UID:high-school-fed-challenge--theme-announced@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20260909
 DTEND;VALUE=DATE:20260910
 SUMMARY:High School Fed Challenge - Theme announced
@@ -94,7 +94,7 @@ URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/high-sch
 END:VEVENT
 BEGIN:VEVENT
 UID:high-school-fed-challenge--registration-deadline@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20270217
 DTEND;VALUE=DATE:20270218
 SUMMARY:High School Fed Challenge - Registration deadline
@@ -103,7 +103,7 @@ URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/high-sch
 END:VEVENT
 BEGIN:VEVENT
 UID:high-school-fed-challenge--papers-due@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20270316
 DTEND;VALUE=DATE:20270317
 SUMMARY:High School Fed Challenge - Papers due
@@ -112,7 +112,7 @@ URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/high-sch
 END:VEVENT
 BEGIN:VEVENT
 UID:high-school-fed-challenge--decisions-announced@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20270515
 DTEND;VALUE=DATE:20270516
 SUMMARY:High School Fed Challenge - Decisions announced
@@ -121,7 +121,7 @@ URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/high-sch
 END:VEVENT
 BEGIN:VEVENT
 UID:national-personal-finance-challenge--advancement-notifications@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20270428
 DTEND;VALUE=DATE:20270429
 SUMMARY:National Personal Finance Challenge (NPFC) - Advancement notifications
@@ -130,7 +130,7 @@ URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/national
 END:VEVENT
 BEGIN:VEVENT
 UID:national-personal-finance-challenge--national-finals-atlanta@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20270531
 DTEND;VALUE=DATE:20270601
 SUMMARY:National Personal Finance Challenge (NPFC) - National finals (Atlanta)
@@ -139,7 +139,7 @@ URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/national
 END:VEVENT
 BEGIN:VEVENT
 UID:nc-personal-finance-challenge--nc-round-opens@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20270120
 DTEND;VALUE=DATE:20270121
 SUMMARY:NC Personal Finance Challenge - NC round opens
@@ -148,7 +148,7 @@ URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/nc-perso
 END:VEVENT
 BEGIN:VEVENT
 UID:nc-personal-finance-challenge--nc-round-closes@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20270328
 DTEND;VALUE=DATE:20270329
 SUMMARY:NC Personal Finance Challenge - NC round closes
@@ -157,7 +157,7 @@ URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/nc-perso
 END:VEVENT
 BEGIN:VEVENT
 UID:knowledge-matters-virtual-business-challenge--team-registration-opens@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20260929
 DTEND;VALUE=DATE:20260930
 SUMMARY:Knowledge Matters Virtual Business Challenge (VBC) - Team registration opens
@@ -166,7 +166,7 @@ URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/knowledg
 END:VEVENT
 BEGIN:VEVENT
 UID:knowledge-matters-virtual-business-challenge--round-1-begins@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
 SUMMARY:Knowledge Matters Virtual Business Challenge (VBC) - Round 1 begins
@@ -175,7 +175,7 @@ URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/knowledg
 END:VEVENT
 BEGIN:VEVENT
 UID:knowledge-matters-virtual-business-challenge--round-1-ends@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20261023
 DTEND;VALUE=DATE:20261024
 SUMMARY:Knowledge Matters Virtual Business Challenge (VBC) - Round 1 ends
@@ -184,7 +184,7 @@ URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/knowledg
 END:VEVENT
 BEGIN:VEVENT
 UID:knowledge-matters-virtual-business-challenge--round-2-begins@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20270112
 DTEND;VALUE=DATE:20270113
 SUMMARY:Knowledge Matters Virtual Business Challenge (VBC) - Round 2 begins
@@ -193,7 +193,7 @@ URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/knowledg
 END:VEVENT
 BEGIN:VEVENT
 UID:knowledge-matters-virtual-business-challenge--round-2-ends@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20270122
 DTEND;VALUE=DATE:20270123
 SUMMARY:Knowledge Matters Virtual Business Challenge (VBC) - Round 2 ends
@@ -202,7 +202,7 @@ URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/knowledg
 END:VEVENT
 BEGIN:VEVENT
 UID:knowledge-matters-virtual-business-challenge--icdc-team-confirmation-due@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20270305
 DTEND;VALUE=DATE:20270306
 SUMMARY:Knowledge Matters Virtual Business Challenge (VBC) - ICDC team confirmation due
@@ -211,7 +211,7 @@ URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/knowledg
 END:VEVENT
 BEGIN:VEVENT
 UID:fbla--nlc-national-leadership-conference@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20270623
 DTEND;VALUE=DATE:20270624
 SUMMARY:FBLA (Securities & Investments and finance events) - NLC (National Leadership Conference)
@@ -220,7 +220,7 @@ URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/fbla
 END:VEVENT
 BEGIN:VEVENT
 UID:mathworks-math-modeling-challenge--registration-deadline@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20270220
 DTEND;VALUE=DATE:20270221
 SUMMARY:MathWorks Math Modeling (M3) Challenge - Registration deadline
@@ -229,7 +229,7 @@ URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/mathwork
 END:VEVENT
 BEGIN:VEVENT
 UID:mathworks-math-modeling-challenge--challenge-weekend-begins@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20270227
 DTEND;VALUE=DATE:20270228
 SUMMARY:MathWorks Math Modeling (M3) Challenge - Challenge weekend begins
@@ -238,7 +238,7 @@ URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/mathwork
 END:VEVENT
 BEGIN:VEVENT
 UID:diamond-challenge--registration-opens@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20260917
 DTEND;VALUE=DATE:20260918
 SUMMARY:Diamond Challenge - Registration opens
@@ -247,7 +247,7 @@ URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/diamond-
 END:VEVENT
 BEGIN:VEVENT
 UID:diamond-challenge--registration-closes@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
 SUMMARY:Diamond Challenge - Registration closes
@@ -256,7 +256,7 @@ URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/diamond-
 END:VEVENT
 BEGIN:VEVENT
 UID:blue-ocean-student-entrepreneur-competition--deadline@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20270222
 DTEND;VALUE=DATE:20270223
 SUMMARY:Blue Ocean Student Entrepreneur Competition - Deadline
@@ -265,7 +265,7 @@ URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/blue-oce
 END:VEVENT
 BEGIN:VEVENT
 UID:nfte-world-series-of-innovation--challenges-launch@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20260909
 DTEND;VALUE=DATE:20260910
 SUMMARY:NFTE World Series of Innovation - Challenges launch
@@ -274,7 +274,7 @@ URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/nfte-wor
 END:VEVENT
 BEGIN:VEVENT
 UID:nfte-world-series-of-innovation--submissions-due@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20261212
 DTEND;VALUE=DATE:20261213
 SUMMARY:NFTE World Series of Innovation - Submissions due
@@ -283,7 +283,7 @@ URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/nfte-wor
 END:VEVENT
 BEGIN:VEVENT
 UID:jane-street-academy-of-math-and-programming--application-deadline@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20270311
 DTEND;VALUE=DATE:20270312
 SUMMARY:Jane Street Academy of Math and Programming (AMP) - Application deadline
@@ -292,7 +292,7 @@ URL:https://ghic-opportunities-db.ishaan-wizard.workers.dev/opportunity/jane-str
 END:VEVENT
 BEGIN:VEVENT
 UID:jane-street-academy-of-math-and-programming--program-begins@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20270629
 DTEND;VALUE=DATE:20270630
 SUMMARY:Jane Street Academy of Math and Programming (AMP) - Program begins

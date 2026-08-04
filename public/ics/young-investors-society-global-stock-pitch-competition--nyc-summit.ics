@@ -4,7 +4,7 @@ PRODID:-//GHIC Opportunities DB//Deadlines//EN
 CALSCALE:GREGORIAN
 BEGIN:VEVENT
 UID:young-investors-society-global-stock-pitch-competition--nyc-summit@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20270528
 DTEND;VALUE=DATE:20270529
 SUMMARY:Young Investors Society (YIS) Global Stock Pitch Competition - NYC Summit

@@ -4,7 +4,7 @@ PRODID:-//GHIC Opportunities DB//Deadlines//EN
 CALSCALE:GREGORIAN
 BEGIN:VEVENT
 UID:fbla--nlc-national-leadership-conference@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20270623
 DTEND;VALUE=DATE:20270624
 SUMMARY:FBLA (Securities & Investments and finance events) - NLC (National Leadership Conference)

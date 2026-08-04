@@ -67,29 +67,29 @@ function shortDate(iso: string): string {
 ---
 
 <BaseLayout title={meta.title} description={meta.description}>
-  <main class="mx-auto max-w-6xl px-4 py-8">
-    <h1 class="text-2xl font-bold text-gray-900">{meta.title}</h1>
-    <p class="mt-2 max-w-2xl text-gray-600">{meta.description}</p>
+  <main class="mx-auto max-w-6xl px-4 py-12">
+    <h1 class="font-serif text-3xl font-semibold text-ink">{meta.title}</h1>
+    <p class="mt-3 max-w-2xl text-ink-muted">{meta.description}</p>
 
     {upcomingDeadlines.length > 0 && (
-      <div class="mt-6 rounded-md border border-gray-200 bg-gray-50 p-4">
-        <p class="text-sm font-semibold text-gray-900">Closing soon</p>
+      <div class="mt-6 rounded-sm border border-rule bg-pill-fill p-4">
+        <p class="text-sm font-semibold text-ink">Closing soon</p>
         <ul class="mt-2 list-none space-y-1.5 p-0 text-sm">
           {upcomingDeadlines.map((d) => (
             <li>
               <a
                 href={`/opportunity/${d.opportunityId}`}
-                class="font-medium text-blue-700 underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                class="font-medium text-accent underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
                 {d.opportunityName}
               </a>
-              <span class="text-gray-600"> -- {d.label}, {shortDate(d.date)}</span>
+              <span class="text-ink-muted"> -- {d.label}, {shortDate(d.date)}</span>
             </li>
           ))}
         </ul>
         <a
           href="/calendar"
-          class="mt-2 inline-block text-sm text-blue-700 underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+          class="mt-2 inline-block text-sm text-accent underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
           See the full calendar &rarr;
         </a>
@@ -123,13 +123,13 @@ function shortDate(iso: string): string {
     <div
       id="filter-empty-state"
       hidden
-      class="mt-8 rounded-lg border border-gray-200 bg-gray-50 p-8 text-center"
+      class="mt-8 rounded-sm border border-rule bg-pill-fill p-8 text-center"
     >
-      <p class="text-gray-700">No opportunities match these filters.</p>
+      <p class="text-ink-muted">No opportunities match these filters.</p>
       <button
         type="button"
         id="filter-empty-clear"
-        class="mt-4 rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+        class="mt-4 rounded-sm border border-rule bg-surface px-3 py-1.5 text-sm font-medium text-ink-muted hover:bg-pill-fill focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
       >
         Clear filters
       </button>

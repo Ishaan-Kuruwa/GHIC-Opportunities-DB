@@ -1,0 +1,64 @@
+---
+// Shows the 1-10 ratings as rows of filled/empty dots plus the number.
+//
+// Why dots AND the number: six ratings per card is a lot to take in, and raw
+// numbers alone don't let you compare at a glance (that's the problem this
+// design pass exists to fix). The dots give you the shape instantly; the
+// number keeps the exact value.
+//
+// Used by both OpportunityCard.astro and the opportunity detail page, so the
+// two can't drift apart. The detail page passes `showDifficulty` to add the
+// difficulty index as a seventh row.
+import type { Opportunity } from "../data/types";
+
+interface Props {
+  ratings: Opportunity["ratings"];
+  difficultyIndex?: number;
+  showDifficulty?: boolean;
+  columns?: 1 | 2;
+}
+
+const { ratings, difficultyIndex, showDifficulty = false, columns = 2 } = Astro.props;
+
+const rows: { label: string; value: number }[] = [
+  { label: "Effort", value: ratings.effort },
+  { label: "Competitiveness", value: ratings.competitiveness },
+  { label: "Skills", value: ratings.skills },
+  { label: "Prestige", value: ratings.prestige },
+  { label: "Club fit", value: ratings.clubFit },
+  { label: "Accessibility", value: ratings.accessibility },
+];
+
+if (showDifficulty && typeof difficultyIndex === "number") {
+  rows.push({ label: "Difficulty index", value: difficultyIndex });
+}
+
+const DOT_COUNT = 10;
+---
+
+<dl class:list={["grid gap-x-6 gap-y-1.5", columns === 2 ? "grid-cols-2" : "grid-cols-1"]}>
+  {rows.map((row) => (
+    <div>
+      {/*
+        The dots are decorative -- a screen reader gets the label and the number
+        from the <dt>/<dd> text, so it never has to interpret shapes or color.
+      */}
+      <dt class="text-xs text-ink-faint">{row.label}</dt>
+      <dd class="mt-0.5 flex items-center gap-1.5">
+        <span class="flex gap-px" aria-hidden="true">
+          {Array.from({ length: DOT_COUNT }, (_, i) => (
+            <span
+              class:list={[
+                "block h-1.5 w-1.5 rounded-full",
+                i < Math.round(row.value) ? "bg-accent" : "bg-dot-empty",
+              ]}
+            />
+          ))}
+        </span>
+        <span class="tabular text-xs font-medium text-ink">
+          {row.value}<span class="sr-only"> out of 10</span>
+        </span>
+      </dd>
+    </div>
+  ))}
+</dl>

@@ -4,7 +4,7 @@ PRODID:-//GHIC Opportunities DB//Deadlines//EN
 CALSCALE:GREGORIAN
 BEGIN:VEVENT
 UID:jane-street-academy-of-math-and-programming--program-begins@ghic-opportunities-db.ishaan-wizard.workers.dev
-DTSTAMP:20260804T123640Z
+DTSTAMP:20260803T000000Z
 DTSTART;VALUE=DATE:20270629
 DTEND;VALUE=DATE:20270630
 SUMMARY:Jane Street Academy of Math and Programming (AMP) - Program begins

@@ -37,6 +37,8 @@ const months = Array.from({ length: 12 }, (_, i) => {
   return {
     key,
     label: `${MONTH_NAMES[monthIndex]} ${year}`,
+    // Short form for the jump-links at the top of the page.
+    shortLabel: MONTH_NAMES[monthIndex].slice(0, 3),
     rows: rows
       .filter((r) => r.date.startsWith(key))
       .sort((a, b) => a.date.localeCompare(b.date)),
@@ -65,18 +67,18 @@ function displayDate(row: Row): string {
   title={`Deadline calendar | ${meta.title}`}
   description="Every deadline and key date across the school year, grouped by month."
 >
-  <main class="mx-auto max-w-3xl px-4 py-8">
+  <main class="mx-auto max-w-3xl px-4 py-12">
     <nav aria-label="Breadcrumb">
       <a
         href="/"
-        class="text-sm text-blue-700 underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+        class="text-sm text-accent underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
       >
         &larr; Back to all opportunities
       </a>
     </nav>
 
-    <h1 class="mt-4 text-2xl font-bold text-gray-900">Deadline calendar</h1>
-    <p class="mt-2 text-gray-600">
+    <h1 class="mt-6 font-serif text-3xl font-semibold text-ink">Deadline calendar</h1>
+    <p class="mt-2 text-ink-muted">
       Every deadline and key date we know about for the {meta.schoolYear} school year, grouped by
       month.
     </p>
@@ -84,89 +86,129 @@ function displayDate(row: Row): string {
     <a
       href="/ics/all-deadlines.ics"
       download
-      class="mt-4 inline-block rounded-md bg-blue-700 px-4 py-2 font-semibold text-white hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+      class="mt-6 inline-block rounded-sm bg-accent px-4 py-2 font-semibold text-surface hover:bg-accent-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
     >
       Add all deadlines to your calendar
     </a>
-    <p class="mt-1 text-xs text-gray-500">
+    <p class="mt-2 text-xs text-ink-faint">
       Only includes entries with an exact date -- a date only described as "late June" can't
       become a real calendar event. Those entries also won't have their own individual "Add to
       calendar" link below.
     </p>
 
-    <div class="mt-6 rounded-md border border-amber-400 bg-amber-50 p-4 text-sm text-amber-900">
+    <div class="mt-8 rounded-sm border border-caution-border bg-caution-fill p-4 text-sm text-caution-text">
       <p class="font-semibold">
         {estimatedCount} of {rows.length} dates on this page are estimates, not confirmed dates.
       </p>
       <p class="mt-1">
         Most organizers hadn't published this cycle's exact dates yet when we last checked, so
         most of what's below is a best guess based on when the program has run in past years or
-        on vague wording like "late spring." Every estimated date is shaded like this box and
-        says exactly what it's guessed from. Always confirm on the organizer's own site before
-        you rely on a date here.
+        on vague wording like "late spring." Every estimated date is marked like this and says
+        exactly what it's guessed from. Always confirm on the organizer's own site before you
+        rely on a date here.
       </p>
     </div>
 
-    <dl class="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-xs text-gray-500">
-      <div class="flex items-center gap-1.5">
-        <span class="inline-block h-3 w-3 rounded-sm border border-gray-300 bg-white"></span>
-        <dt class="sr-only">Confirmed</dt>
-        <dd>Confirmed date</dd>
-      </div>
-      <div class="flex items-center gap-1.5">
-        <span class="inline-block h-3 w-3 rounded-sm border border-amber-400 bg-amber-50"></span>
-        <dt class="sr-only">Estimated</dt>
-        <dd>Estimated date</dd>
-      </div>
-      <div class="flex items-center gap-1.5">
-        <span class="rounded border border-gray-300 px-1 py-px font-medium">deadline</span>
-        <dd>Something you can miss</dd>
-      </div>
-      <div class="flex items-center gap-1.5">
-        <span class="rounded border border-gray-300 px-1 py-px font-medium">milestone</span>
-        <dd>Informational -- nothing due</dd>
-      </div>
-    </dl>
+    {/*
+      The two swatches are deliberately card-shaped (wider than tall) rather than
+      little squares -- at 12px square the 4px stripe swallowed a third of the
+      swatch and read as a solid blob instead of the stripe it's describing.
+      The legend has to teach the same visual language the cards below use.
+    */}
+    {/*
+      A plain list, not a <dl>: these are legend items, not term/definition
+      pairs, and forcing them into <dt>/<dd> produced invalid markup (swatches
+      sitting loose inside the list, and two entries with a <dd> and no <dt>).
+      The swatches are decorative -- the text beside each one already says what
+      it means -- so they're hidden from screen readers.
+    */}
+    <ul aria-label="Legend" class="mt-6 flex list-none flex-wrap gap-x-6 gap-y-2 p-0 text-xs text-ink-faint">
+      <li class="flex items-center gap-1.5">
+        <span aria-hidden="true" class="inline-block h-4 w-6 rounded-sm border border-rule bg-surface"></span>
+        Confirmed date
+      </li>
+      <li class="flex items-center gap-1.5">
+        <span aria-hidden="true" class="inline-block h-4 w-6 rounded-sm border border-rule border-l-4 border-l-caution-border bg-surface"></span>
+        Estimated date
+      </li>
+      <li class="flex items-center gap-1.5">
+        <span aria-hidden="true" class="rounded-sm border border-rule px-1 py-px font-medium">deadline</span>
+        Something you can miss
+      </li>
+      <li class="flex items-center gap-1.5">
+        <span aria-hidden="true" class="rounded-sm border border-rule px-1 py-px font-medium">milestone</span>
+        Informational -- nothing due
+      </li>
+    </ul>
+
+    {/*
+      Twelve months of cards is a long scroll to reach February. Plain anchor
+      links to each month heading -- no JavaScript, so these work exactly the
+      same with JS off, and the browser handles the scrolling itself.
+    */}
+    <nav aria-label="Jump to month" class="mt-6 border-y border-rule py-3">
+      <ul class="flex list-none flex-wrap gap-x-4 gap-y-2 p-0 text-sm">
+        {months.map((month) => (
+          <li>
+            <a
+              href={`#${month.key}`}
+              class="text-accent underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            >
+              {month.shortLabel}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
 
     {months.map((month) => (
-      <section class="mt-10">
-        <h2 class="text-lg font-semibold text-gray-900">{month.label}</h2>
-        <ul class="mt-3 list-none space-y-2 p-0">
+      /* scroll-mt-4 keeps the heading from sitting flush against the very top
+         of the viewport when you arrive here from a jump-link. */
+      <section id={month.key} class="mt-12 scroll-mt-4">
+        <h2 class="font-serif text-xl font-semibold text-ink">{month.label}</h2>
+        {/*
+          Estimated rows get an amber LEFT STRIPE rather than a full amber fill.
+          45 of 55 entries are estimates, so filling every one of them turned the
+          whole page amber -- which read as alarming, and left the summary box at
+          the top with nothing to distinguish it. The stripe keeps amber meaning
+          "check this" without amber becoming the page.
+        */}
+        <ul class="mt-4 list-none space-y-3 p-0">
           {month.rows.map((row) => (
             <li
               class:list={[
-                "rounded-md border p-3",
-                row.estimated
-                  ? "border-amber-400 bg-amber-50"
-                  : "border-gray-200 bg-white",
+                "rounded-sm border border-rule bg-surface p-4",
+                row.estimated && "border-l-4 border-l-caution-border",
               ]}
             >
               <div class="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
                 <a
                   href={`/opportunity/${row.opportunityId}`}
-                  class="font-semibold text-gray-900 underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                  class="font-serif font-semibold text-ink underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                 >
                   {row.opportunityName}
                 </a>
                 <span
                   class:list={[
-                    "rounded border px-1.5 py-0.5 text-xs font-medium",
+                    "tabular rounded-sm border px-1.5 py-0.5 text-xs font-medium",
                     row.estimated
-                      ? "border-amber-400 text-amber-900"
-                      : "border-gray-300 text-gray-600",
+                      ? "border-caution-border text-caution-text"
+                      : "border-rule text-ink-muted",
                   ]}
                 >
                   {displayDate(row)}
                 </span>
               </div>
-              <p class="mt-1 text-sm text-gray-700">
+              <p class="mt-2 text-sm text-ink-muted">
                 {row.label}
-                <span class="ml-2 rounded border border-gray-300 px-1 py-px text-xs font-medium text-gray-500">
+                <span
+                  class="ml-2 rounded-sm border border-rule px-1 py-px text-xs font-medium"
+                >
                   {row.kind}
                 </span>
               </p>
               {row.estimated && (
-                <p class="mt-1 text-xs text-amber-800">
+                <p class="mt-2 text-xs text-caution-text">
                   Estimated -- {row.estimatedFrom}
                 </p>
               )}
@@ -174,7 +216,7 @@ function displayDate(row: Row): string {
                 <a
                   href={icsHref(row)}
                   download
-                  class="mt-2 inline-block text-xs font-medium text-blue-700 underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                  class="mt-3 inline-block text-xs font-medium text-accent underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                 >
                   Add to calendar (.ics)
                 </a>

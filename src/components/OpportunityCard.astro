@@ -1,43 +1,41 @@
 ---
 import type { Opportunity } from "../data/types";
+import RatingMeter from "./RatingMeter.astro";
 
 interface Props {
   opportunity: Opportunity;
 }
 
 const { opportunity } = Astro.props;
-
-const ratingEntries: [string, number][] = [
-  ["Effort", opportunity.ratings.effort],
-  ["Competitiveness", opportunity.ratings.competitiveness],
-  ["Skills", opportunity.ratings.skills],
-  ["Prestige", opportunity.ratings.prestige],
-  ["Club fit", opportunity.ratings.clubFit],
-  ["Accessibility", opportunity.ratings.accessibility],
-];
 ---
 
-<article class="h-full rounded-lg border border-gray-200 shadow-sm transition hover:shadow-md">
+<article class="h-full rounded-sm border border-rule bg-surface transition-colors hover:border-accent">
   <a
     href={`/opportunity/${opportunity.id}`}
-    class="block h-full rounded-lg p-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+    class="block h-full rounded-sm p-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
   >
-    <h2 class="text-lg font-semibold leading-snug text-gray-900">{opportunity.name}</h2>
+    <h2 class="font-serif text-lg leading-snug font-semibold text-ink">{opportunity.name}</h2>
 
-    <p class="mt-1 text-sm text-gray-600">
+    <p class="mt-1 text-sm text-ink-muted">
       {opportunity.type} &middot; {opportunity.category}
     </p>
 
-    <p class="mt-2 text-sm text-gray-700">{opportunity.prestigeTier}</p>
-    <p class="mt-1 text-sm text-gray-700">{opportunity.cost}</p>
+    {/*
+      Prestige tier shows the data value verbatim -- we deliberately don't parse
+      a short "Tier 1" out of it. A proper short label belongs in the data file
+      (planned for Phase 7), not in a string-slicing rule here that breaks the
+      moment someone words a tier differently.
+    */}
+    <p class="mt-3">
+      <span class="inline-block rounded-sm bg-pill-fill px-2 py-0.5 text-xs font-medium text-ink-muted">
+        {opportunity.prestigeTier}
+      </span>
+    </p>
 
-    <dl class="mt-3 grid grid-cols-2 gap-x-3 gap-y-1 text-sm">
-      {ratingEntries.map(([label, value]) => (
-        <div class="flex justify-between gap-2">
-          <dt class="text-gray-500">{label}</dt>
-          <dd class="font-medium text-gray-900">{value}/10</dd>
-        </div>
-      ))}
-    </dl>
+    <p class="mt-2 text-sm text-ink-muted">{opportunity.cost}</p>
+
+    <div class="mt-4">
+      <RatingMeter ratings={opportunity.ratings} />
+    </div>
   </a>
 </article>

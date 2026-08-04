@@ -137,7 +137,8 @@ Update this section as you go so the next session has context.
 - [x] Phase 2 — detail pages
 - [x] Phase 3 — filters + search
 - [x] Phase 4 — deadline calendar + .ics export
-- [ ] Phase 5 — design pass
+- [x] Phase 5 — design pass. Design tokens live in `src/styles/global.css` (`@theme`); use those,
+      not raw Tailwind colors. Amber is reserved strictly for caution states.
 - [ ] Phase 6 — guide content
 - [ ] Phase 7 — Google Sheet as CMS
 - [ ] Phase 8 — handoff documentation

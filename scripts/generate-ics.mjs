@@ -37,12 +37,22 @@ function addDays(isoDate, days) {
   return date.toISOString().slice(0, 10).replace(/-/g, "");
 }
 
-const dtstamp = new Date().toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
+// DTSTAMP is "when this calendar entry was last authored." We use the
+// opportunity's own lastVerified date rather than the current time, so running
+// a build produces byte-identical files when nothing in the data changed.
+//
+// Using new Date() here (the obvious thing) rewrote all 34 .ics files on every
+// single build, so `git status` was permanently full of noise -- which buries
+// real changes and pushes people toward habits like a blind `git add .`.
+function dtstampFor(opportunity) {
+  return `${opportunity.lastVerified.replace(/-/g, "")}T000000Z`;
+}
 
 function buildEvent(opportunity, deadline) {
   const startDate = deadline.date.replace(/-/g, "");
   const endDate = addDays(deadline.date, 1); // DTEND is exclusive for all-day events
   const uid = `${opportunity.id}--${slugify(deadline.label)}@${new URL(siteUrl).hostname}`;
+  const dtstamp = dtstampFor(opportunity);
   // Plain hyphen, not an em dash -- keeps the file pure ASCII, which is the
   // safest bet for older/less-common calendar apps that might mishandle
   // non-ASCII bytes in an .ics file.

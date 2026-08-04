@@ -1,6 +1,63 @@
 @import "tailwindcss";
 
 /*
+ * DESIGN TOKENS
+ *
+ * Every color and font on this site comes from this block. Change a value here
+ * and it changes everywhere -- don't write raw colors like `text-gray-600` or
+ * `bg-white` into components, or the next person has to hunt through fifty
+ * files to restyle anything.
+ *
+ * `@theme` is Tailwind v4's way of doing this in plain CSS (no config file, no
+ * extra dependency). Each `--color-x` here becomes usable as `bg-x`, `text-x`,
+ * `border-x`, etc.
+ *
+ * The look is "researched reference document," not "social feed": an off-white
+ * paper background, cards that sit slightly BRIGHTER than the page (so they
+ * stand out without heavy borders or shadows), hairline rules, one navy accent,
+ * and a serif for headings.
+ *
+ * Contrast ratios below were computed against the paper background and all meet
+ * WCAG AA. If you change a color, re-check it -- a "nicer" lighter gray is very
+ * easy to pick and will quietly fail for anyone with low vision.
+ */
+@theme {
+  /* Surfaces */
+  --color-paper: #faf9f5; /* page background */
+  --color-surface: #ffffff; /* cards, sit brighter than the page */
+  --color-rule: #e4e1d8; /* hairline borders */
+
+  /* Text -- ratios are against paper */
+  --color-ink: #1a1d21; /* 16.05 -- headings, primary text */
+  --color-ink-muted: #565c64; /* 6.41  -- secondary text */
+  --color-ink-faint: #6b727a; /* 4.62  -- tertiary; still AA at small sizes */
+
+  /* The one accent. Used for links, buttons, focus rings, filled rating dots. */
+  --color-accent: #1b3a6b; /* 10.69 */
+  --color-accent-hover: #16305a;
+
+  /* Caution ONLY -- unverified entries and estimated dates. Never decorative,
+   * never used for emphasis, so that amber always means "check this."
+   * The fill is deliberately deeper than Tailwind's amber-50: against this
+   * off-white page, amber-50 measures 1.016 contrast, i.e. invisible. */
+  --color-caution-fill: #fde68a; /* 1.182 vs paper -- reads as a distinct surface */
+  --color-caution-border: #d97706; /* 3.02  vs paper -- passes non-text minimum */
+  --color-caution-text: #713f12; /* 6.96  on the fill above */
+
+  /* Neutral pill (prestige tier). Deliberately NOT accent-colored, so pills are
+   * never mistaken for links, and never approach the caution palette. */
+  --color-pill-fill: #f0efe9;
+
+  /* Empty rating dot. Filled dots use the accent. */
+  --color-dot-empty: #d8d5cc;
+
+  /* System fonts only -- nothing to download, so no layout shift and no
+   * web-font weight budget to worry about. The serif carries the "reference
+   * document" feel; the sans handles body copy and UI. */
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", serif;
+}
+
+/*
  * The filter bar only works with JavaScript, so it's hidden unless JS actually
  * ran (see the inline script in BaseLayout.astro that adds the "js" class to
  * <html>). Plain CSS rather than a Tailwind utility: Tailwind has no built-in
@@ -12,4 +69,11 @@
 }
 .js .filters {
   display: block;
+}
+
+/* Dates, ratings and counts line up in columns, so digits should be
+ * fixed-width. Applied via a class rather than globally because it should not
+ * affect running prose. */
+.tabular {
+  font-variant-numeric: tabular-nums;
 }
