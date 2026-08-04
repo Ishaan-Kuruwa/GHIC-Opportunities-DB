@@ -1,10 +1,28 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import OpportunityCard from "../components/OpportunityCard.astro";
+import FilterBar from "../components/FilterBar.astro";
 import data from "../data/opportunities.json";
 import type { OpportunitiesData } from "../data/types";
 
-const { meta, opportunities } = data as OpportunitiesData;
+const { meta, opportunities, facets } = data as OpportunitiesData;
+
+// TEMPORARY: "free" is derived from the cost string, not a real data field.
+// This only catches costs that literally start with "Free" -- a few entries
+// ("Usually free", "Expected free", etc.) are deliberately left out rather than
+// guessed at. The durable fix is a real `free: boolean` field added to the data
+// schema as part of Phase 7 (Google Sheet as CMS); string-parsing like this will
+// silently break the moment someone types "No cost" or "$0" in the sheet instead.
+function isFree(cost: string): boolean {
+  return cost.trim().toLowerCase().startsWith("free");
+}
+
+// Card text alone doesn't include organizer/description, but SPEC requires
+// searching across both -- so build the searchable text once per opportunity
+// here, at build time, instead of asking the client script to know the data shape.
+function searchText(opportunity: (typeof opportunities)[number]): string {
+  return `${opportunity.name} ${opportunity.organizer} ${opportunity.description} ${opportunity.category}`.toLowerCase();
+}
 ---
 
 <BaseLayout title={meta.title} description={meta.description}>
@@ -12,12 +30,45 @@ const { meta, opportunities } = data as OpportunitiesData;
     <h1 class="text-2xl font-bold text-gray-900">{meta.title}</h1>
     <p class="mt-2 max-w-2xl text-gray-600">{meta.description}</p>
 
-    <ul class="mt-8 grid list-none grid-cols-1 gap-4 p-0 md:grid-cols-2 lg:grid-cols-3">
+    <FilterBar facets={facets} total={opportunities.length} />
+
+    <ul
+      id="opportunity-list"
+      class="mt-8 grid list-none grid-cols-1 gap-4 p-0 md:grid-cols-2 lg:grid-cols-3"
+    >
       {opportunities.map((opportunity) => (
-        <li>
+        <li
+          data-opportunity
+          data-type={opportunity.type}
+          data-category={opportunity.category}
+          data-free={isFree(opportunity.cost)}
+          data-verified={opportunity.verified}
+          data-effort={opportunity.ratings.effort}
+          data-competitiveness={opportunity.ratings.competitiveness}
+          data-skills={opportunity.ratings.skills}
+          data-club-fit={opportunity.ratings.clubFit}
+          data-search={searchText(opportunity)}
+        >
           <OpportunityCard opportunity={opportunity} />
         </li>
       ))}
     </ul>
+
+    <div
+      id="filter-empty-state"
+      hidden
+      class="mt-8 rounded-lg border border-gray-200 bg-gray-50 p-8 text-center"
+    >
+      <p class="text-gray-700">No opportunities match these filters.</p>
+      <button
+        type="button"
+        id="filter-empty-clear"
+        class="mt-4 rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+      >
+        Clear filters
+      </button>
+    </div>
   </main>
+
+  <script src="../scripts/filters.js"></script>
 </BaseLayout>

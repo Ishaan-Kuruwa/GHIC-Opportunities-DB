@@ -135,7 +135,7 @@ Update this section as you go so the next session has context.
       https://ghic-opportunities-db.ishaan-wizard.workers.dev (Cloudflare Workers Builds,
       auto-deploys on push to `main`).
 - [x] Phase 2 — detail pages
-- [ ] Phase 3 — filters + search
+- [x] Phase 3 — filters + search
 - [ ] Phase 4 — deadline calendar + .ics export
 - [ ] Phase 5 — design pass
 - [ ] Phase 6 — guide content

@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+/*
+ * The filter bar only works with JavaScript, so it's hidden unless JS actually
+ * ran (see the inline script in BaseLayout.astro that adds the "js" class to
+ * <html>). Plain CSS rather than a Tailwind utility: Tailwind has no built-in
+ * "only if JS ran" variant without a config file, which this project deliberately
+ * doesn't have (Tailwind v4 is CSS-first).
+ */
+.filters {
+  display: none;
+}
+.js .filters {
+  display: block;
+}
