@@ -7,7 +7,7 @@ resources. Built and maintained by our investing club.
 **Who it's for:** high school students, their teachers, and their parents, mostly browsing on a
 phone. Most visitors have never heard of any of the programs listed here.
 
-**Live site:** _not yet deployed — add the Cloudflare URL here once the site is live._
+**Live site:** https://ghic-opportunities-db.ishaan-wizard.workers.dev
 
 ## Running it locally
 
