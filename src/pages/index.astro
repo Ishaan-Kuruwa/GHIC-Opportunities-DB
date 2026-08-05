@@ -68,39 +68,39 @@ function shortDate(iso: string): string {
 
 <BaseLayout title={meta.title} description={meta.description}>
   <main class="mx-auto max-w-6xl px-4 py-12">
-    <h1 class="font-black text-3xl uppercase tracking-tight text-ink">{meta.title}</h1>
+    <h1 class="font-serif text-3xl font-semibold text-ink">{meta.title}</h1>
     <p class="mt-3 max-w-2xl text-ink-muted">{meta.description}</p>
 
     <nav aria-label="Guides" class="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-sm">
       <a
         href="/guides/start-here"
-        class="font-extrabold uppercase tracking-tight text-accent underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+        class="font-medium text-accent underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
       >
         Start here
       </a>
       <a
         href="/guides/free-learning-stack"
-        class="font-extrabold uppercase tracking-tight text-accent underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+        class="font-medium text-accent underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
       >
         Free learning stack
       </a>
       <a
         href="/guides/how-we-verify"
-        class="font-extrabold uppercase tracking-tight text-accent underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+        class="font-medium text-accent underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
       >
         How we verify
       </a>
       <a
         href="/guides/about"
-        class="font-extrabold uppercase tracking-tight text-accent underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+        class="font-medium text-accent underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
       >
         About
       </a>
     </nav>
 
     {upcomingDeadlines.length > 0 && (
-      <div class="mt-6 border-4 border-ink bg-pill-fill p-4">
-        <p class="text-sm font-extrabold uppercase tracking-tight text-ink">Closing soon</p>
+      <div class="mt-6 rounded-sm border border-rule bg-pill-fill p-4">
+        <p class="text-sm font-semibold text-ink">Closing soon</p>
         <ul class="mt-2 list-none space-y-1.5 p-0 text-sm">
           {upcomingDeadlines.map((d) => (
             <li>
@@ -150,13 +150,13 @@ function shortDate(iso: string): string {
     <div
       id="filter-empty-state"
       hidden
-      class="mt-8 border-4 border-ink bg-pill-fill p-8 text-center"
+      class="mt-8 rounded-sm border border-rule bg-pill-fill p-8 text-center"
     >
       <p class="text-ink-muted">No opportunities match these filters.</p>
       <button
         type="button"
         id="filter-empty-clear"
-        class="shadow-brutal mt-4 border-4 border-ink bg-surface px-3 py-1.5 text-sm font-extrabold uppercase tracking-tight text-ink hover:bg-pill-fill focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+        class="mt-4 rounded-sm border border-rule bg-surface px-3 py-1.5 text-sm font-medium text-ink-muted hover:bg-pill-fill focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
       >
         Clear filters
       </button>

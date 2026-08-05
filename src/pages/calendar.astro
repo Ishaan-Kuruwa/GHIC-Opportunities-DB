@@ -77,7 +77,7 @@ function displayDate(row: Row): string {
       </a>
     </nav>
 
-    <h1 class="mt-6 font-black text-3xl uppercase tracking-tight text-ink">Deadline calendar</h1>
+    <h1 class="mt-6 font-serif text-3xl font-semibold text-ink">Deadline calendar</h1>
     <p class="mt-2 text-ink-muted">
       Every deadline and key date we know about for the {meta.schoolYear} school year, grouped by
       month.
@@ -86,7 +86,7 @@ function displayDate(row: Row): string {
     <a
       href="/ics/all-deadlines.ics"
       download
-      class="shadow-brutal mt-6 inline-block border-4 border-ink bg-accent px-4 py-2 font-extrabold uppercase tracking-tight text-surface hover:bg-accent-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+      class="mt-6 inline-block rounded-sm bg-accent px-4 py-2 font-semibold text-surface hover:bg-accent-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
     >
       Add all deadlines to your calendar
     </a>
@@ -96,8 +96,8 @@ function displayDate(row: Row): string {
       calendar" link below.
     </p>
 
-    <div class="mt-8 border-4 border-caution-border bg-caution-fill p-4 text-sm text-caution-text">
-      <p class="font-extrabold uppercase tracking-tight text-caution-text">
+    <div class="mt-8 rounded-sm border border-caution-border bg-caution-fill p-4 text-sm text-caution-text">
+      <p class="font-semibold">
         {estimatedCount} of {rows.length} dates on this page are estimates, not confirmed dates.
       </p>
       <p class="mt-1">
@@ -111,14 +111,9 @@ function displayDate(row: Row): string {
 
     {/*
       The two swatches are deliberately card-shaped (wider than tall) rather than
-      little squares -- at the old thin-border scale a 4px stripe on a 12px
-      square swallowed a third of the swatch and read as a solid blob instead
-      of the stripe it's describing. Now that borders are 4px and the stripe is
-      8px, the swatches are sized up again (h-6 w-10) for the same reason --
-      otherwise the exact same "stripe swallows the swatch" problem comes back
-      at the new, heavier scale. The legend has to teach the same visual
-      language the cards below actually use, so its border color/width and
-      stripe width must be kept in sync with the real per-row markup below.
+      little squares -- at 12px square the 4px stripe swallowed a third of the
+      swatch and read as a solid blob instead of the stripe it's describing.
+      The legend has to teach the same visual language the cards below use.
     */}
     {/*
       A plain list, not a <dl>: these are legend items, not term/definition
@@ -129,19 +124,19 @@ function displayDate(row: Row): string {
     */}
     <ul aria-label="Legend" class="mt-6 flex list-none flex-wrap gap-x-6 gap-y-2 p-0 text-xs text-ink-faint">
       <li class="flex items-center gap-1.5">
-        <span aria-hidden="true" class="inline-block h-6 w-10 border-4 border-ink bg-surface"></span>
+        <span aria-hidden="true" class="inline-block h-4 w-6 rounded-sm border border-rule bg-surface"></span>
         Confirmed date
       </li>
       <li class="flex items-center gap-1.5">
-        <span aria-hidden="true" class="inline-block h-6 w-10 border-4 border-ink border-l-8 border-l-caution-border bg-surface"></span>
+        <span aria-hidden="true" class="inline-block h-4 w-6 rounded-sm border border-rule border-l-4 border-l-caution-border bg-surface"></span>
         Estimated date
       </li>
       <li class="flex items-center gap-1.5">
-        <span aria-hidden="true" class="border-4 border-ink px-1.5 py-0.5 font-extrabold uppercase tracking-tight text-ink">deadline</span>
+        <span aria-hidden="true" class="rounded-sm border border-rule px-1 py-px font-medium">deadline</span>
         Something you can miss
       </li>
       <li class="flex items-center gap-1.5">
-        <span aria-hidden="true" class="border-4 border-ink px-1.5 py-0.5 font-extrabold uppercase tracking-tight text-ink">milestone</span>
+        <span aria-hidden="true" class="rounded-sm border border-rule px-1 py-px font-medium">milestone</span>
         Informational -- nothing due
       </li>
     </ul>
@@ -151,7 +146,7 @@ function displayDate(row: Row): string {
       links to each month heading -- no JavaScript, so these work exactly the
       same with JS off, and the browser handles the scrolling itself.
     */}
-    <nav aria-label="Jump to month" class="mt-6 border-y-4 border-ink py-3">
+    <nav aria-label="Jump to month" class="mt-6 border-y border-rule py-3">
       <ul class="flex list-none flex-wrap gap-x-4 gap-y-2 p-0 text-sm">
         {months.map((month) => (
           <li>
@@ -170,44 +165,35 @@ function displayDate(row: Row): string {
       /* scroll-mt-4 keeps the heading from sitting flush against the very top
          of the viewport when you arrive here from a jump-link. */
       <section id={month.key} class="mt-12 scroll-mt-4">
-        {/* Heavy weight, but NOT uppercase -- twelve of these run down the
-            page, and uppercasing all of them would compete with the page's
-            one true H1 for attention. Weight alone is enough to read as a
-            strong divider. */}
-        <h2 class="font-black text-xl text-ink">{month.label}</h2>
+        <h2 class="font-serif text-xl font-semibold text-ink">{month.label}</h2>
         {/*
           Estimated rows get an amber LEFT STRIPE rather than a full amber fill.
           45 of 55 entries are estimates, so filling every one of them turned the
           whole page amber -- which read as alarming, and left the summary box at
           the top with nothing to distinguish it. The stripe keeps amber meaning
           "check this" without amber becoming the page.
-
-          The stripe is 8px, not the 4px it used to be: every card on the page
-          now has its own 4px black border, so a 4px amber stripe would just
-          read as "one more 4px border" among dozens. Doubling it keeps the
-          "this one's an estimate" signal loud enough to still cut through.
         */}
         <ul class="mt-4 list-none space-y-3 p-0">
           {month.rows.map((row) => (
             <li
               class:list={[
-                "border-4 border-ink bg-surface p-4",
-                row.estimated && "border-l-8 border-l-caution-border",
+                "rounded-sm border border-rule bg-surface p-4",
+                row.estimated && "border-l-4 border-l-caution-border",
               ]}
             >
               <div class="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
                 <a
                   href={`/opportunity/${row.opportunityId}`}
-                  class="font-black text-ink underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                  class="font-serif font-semibold text-ink underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                 >
                   {row.opportunityName}
                 </a>
                 <span
                   class:list={[
-                    "tabular border-4 px-2 py-1 text-xs font-medium",
+                    "tabular rounded-sm border px-1.5 py-0.5 text-xs font-medium",
                     row.estimated
                       ? "border-caution-border text-caution-text"
-                      : "border-ink text-ink-muted",
+                      : "border-rule text-ink-muted",
                   ]}
                 >
                   {displayDate(row)}
@@ -216,7 +202,7 @@ function displayDate(row: Row): string {
               <p class="mt-2 text-sm text-ink-muted">
                 {row.label}
                 <span
-                  class="ml-2 border-4 border-ink px-1.5 py-0.5 text-xs font-extrabold uppercase tracking-tight text-ink"
+                  class="ml-2 rounded-sm border border-rule px-1 py-px text-xs font-medium"
                 >
                   {row.kind}
                 </span>

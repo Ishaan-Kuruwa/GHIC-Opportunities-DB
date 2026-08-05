@@ -22,112 +22,39 @@
  * easy to pick and will quietly fail for anyone with low vision.
  */
 @theme {
-  /* Surfaces -- unchanged from Phase 5. */
+  /* Surfaces */
   --color-paper: #faf9f5; /* page background */
   --color-surface: #ffffff; /* cards, sit brighter than the page */
+  --color-rule: #e4e1d8; /* hairline borders */
 
-  /* Hairline rule -- NOT deleted, even though thick black borders (border-ink,
-   * below) do almost all of the separating work now. A couple of spots (the
-   * jump-to-month divider on the calendar page) still use a plain 1px rule as
-   * a quieter divider than a full border-4 would be. */
-  --color-rule: #e4e1d8;
+  /* Text -- ratios are against paper */
+  --color-ink: #1a1d21; /* 16.05 -- headings, primary text */
+  --color-ink-muted: #565c64; /* 6.41  -- secondary text */
+  --color-ink-faint: #6b727a; /* 4.62  -- tertiary; still AA at small sizes */
 
-  /* Ink does double duty now: it's the text color AND the one border color
-   * for every "this is structure" border on the site (cards, buttons, inputs,
-   * chips). One token instead of a separate --color-border keeps the palette
-   * short -- there's only ever one border color to remember. Pure black also
-   * reads as "stamped," which is the brutalist look we want.
-   * 19.94 vs paper, 21 vs surface -- both far past AA. */
-  --color-ink: #000000;
-  --color-ink-muted: #565c64; /* 6.41 vs paper -- unchanged */
-  --color-ink-faint: #6b727a; /* 4.62 vs paper -- unchanged */
+  /* The one accent. Used for links, buttons, focus rings, filled rating dots. */
+  --color-accent: #1b3a6b; /* 10.69 */
+  --color-accent-hover: #16305a;
 
-  /* The one accent. Saturated "brutalist blue," not the old muted navy --
-   * loud on purpose. 5.48 vs paper, 5.78 vs surface: passes AA for normal
-   * text either way. IMPORTANT: white text on a bg-accent FILL passes AA
-   * (5.78), but black text on a bg-accent fill does NOT (3.64, fails below
-   * large-bold size) -- any button that fills its background with bg-accent
-   * must use white/surface text, never black. */
-  --color-accent: #2b4eff;
-  /* Darker shade for :hover on the two accent-fill buttons. Checked, not
-   * assumed: white text on THIS fill is 8.3 -- even higher contrast than the
-   * base blue, since it's darker. */
-  --color-accent-hover: #1e3acc;
-
-  /* Caution ONLY -- unverified entries and estimated dates. UNCHANGED values
-   * from Phase 5 (don't touch): amber's hue (~32-48 degrees) sits roughly
-   * 180-200 degrees away from the new accent blue's hue (~230 degrees), so
-   * there's no risk of the new blue reading as "another shade of caution."
-   * Never used for emphasis or decoration -- amber always means "check this."
+  /* Caution ONLY -- unverified entries and estimated dates. Never decorative,
+   * never used for emphasis, so that amber always means "check this."
    * The fill is deliberately deeper than Tailwind's amber-50: against this
    * off-white page, amber-50 measures 1.016 contrast, i.e. invisible. */
   --color-caution-fill: #fde68a; /* 1.182 vs paper -- reads as a distinct surface */
   --color-caution-border: #d97706; /* 3.02  vs paper -- passes non-text minimum */
   --color-caution-text: #713f12; /* 6.96  on the fill above */
 
-  /* Neutral chip fill (prestige tier, kind tags). Deliberately NOT accent-
-   * colored and nowhere near amber, so a chip is never mistaken for a link
-   * or a caution notice. */
+  /* Neutral pill (prestige tier). Deliberately NOT accent-colored, so pills are
+   * never mistaken for links, and never approach the caution palette. */
   --color-pill-fill: #f0efe9;
 
-  /* Empty rating tick. Filled ticks use the accent. */
+  /* Empty rating dot. Filled dots use the accent. */
   --color-dot-empty: #d8d5cc;
 
-  /* One system font stack for literally everything now -- headings, body,
-   * buttons, chips. No serif anymore: brutalist chrome differentiates with
-   * WEIGHT and CASE (heavy + uppercase for short chrome labels, never for
-   * text pulled from opportunities.json), not with a second typeface. Still
-   * zero web fonts: nothing to download, no layout shift, no font-weight
-   * budget to worry about. */
-  --font-sans:
-    ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif;
-}
-
-/* Hard offset shadow -- the brutalist "sticker" look. Tailwind's built-in
- * shadow utilities are soft/blurred; this needs a flat, sharp offset, which
- * Tailwind can't express without a config file (this project deliberately
- * doesn't have one), so it's plain CSS like .tabular below.
- *
- * Only ever goes on things you can actually click -- it's a "press me"
- * affordance, not decoration. A static box (a caution notice, the empty-state
- * message) gets a border-4 border-ink instead, no shadow. If everything had a
- * shadow, none of them would mean anything.
- *
- * On press (hover, active, or keyboard focus) the shadow shrinks and the
- * element nudges toward it -- like it's physically pressing into the page --
- * rather than the shadow growing outward, which would risk visually
- * colliding with the next card over in the 3-column grid. */
-.shadow-brutal {
-  box-shadow: 4px 4px 0 0 var(--color-ink);
-  transition:
-    box-shadow 100ms ease-out,
-    transform 100ms ease-out;
-}
-.shadow-brutal:hover,
-.shadow-brutal:active,
-.shadow-brutal:focus-visible {
-  /* translate is exactly (resting offset - pressed offset). If either offset
-   * above changes, this has to move with it or the pressed shadow shows a
-   * visible 1px alignment sliver. */
-  box-shadow: 1px 1px 0 0 var(--color-ink);
-  transform: translate(3px, 3px);
-}
-
-/* Anyone who's told their browser they get motion-sick shouldn't get a
- * sliding button. The shadow/position still change (that's an instant,
- * not-animated state change, which is fine) -- only the smooth transition
- * and the translate itself are turned off, so the pressed feedback still
- * happens, it just doesn't slide. */
-@media (prefers-reduced-motion: reduce) {
-  .shadow-brutal {
-    transition: none;
-  }
-  .shadow-brutal:hover,
-  .shadow-brutal:active,
-  .shadow-brutal:focus-visible {
-    transform: none;
-  }
+  /* System fonts only -- nothing to download, so no layout shift and no
+   * web-font weight budget to worry about. The serif carries the "reference
+   * document" feel; the sans handles body copy and UI. */
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", serif;
 }
 
 /*
@@ -158,7 +85,7 @@
  * These rules style headings/lists/links straight off the design tokens above. */
 .guide-content h2 {
   margin-top: 2.5rem;
-  font-family: var(--font-sans);
+  font-family: var(--font-serif);
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--color-ink);

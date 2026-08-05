@@ -49,7 +49,7 @@ const DOT_COUNT = 10;
           {Array.from({ length: DOT_COUNT }, (_, i) => (
             <span
               class:list={[
-                "block h-1.5 w-1.5 rounded-none",
+                "block h-1.5 w-1.5 rounded-full",
                 i < Math.round(row.value) ? "bg-accent" : "bg-dot-empty",
               ]}
             />
