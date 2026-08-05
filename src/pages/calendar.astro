@@ -189,12 +189,7 @@ function displayDate(row: Row): string {
                   {row.opportunityName}
                 </a>
                 <span
-                  class:list={[
-                    "tabular rounded-sm border px-1.5 py-0.5 text-xs font-medium",
-                    row.estimated
-                      ? "border-caution-border text-caution-text"
-                      : "border-hairline text-ink-muted",
-                  ]}
+                  class="tabular rounded-sm border border-hairline px-1.5 py-0.5 text-xs font-medium text-ink-muted"
                 >
                   {displayDate(row)}
                 </span>
@@ -208,7 +203,7 @@ function displayDate(row: Row): string {
                 </span>
               </p>
               {row.estimated && (
-                <p class="mt-2 text-xs text-caution-text">
+                <p class="mt-2 text-xs text-ink-faint">
                   Estimated -- {row.estimatedFrom}
                 </p>
               )}

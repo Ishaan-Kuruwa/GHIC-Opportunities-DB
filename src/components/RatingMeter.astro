@@ -10,24 +10,39 @@
 // two can't drift apart. The detail page passes `showDifficulty` to add the
 // difficulty index as a seventh row.
 import type { Opportunity } from "../data/types";
+import { RATING_AXES } from "../utils/ratingAxes";
 
 interface Props {
   ratings: Opportunity["ratings"];
   difficultyIndex?: number;
   showDifficulty?: boolean;
   columns?: 1 | 2;
+  // Detail page only: plot the six rows in RatingRadar's own axis order
+  // instead of the order below, so the numbers read in the same sequence as
+  // the shape next to them. Cards keep the default order -- it leads with
+  // effort/competitiveness, which matters more at a glance than it does once
+  // you're already reading a full detail page next to the shape.
+  matchRadarOrder?: boolean;
 }
 
-const { ratings, difficultyIndex, showDifficulty = false, columns = 2 } = Astro.props;
+const {
+  ratings,
+  difficultyIndex,
+  showDifficulty = false,
+  columns = 2,
+  matchRadarOrder = false,
+} = Astro.props;
 
-const rows: { label: string; value: number }[] = [
-  { label: "Effort", value: ratings.effort },
-  { label: "Competitiveness", value: ratings.competitiveness },
-  { label: "Skills", value: ratings.skills },
-  { label: "Prestige", value: ratings.prestige },
-  { label: "Club fit", value: ratings.clubFit },
-  { label: "Accessibility", value: ratings.accessibility },
-];
+const rows: { label: string; value: number }[] = matchRadarOrder
+  ? RATING_AXES.map((axis) => ({ label: axis.label, value: ratings[axis.key] }))
+  : [
+      { label: "Effort", value: ratings.effort },
+      { label: "Competitiveness", value: ratings.competitiveness },
+      { label: "Skills", value: ratings.skills },
+      { label: "Prestige", value: ratings.prestige },
+      { label: "Club fit", value: ratings.clubFit },
+      { label: "Accessibility", value: ratings.accessibility },
+    ];
 
 if (showDifficulty && typeof difficultyIndex === "number") {
   rows.push({ label: "Difficulty index", value: difficultyIndex });

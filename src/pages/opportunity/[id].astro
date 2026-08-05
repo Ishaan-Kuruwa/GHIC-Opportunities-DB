@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import RatingMeter from "../../components/RatingMeter.astro";
+import RatingRadar from "../../components/RatingRadar.astro";
 import data from "../../data/opportunities.json";
 import type { Opportunity, OpportunitiesData } from "../../data/types";
 
@@ -111,14 +112,28 @@ const factRows: [string, string][] = [
         </div>
       )}
 
-      <div class="mt-10">
+      {/*
+        Radar and meter live inside one bordered card, not two components
+        placed near each other -- same bg-tile/border-hairline language every
+        bento tile already uses to mean "this is one grouped unit." The meter
+        also plots its six rows in the radar's own axis order (matchRadarOrder,
+        columns=1), so reading down the numbers traces the same sequence as
+        reading around the shape: the shape is what you compare at a glance,
+        the numbers beside it are that same comparison spelled out.
+      */}
+      <div class="mt-10 rounded-sm border border-hairline bg-tile p-6">
         <h2 class="text-lg font-semibold text-ink">Ratings</h2>
-        <div class="mt-4">
-          <RatingMeter
-            ratings={opportunity.ratings}
-            difficultyIndex={opportunity.difficultyIndex}
-            showDifficulty
-          />
+        <div class="mt-4 flex flex-col items-center gap-6 sm:flex-row sm:items-start sm:gap-10">
+          <RatingRadar ratings={opportunity.ratings} size={240} />
+          <div class="w-full sm:flex-1">
+            <RatingMeter
+              ratings={opportunity.ratings}
+              difficultyIndex={opportunity.difficultyIndex}
+              showDifficulty
+              columns={1}
+              matchRadarOrder
+            />
+          </div>
         </div>
       </div>
     </article>

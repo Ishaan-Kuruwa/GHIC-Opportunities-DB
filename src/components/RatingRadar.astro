@@ -10,6 +10,7 @@
 // shapes are only comparable to each other if every opportunity plots its six
 // ratings in the same six directions.
 import type { Opportunity } from "../data/types";
+import { RATING_AXES as AXES } from "../utils/ratingAxes";
 
 interface Props {
   ratings: Opportunity["ratings"];
@@ -17,15 +18,6 @@ interface Props {
 }
 
 const { ratings, size } = Astro.props;
-
-const AXES: { key: keyof Opportunity["ratings"]; label: string }[] = [
-  { key: "clubFit", label: "Club fit" },
-  { key: "prestige", label: "Prestige" },
-  { key: "accessibility", label: "Accessibility" },
-  { key: "effort", label: "Effort" },
-  { key: "competitiveness", label: "Competitiveness" },
-  { key: "skills", label: "Skills" },
-];
 
 // Fixed 0-100 viewBox, independent of the `size` prop -- so the same ratings
 // always produce the same point coordinates no matter how large the shape is
