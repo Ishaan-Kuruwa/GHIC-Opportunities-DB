@@ -40,13 +40,13 @@ const otherGuides = GUIDE_ORDER.filter((slug) => slug !== guide.id).map(
     </nav>
 
     <article class="mt-6">
-      <h1 class="font-serif text-3xl font-semibold text-ink">{guide.data.title}</h1>
+      <h1 class="text-3xl font-semibold text-ink">{guide.data.title}</h1>
       <div class="guide-content mt-4">
         <Content />
       </div>
     </article>
 
-    <nav aria-label="More guides" class="mt-12 border-t border-rule pt-6">
+    <nav aria-label="More guides" class="mt-12 border-t border-hairline pt-6">
       <p class="text-sm font-semibold text-ink-faint">More guides</p>
       <ul class="mt-2 list-none space-y-1.5 p-0 text-sm">
         {otherGuides.map((other) => (

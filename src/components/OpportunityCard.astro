@@ -9,12 +9,12 @@ interface Props {
 const { opportunity } = Astro.props;
 ---
 
-<article class="h-full rounded-sm border border-rule bg-surface transition-colors hover:border-accent">
+<article class="h-full rounded-sm border border-hairline bg-tile transition-colors hover:border-accent">
   <a
     href={`/opportunity/${opportunity.id}`}
     class="block h-full rounded-sm p-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
   >
-    <h2 class="font-serif text-lg leading-snug font-semibold text-ink">{opportunity.name}</h2>
+    <h2 class="text-lg leading-snug font-semibold text-ink">{opportunity.name}</h2>
 
     <p class="mt-1 text-sm text-ink-muted">
       {opportunity.type} &middot; {opportunity.category}

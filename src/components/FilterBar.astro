@@ -68,11 +68,11 @@ const rangeFilters = [
 ];
 
 const selectClass =
-  "mt-1 w-full rounded-sm border border-rule bg-surface p-2 text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
+  "mt-1 w-full rounded-sm border border-hairline bg-tile p-2 text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
 const labelClass = "block text-sm font-medium text-ink-muted";
 ---
 
-<div class="filters mt-6 rounded-sm border border-rule bg-pill-fill p-4" id="filter-bar">
+<div class="filters mt-6 rounded-sm border border-hairline bg-pill-fill p-4" id="filter-bar">
   <div>
     <label for="filter-search" class={labelClass}>Search</label>
     <input
@@ -140,7 +140,7 @@ const labelClass = "block text-sm font-medium text-ink-muted";
           <input
             type="checkbox"
             id="filter-free"
-            class="h-4 w-4 rounded border-rule focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            class="h-4 w-4 rounded border-hairline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           />
           Free only
         </label>
@@ -148,7 +148,7 @@ const labelClass = "block text-sm font-medium text-ink-muted";
           <input
             type="checkbox"
             id="filter-verified"
-            class="h-4 w-4 rounded border-rule focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            class="h-4 w-4 rounded border-hairline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           />
           Verified only
         </label>
@@ -163,7 +163,7 @@ const labelClass = "block text-sm font-medium text-ink-muted";
     <button
       type="button"
       id="filter-clear"
-      class="rounded-sm border border-rule bg-surface px-3 py-1.5 text-sm font-medium text-ink-muted hover:bg-pill-fill focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+      class="rounded-sm border border-hairline bg-tile px-3 py-1.5 text-sm font-medium text-ink-muted hover:bg-pill-fill focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
     >
       Clear all
     </button>

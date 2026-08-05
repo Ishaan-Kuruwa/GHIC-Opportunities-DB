@@ -77,7 +77,7 @@ function displayDate(row: Row): string {
       </a>
     </nav>
 
-    <h1 class="mt-6 font-serif text-3xl font-semibold text-ink">Deadline calendar</h1>
+    <h1 class="mt-6 text-3xl font-semibold text-ink">Deadline calendar</h1>
     <p class="mt-2 text-ink-muted">
       Every deadline and key date we know about for the {meta.schoolYear} school year, grouped by
       month.
@@ -86,7 +86,7 @@ function displayDate(row: Row): string {
     <a
       href="/ics/all-deadlines.ics"
       download
-      class="mt-6 inline-block rounded-sm bg-accent px-4 py-2 font-semibold text-surface hover:bg-accent-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+      class="mt-6 inline-block rounded-sm bg-accent px-4 py-2 font-semibold text-floor hover:bg-accent-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
     >
       Add all deadlines to your calendar
     </a>
@@ -124,19 +124,19 @@ function displayDate(row: Row): string {
     */}
     <ul aria-label="Legend" class="mt-6 flex list-none flex-wrap gap-x-6 gap-y-2 p-0 text-xs text-ink-faint">
       <li class="flex items-center gap-1.5">
-        <span aria-hidden="true" class="inline-block h-4 w-6 rounded-sm border border-rule bg-surface"></span>
+        <span aria-hidden="true" class="inline-block h-4 w-6 rounded-sm border border-hairline bg-tile"></span>
         Confirmed date
       </li>
       <li class="flex items-center gap-1.5">
-        <span aria-hidden="true" class="inline-block h-4 w-6 rounded-sm border border-rule border-l-4 border-l-caution-border bg-surface"></span>
+        <span aria-hidden="true" class="inline-block h-4 w-6 rounded-sm border border-hairline border-l-4 border-l-caution-border bg-tile"></span>
         Estimated date
       </li>
       <li class="flex items-center gap-1.5">
-        <span aria-hidden="true" class="rounded-sm border border-rule px-1 py-px font-medium">deadline</span>
+        <span aria-hidden="true" class="rounded-sm border border-hairline px-1 py-px font-medium">deadline</span>
         Something you can miss
       </li>
       <li class="flex items-center gap-1.5">
-        <span aria-hidden="true" class="rounded-sm border border-rule px-1 py-px font-medium">milestone</span>
+        <span aria-hidden="true" class="rounded-sm border border-hairline px-1 py-px font-medium">milestone</span>
         Informational -- nothing due
       </li>
     </ul>
@@ -146,7 +146,7 @@ function displayDate(row: Row): string {
       links to each month heading -- no JavaScript, so these work exactly the
       same with JS off, and the browser handles the scrolling itself.
     */}
-    <nav aria-label="Jump to month" class="mt-6 border-y border-rule py-3">
+    <nav aria-label="Jump to month" class="mt-6 border-y border-hairline py-3">
       <ul class="flex list-none flex-wrap gap-x-4 gap-y-2 p-0 text-sm">
         {months.map((month) => (
           <li>
@@ -165,7 +165,7 @@ function displayDate(row: Row): string {
       /* scroll-mt-4 keeps the heading from sitting flush against the very top
          of the viewport when you arrive here from a jump-link. */
       <section id={month.key} class="mt-12 scroll-mt-4">
-        <h2 class="font-serif text-xl font-semibold text-ink">{month.label}</h2>
+        <h2 class="text-xl font-semibold text-ink">{month.label}</h2>
         {/*
           Estimated rows get an amber LEFT STRIPE rather than a full amber fill.
           45 of 55 entries are estimates, so filling every one of them turned the
@@ -177,14 +177,14 @@ function displayDate(row: Row): string {
           {month.rows.map((row) => (
             <li
               class:list={[
-                "rounded-sm border border-rule bg-surface p-4",
+                "rounded-sm border border-hairline bg-tile p-4",
                 row.estimated && "border-l-4 border-l-caution-border",
               ]}
             >
               <div class="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
                 <a
                   href={`/opportunity/${row.opportunityId}`}
-                  class="font-serif font-semibold text-ink underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                  class="font-semibold text-ink underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                 >
                   {row.opportunityName}
                 </a>
@@ -193,7 +193,7 @@ function displayDate(row: Row): string {
                     "tabular rounded-sm border px-1.5 py-0.5 text-xs font-medium",
                     row.estimated
                       ? "border-caution-border text-caution-text"
-                      : "border-rule text-ink-muted",
+                      : "border-hairline text-ink-muted",
                   ]}
                 >
                   {displayDate(row)}
@@ -202,7 +202,7 @@ function displayDate(row: Row): string {
               <p class="mt-2 text-sm text-ink-muted">
                 {row.label}
                 <span
-                  class="ml-2 rounded-sm border border-rule px-1 py-px text-xs font-medium"
+                  class="ml-2 rounded-sm border border-hairline px-1 py-px text-xs font-medium"
                 >
                   {row.kind}
                 </span>

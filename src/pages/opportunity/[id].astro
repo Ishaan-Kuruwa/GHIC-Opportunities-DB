@@ -55,7 +55,7 @@ const factRows: [string, string][] = [
     </nav>
 
     <article class="mt-6">
-      <h1 class="font-serif text-3xl font-semibold text-ink">{opportunity.name}</h1>
+      <h1 class="text-3xl font-semibold text-ink">{opportunity.name}</h1>
       <p class="mt-2 text-ink-muted">
         {opportunity.type} &middot; {opportunity.category} &middot; {opportunity.organizer}
       </p>
@@ -85,7 +85,7 @@ const factRows: [string, string][] = [
           href={opportunity.url}
           target="_blank"
           rel="noopener noreferrer"
-          class="mt-4 inline-block rounded-sm bg-accent px-4 py-2 font-semibold text-surface hover:bg-accent-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+          class="mt-4 inline-block rounded-sm bg-accent px-4 py-2 font-semibold text-floor hover:bg-accent-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
           Visit the official site
         </a>
@@ -95,9 +95,9 @@ const factRows: [string, string][] = [
 
       {/* Hairline-ruled rows rather than boxed cards -- reads as a reference
           entry, and keeps the eye moving down one column on a phone. */}
-      <dl class="mt-10 border-t border-rule">
+      <dl class="mt-10 border-t border-hairline">
         {factRows.map(([label, value]) => (
-          <div class="grid grid-cols-1 gap-1 border-b border-rule py-3 sm:grid-cols-[10rem_1fr] sm:gap-6">
+          <div class="grid grid-cols-1 gap-1 border-b border-hairline py-3 sm:grid-cols-[10rem_1fr] sm:gap-6">
             <dt class="text-sm font-semibold text-ink-faint">{label}</dt>
             <dd class="text-ink">{value}</dd>
           </div>
@@ -106,13 +106,13 @@ const factRows: [string, string][] = [
 
       {opportunity.notes && (
         <div class="mt-8">
-          <h2 class="font-serif text-lg font-semibold text-ink">Notes</h2>
+          <h2 class="text-lg font-semibold text-ink">Notes</h2>
           <p class="mt-2 text-ink">{opportunity.notes}</p>
         </div>
       )}
 
       <div class="mt-10">
-        <h2 class="font-serif text-lg font-semibold text-ink">Ratings</h2>
+        <h2 class="text-lg font-semibold text-ink">Ratings</h2>
         <div class="mt-4">
           <RatingMeter
             ratings={opportunity.ratings}
@@ -125,7 +125,7 @@ const factRows: [string, string][] = [
 
     <nav
       aria-label="Opportunity navigation"
-      class="mt-12 grid grid-cols-2 gap-6 border-t border-rule pt-6"
+      class="mt-12 grid grid-cols-2 gap-6 border-t border-hairline pt-6"
     >
       <a
         href={`/opportunity/${previous.id}`}

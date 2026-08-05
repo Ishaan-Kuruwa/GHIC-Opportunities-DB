@@ -12,49 +12,99 @@
  * extra dependency). Each `--color-x` here becomes usable as `bg-x`, `text-x`,
  * `border-x`, etc.
  *
- * The look is "researched reference document," not "social feed": an off-white
- * paper background, cards that sit slightly BRIGHTER than the page (so they
- * stand out without heavy borders or shadows), hairline rules, one navy accent,
- * and a serif for headings.
+ * v3 look: dark, terminal-modern. Near-black floor, tiles one step lighter,
+ * hairline structure (not heavy borders), one cool blue accent, monospace for
+ * every number. See REDESGIN-V3.md for the full spec. This supersedes the v2
+ * "neo-brutalist" pass (thick borders, pure-black ink) which is reverted --
+ * see git history if you need to compare.
  *
- * Contrast ratios below were computed against the paper background and all meet
- * WCAG AA. If you change a color, re-check it -- a "nicer" lighter gray is very
- * easy to pick and will quietly fail for anyone with low vision.
+ * Contrast ratios below are computed with the standard WCAG relative-luminance
+ * formula against EVERY surface a color can land on (floor, tile, tile-raised),
+ * not just one -- on a dark palette, secondary text that passes against the
+ * page background can still fail against a lighter card surface. If you
+ * change a color, recompute against all three surfaces it might sit on.
  */
 @theme {
-  /* Surfaces */
-  --color-paper: #faf9f5; /* page background */
-  --color-surface: #ffffff; /* cards, sit brighter than the page */
-  --color-rule: #e4e1d8; /* hairline borders */
+  /* Surfaces, darkest to lightest. Renamed from the old "paper/surface" pair
+   * (a light-theme metaphor that would be actively confusing pointed at a
+   * near-black value) to floor/tile, matching the bento-tile vocabulary the
+   * rest of the design uses. */
+  --color-floor: #0b0e14; /* page background -- near-black, slightly blue */
+  --color-tile: #131824; /* card/tile surface, one step lighter than floor */
+  --color-tile-raised: #1b2230; /* hover / emphasis surface, one step lighter again */
 
-  /* Text -- ratios are against paper */
-  --color-ink: #1a1d21; /* 16.05 -- headings, primary text */
-  --color-ink-muted: #565c64; /* 6.41  -- secondary text */
-  --color-ink-faint: #6b727a; /* 4.62  -- tertiary; still AA at small sizes */
+  /* Structural borders. Same role the old --color-rule played (hairline
+   * dividers, not the v2 brutalist thick borders) -- renamed to match, and
+   * recomputed dark. 3.26:1 vs tile, 3.55:1 vs floor -- both clear the 3:1
+   * non-text minimum. Also reused for empty-state UI (see --color-dot-empty)
+   * so there's one "quiet structural" tone to remember, not two. */
+  --color-hairline: #5f6a80;
 
-  /* The one accent. Used for links, buttons, focus rings, filled rating dots. */
-  --color-accent: #1b3a6b; /* 10.69 */
-  --color-accent-hover: #16305a;
+  /* Text. Never pure white -- halates on near-black and is genuinely harder
+   * to read for extended text. */
+  --color-ink: #e8e6e1; /* 15.49 vs floor, 14.23 vs tile, 12.78 vs tile-raised */
+  --color-ink-muted: #949ba8; /* 6.92 vs floor, 6.35 vs tile, 5.70 vs tile-raised */
+  --color-ink-faint: #838a98; /* 5.57 vs floor, 5.11 vs tile, 4.59 vs tile-raised -- tightest margin of the three, don't darken further */
+
+  /* The one accent: azure blue (~208 degrees), not cyan-green and not the
+   * signal-green a terminal aesthetic would default to -- see REDESGIN-V3.md
+   * "constraint zero" on why. Used for links, focus rings, and (in Stage B)
+   * the radar stroke.
+   * 7.36 vs floor, 6.76 vs tile, 6.07 vs tile-raised as text/stroke.
+   *
+   * IMPORTANT, and a flip from the old palette: on light backgrounds, WHITE
+   * text passed on an accent fill and black failed. On this dark accent,
+   * it's reversed -- light ink text on an accent-fill button measures only
+   * 2.1:1 and FAILS. Only dark text (--color-floor) passes (7.36:1). Both
+   * accent-fill CTA buttons on this site use text-floor for exactly this
+   * reason -- never text-ink on a bg-accent fill. */
+  --color-accent: #4da3ff;
+  /* Hover/press state brightens rather than darkens -- darkening would push
+   * it toward --color-floor and collapse the dark-text contrast below AA.
+   * Dark text on this fill: 8.76:1. */
+  --color-accent-hover: #6bb3ff;
+  /* Radar fill / low-emphasis accent use (Stage B). Provisional value --
+   * re-verify by eye once RatingRadar.astro exists, per the build order in
+   * REDESGIN-V3.md ("its own look before it's embedded"). */
+  --color-accent-dim: #1f3a52;
 
   /* Caution ONLY -- unverified entries and estimated dates. Never decorative,
-   * never used for emphasis, so that amber always means "check this."
-   * The fill is deliberately deeper than Tailwind's amber-50: against this
-   * off-white page, amber-50 measures 1.016 contrast, i.e. invisible. */
-  --color-caution-fill: #fde68a; /* 1.182 vs paper -- reads as a distinct surface */
-  --color-caution-border: #d97706; /* 3.02  vs paper -- passes non-text minimum */
-  --color-caution-text: #713f12; /* 6.96  on the fill above */
+   * never used for emphasis, so amber always means "check this." Recomputed
+   * from scratch against the dark floor, not ported from the light-theme
+   * values -- those (#fde68a fill) would glare on dark. Fill inverts to a
+   * deep amber-brown; border and text stay bright amber so the signal still
+   * reads at a glance. Amber's hue (~35-45 degrees) stays far from the
+   * accent's hue (~208 degrees), so there's no risk of the two reading as
+   * the same system. */
+  --color-caution-fill: #3d2810; /* deep amber-brown surface */
+  --color-caution-border: #f2a93c; /* 8.88 vs tile, 9.67 vs floor -- clears 3:1 by a wide margin */
+  --color-caution-text: #ffc966; /* 9.14 vs caution-fill */
 
-  /* Neutral pill (prestige tier). Deliberately NOT accent-colored, so pills are
-   * never mistaken for links, and never approach the caution palette. */
-  --color-pill-fill: #f0efe9;
+  /* Neutral chip fill (prestige tier, kind tags). Deliberately NOT accent-
+   * colored and nowhere near amber, so a chip is never mistaken for a link
+   * or a caution notice. ink-muted on this fill: 5.02:1. ink: 11.25:1. */
+  --color-pill-fill: #242c3a;
 
-  /* Empty rating dot. Filled dots use the accent. */
-  --color-dot-empty: #d8d5cc;
+  /* Empty rating tick. Filled ticks use the accent. Same value as
+   * --color-hairline -- see that token's comment. */
+  --color-dot-empty: #5f6a80;
 
-  /* System fonts only -- nothing to download, so no layout shift and no
-   * web-font weight budget to worry about. The serif carries the "reference
-   * document" feel; the sans handles body copy and UI. */
-  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", serif;
+  /* One system sans stack for everything -- headings, body, UI. No serif
+   * anymore (the v2 rationale for dropping it was different, but v3 lands on
+   * the same conclusion: a dark terminal-modern look wants one typeface, not
+   * two). Zero web fonts: nothing to download, no layout shift. */
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+
+  /* Every number on the site -- ratings, dates, counts, deadline countdowns --
+   * renders in this stack via the .tabular class below. This is the
+   * terminal-modern signal; it does the work a second display typeface would
+   * otherwise do. System monospace only, same zero-web-font reasoning as
+   * --font-sans. */
+  --font-mono:
+    ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", Menlo, Consolas,
+    monospace;
 }
 
 /*
@@ -72,10 +122,12 @@
 }
 
 /* Dates, ratings and counts line up in columns, so digits should be
- * fixed-width. Applied via a class rather than globally because it should not
+ * fixed-width, and (v3) render in the monospace stack -- the terminal-modern
+ * identity. Applied via a class rather than globally because it should not
  * affect running prose. */
 .tabular {
   font-variant-numeric: tabular-nums;
+  font-family: var(--font-mono);
 }
 
 /* Guide pages (src/content/guides/*.md, rendered by src/pages/guides/[slug].astro)
@@ -85,7 +137,7 @@
  * These rules style headings/lists/links straight off the design tokens above. */
 .guide-content h2 {
   margin-top: 2.5rem;
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--color-ink);
