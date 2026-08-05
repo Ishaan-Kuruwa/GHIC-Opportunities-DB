@@ -1,0 +1,96 @@
+---
+// Draws the six ratings as a hexagonal silhouette instead of a row of numbers --
+// the site's visual identity (see REDESGIN-V3.md). Deliberately draws NO visible
+// labels or numbers: the shape is meant to be compared at a glance ("you compare
+// silhouettes rather than reading numbers"), and the exact values are already
+// available elsewhere on the card via RatingMeter's dots. This component only
+// needs to carry those same numbers for screen readers (see sr-only block below).
+//
+// Axis order is fixed and never derived from the ratings object's own key order --
+// shapes are only comparable to each other if every opportunity plots its six
+// ratings in the same six directions.
+import type { Opportunity } from "../data/types";
+
+interface Props {
+  ratings: Opportunity["ratings"];
+  size: number;
+}
+
+const { ratings, size } = Astro.props;
+
+const AXES: { key: keyof Opportunity["ratings"]; label: string }[] = [
+  { key: "clubFit", label: "Club fit" },
+  { key: "prestige", label: "Prestige" },
+  { key: "accessibility", label: "Accessibility" },
+  { key: "effort", label: "Effort" },
+  { key: "competitiveness", label: "Competitiveness" },
+  { key: "skills", label: "Skills" },
+];
+
+// Fixed 0-100 viewBox, independent of the `size` prop -- so the same ratings
+// always produce the same point coordinates no matter how large the shape is
+// drawn. SVG's own viewBox scaling handles the rest. That's what makes these
+// "precomputed": the same opportunity rendered at three different sizes (a
+// Stage C wide tile, a Stage C large tile, a Stage D detail page) computes
+// this math once each, not three times, without needing a cache on top.
+const CENTER = 50;
+const MAX_RADIUS = 40;
+const RING_FRACTIONS = [0.33, 0.66, 1];
+
+function axisAngleDeg(i: number): number {
+  return -90 + i * 60;
+}
+
+function polarPoint(angleDeg: number, radius: number) {
+  const rad = (angleDeg * Math.PI) / 180;
+  return { x: CENTER + radius * Math.cos(rad), y: CENTER + radius * Math.sin(rad) };
+}
+
+function toPath(points: { x: number; y: number }[]): string {
+  return (
+    points.map((p, i) => `${i === 0 ? "M" : "L"} ${p.x.toFixed(2)} ${p.y.toFixed(2)}`).join(" ") +
+    " Z"
+  );
+}
+
+const guideRingPaths = RING_FRACTIONS.map((frac) =>
+  toPath(AXES.map((_, i) => polarPoint(axisAngleDeg(i), MAX_RADIUS * frac))),
+);
+
+const dataPath = toPath(
+  AXES.map((axis, i) => polarPoint(axisAngleDeg(i), (MAX_RADIUS * ratings[axis.key]) / 10)),
+);
+
+const accessibleSummary = AXES.map((axis) => `${axis.label} ${ratings[axis.key]} out of 10`).join(
+  ", ",
+);
+---
+
+<svg
+  class="block"
+  width={size}
+  height={size}
+  viewBox="0 0 100 100"
+  aria-hidden="true"
+>
+  {/*
+    No spokes from center to each vertex -- tried that first, and at anything
+    above ~200px the outer ring plus six spokes reads as a wireframe cube, not
+    a flat radar grid (confirmed by looking, per REDESGIN-V3.md's own method).
+    Since this component draws no axis labels, spokes weren't adding
+    direction information anyway -- nothing on the chart said which spoke was
+    "Prestige" versus "Skills." The three rings alone read as a hex grid
+    without the illusion.
+  */}
+  {guideRingPaths.map((d) => (
+    <path d={d} fill="none" stroke="var(--color-hairline)" stroke-width="0.75" />
+  ))}
+  <path
+    d={dataPath}
+    fill="var(--color-accent-dim)"
+    stroke="var(--color-accent)"
+    stroke-width="1.5"
+    stroke-linejoin="round"
+  />
+</svg>
+<span class="sr-only">{accessibleSummary}</span>

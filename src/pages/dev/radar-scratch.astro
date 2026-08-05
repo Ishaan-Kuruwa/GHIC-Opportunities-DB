@@ -1,0 +1,100 @@
+---
+// Stage B scratch page (see REDESGIN-V3.md build order): review RatingRadar.astro
+// standalone, at real sizes, with real data, before it goes anywhere near the
+// bento grid. Not linked from any nav. Delete this once Stage C embeds the
+// radar in real tiles and it has a real place to be reviewed in.
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import RatingRadar from "../../components/RatingRadar.astro";
+import data from "../../data/opportunities.json";
+import type { OpportunitiesData } from "../../data/types";
+
+const { opportunities } = data as OpportunitiesData;
+
+function find(id: string) {
+  const opp = opportunities.find((o) => o.id === id);
+  if (!opp) throw new Error(`radar-scratch: no opportunity with id "${id}"`);
+  return opp;
+}
+
+// Highest rating-variance entry in the dataset -- a spiky, lopsided shape.
+const spiky = find("free-self-study-stack");
+// A well-rounded, uniformly high shape.
+const rounded = find("wharton-global-high-school-investment-competition");
+// Lowest rating-variance entry in the dataset -- close to a regular hexagon.
+const flat = find("national-economics-challenge");
+
+function ratingsLine(o: typeof spiky): string {
+  const r = o.ratings;
+  return `effort ${r.effort} · comp ${r.competitiveness} · skills ${r.skills} · prestige ${r.prestige} · club ${r.clubFit} · access ${r.accessibility}`;
+}
+---
+
+<BaseLayout title="Radar scratch page (dev only)">
+  <main class="mx-auto max-w-4xl px-4 py-10">
+    <h1 class="text-3xl font-semibold text-ink">RatingRadar — scratch page</h1>
+    <p class="mt-2 text-ink-muted">
+      Stage B review only. Not linked anywhere, not meant to stay.
+    </p>
+
+    <h2 class="mt-10 text-xl font-semibold text-ink">Single shapes, three sizes</h2>
+    <p class="mt-1 text-sm text-ink-muted">
+      Does the 96px shape still read as a shape, or does it collapse into noise? Compare it
+      against the same opportunity at 320px.
+    </p>
+    <div class="mt-6 flex flex-wrap items-end gap-10">
+      <figure>
+        <RatingRadar ratings={spiky.ratings} size={96} />
+        <figcaption class="mt-2 max-w-[12rem] text-xs text-ink-faint">
+          {spiky.name} · 96px
+          <span class="tabular mt-1 block">{ratingsLine(spiky)}</span>
+        </figcaption>
+      </figure>
+      <figure>
+        <RatingRadar ratings={rounded.ratings} size={200} />
+        <figcaption class="mt-2 max-w-[14rem] text-xs text-ink-faint">
+          {rounded.name} · 200px (wide-tile reference size)
+          <span class="tabular mt-1 block">{ratingsLine(rounded)}</span>
+        </figcaption>
+      </figure>
+      <figure>
+        <RatingRadar ratings={flat.ratings} size={200} />
+        <figcaption class="mt-2 max-w-[14rem] text-xs text-ink-faint">
+          {flat.name} · 200px (near-regular hexagon, lowest rating variance in the dataset)
+          <span class="tabular mt-1 block">{ratingsLine(flat)}</span>
+        </figcaption>
+      </figure>
+      <figure>
+        <RatingRadar ratings={spiky.ratings} size={320} />
+        <figcaption class="mt-2 max-w-[16rem] text-xs text-ink-faint">
+          {spiky.name} · 320px (detail-page reference size)
+          <span class="tabular mt-1 block">{ratingsLine(spiky)}</span>
+        </figcaption>
+      </figure>
+    </div>
+
+    <h2 class="mt-12 text-xl font-semibold text-ink">
+      Side by side at 96px — can you tell them apart?
+    </h2>
+    <p class="mt-1 text-sm text-ink-muted">
+      The real test isn't whether one shape is legible alone, it's whether two are
+      distinguishable from each other at a glance while scrolling a grid. This is what decides
+      whether Standard (1&times;1) tiles get a radar at all, per REDESGIN-V3.md.
+    </p>
+    <div class="mt-6 flex flex-wrap items-end gap-10">
+      <figure>
+        <RatingRadar ratings={spiky.ratings} size={96} />
+        <figcaption class="mt-2 max-w-[12rem] text-xs text-ink-faint">
+          {spiky.name} (spiky)
+          <span class="tabular mt-1 block">{ratingsLine(spiky)}</span>
+        </figcaption>
+      </figure>
+      <figure>
+        <RatingRadar ratings={flat.ratings} size={96} />
+        <figcaption class="mt-2 max-w-[12rem] text-xs text-ink-faint">
+          {flat.name} (near-regular hexagon)
+          <span class="tabular mt-1 block">{ratingsLine(flat)}</span>
+        </figcaption>
+      </figure>
+    </div>
+  </main>
+</BaseLayout>
