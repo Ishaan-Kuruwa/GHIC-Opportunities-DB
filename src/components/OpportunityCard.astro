@@ -1,12 +1,24 @@
 ---
 import type { Opportunity } from "../data/types";
 import RatingMeter from "./RatingMeter.astro";
+import RatingRadar from "./RatingRadar.astro";
+
+export type TileSize = "standard" | "wide" | "large";
 
 interface Props {
   opportunity: Opportunity;
+  tileSize?: TileSize;
 }
 
-const { opportunity } = Astro.props;
+const { opportunity, tileSize = "standard" } = Astro.props;
+
+// Radar replaces the dot meter on wide/large rather than sitting alongside it --
+// both already carry the same six numbers (the radar's sr-only text says the
+// same thing RatingMeter's <dd> text does), so showing both would just repeat
+// the same information twice on one card. Standard tiles keep RatingMeter as
+// the "compact ratings" case -- it's already the compact option (see its own
+// doc comment), not a new component invented for this.
+const RADAR_SIZE = { wide: 128, large: 176 } as const;
 ---
 
 <article class="h-full rounded-sm border border-hairline bg-tile transition-colors hover:border-accent">
@@ -35,7 +47,15 @@ const { opportunity } = Astro.props;
     <p class="mt-2 text-sm text-ink-muted">{opportunity.cost}</p>
 
     <div class="mt-4">
-      <RatingMeter ratings={opportunity.ratings} />
+      {tileSize === "standard" ? (
+        <RatingMeter ratings={opportunity.ratings} />
+      ) : (
+        <RatingRadar ratings={opportunity.ratings} size={RADAR_SIZE[tileSize]} />
+      )}
     </div>
+
+    {tileSize === "large" && (
+      <p class="mt-4 text-sm text-ink-muted line-clamp-3">{opportunity.description}</p>
+    )}
   </a>
 </article>

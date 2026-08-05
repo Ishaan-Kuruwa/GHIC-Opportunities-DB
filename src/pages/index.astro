@@ -56,6 +56,99 @@ const upcomingDeadlines = opportunities
   .sort((a, b) => a.date.localeCompare(b.date))
   .slice(0, 3);
 
+// Bento tile sizing (see REDESGIN-V3.md "Layout > Bento grid"). Derived from
+// data every build, never hand-assigned -- so a prestige edit or a new
+// deadline in the Google Sheet reshuffles the grid on its own.
+type TileSize = "standard" | "wide" | "large";
+
+function baseTileSize(prestige: number): TileSize {
+  if (prestige >= 9) return "large";
+  if (prestige >= 7) return "wide";
+  return "standard";
+}
+
+function promote(size: TileSize): TileSize {
+  return size === "large" ? "large" : size === "wide" ? "large" : "wide";
+}
+
+// Separate, narrower window than the 45-day "closing soon" banner above --
+// the spec's own promotion rule is 30 days, not 45.
+const in30Days = new Date(today);
+in30Days.setDate(in30Days.getDate() + 30);
+const cutoff30Iso = in30Days.toISOString().slice(0, 10);
+
+// "Confirmed" = not a guess (estimated === false). A milestone ("Registration
+// opens") isn't something worth promoting a tile for -- only kind: "deadline".
+function hasConfirmedDeadlineSoon(opportunity: (typeof opportunities)[number]): boolean {
+  return opportunity.deadlines.some(
+    (d) => d.kind === "deadline" && !d.estimated && d.date >= todayIso && d.date <= cutoff30Iso,
+  );
+}
+
+function tileSizeFor(opportunity: (typeof opportunities)[number]): TileSize {
+  const base = baseTileSize(opportunity.ratings.prestige);
+  return hasConfirmedDeadlineSoon(opportunity) ? promote(base) : base;
+}
+
+// Column/row span only -- content density (which ratings view, whether an
+// excerpt shows) is a separate decision passed straight into OpportunityCard
+// as the `tileSize` prop, independent of viewport. That split is what makes
+// "every tile full width on mobile, but size still controls density" work
+// without extra mobile-specific logic: the `md:` prefix here means every tile
+// defaults to a plain 1x1 below that breakpoint for free, while the prop-driven
+// content decision doesn't care what breakpoint it's rendered at.
+function gridSpanClasses(size: TileSize): string {
+  if (size === "large") return "md:col-span-2 md:row-span-2";
+  if (size === "wide") return "md:col-span-2";
+  return "";
+}
+
+// Computed once per opportunity, not once per template read -- tileSizeFor()
+// gets used for both the <li>'s span classes and the card's content, and
+// there's no reason to run the same prestige/deadline check on the same
+// opportunity twice per page render.
+const tiledOpportunities = opportunities.map((opportunity) => ({
+  opportunity,
+  size: tileSizeFor(opportunity),
+}));
+
+// Homepage-only display order. The sheet's own order (still used everywhere
+// else -- the calendar, and prev/next on the detail page) clusters categories
+// together, and prestige tends to cluster by category too, so browsing this
+// page in canonical order means long stretches of same-size tiles followed by
+// a cluster of variety, rather than variety spread across the page. Checked
+// against the real data before writing this: canonical order's longest
+// same-size run is 11 tiles; this interleave brings that down to 3.
+//
+// The interleave gives every opportunity a position from 0 to just-under-1
+// based only on where it falls within its OWN size bucket, keeping each
+// bucket's existing relative order, then sorts everyone by that fraction.
+// That spreads a small bucket (3 large tiles) evenly across the whole page
+// instead of bunching them -- a fixed L,W,S,L,W,S,... round-robin was tried
+// first and rejected: with a split this lopsided (3/12/31) it exhausts the
+// large and wide buckets almost immediately and leaves the last 19 of 46
+// tiles as a pure-standard run again, just moved to the end of the page
+// instead of the middle.
+function interleaveBySize(items: typeof tiledOpportunities): typeof tiledOpportunities {
+  const seen: Record<TileSize, number> = { large: 0, wide: 0, standard: 0 };
+  const totals: Record<TileSize, number> = { large: 0, wide: 0, standard: 0 };
+  items.forEach((item) => totals[item.size]++);
+
+  return items
+    .map((item, originalIndex) => {
+      const fraction = seen[item.size] / totals[item.size];
+      seen[item.size]++;
+      return { item, originalIndex, fraction };
+    })
+    // Tie-break on original array index -- fully deterministic, no randomness,
+    // and it's what keeps each bucket's own items in their original relative
+    // order rather than shuffling them.
+    .sort((a, b) => a.fraction - b.fraction || a.originalIndex - b.originalIndex)
+    .map(({ item }) => item);
+}
+
+const displayOrder = interleaveBySize(tiledOpportunities);
+
 const DEADLINE_MONTH_NAMES = [
   "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
 ];
@@ -127,10 +220,11 @@ function shortDate(iso: string): string {
 
     <ul
       id="opportunity-list"
-      class="mt-8 grid list-none grid-cols-1 gap-4 p-0 md:grid-cols-2 lg:grid-cols-3"
+      class="mt-8 grid list-none grid-cols-1 gap-4 p-0 md:grid-cols-3 lg:grid-cols-4 grid-flow-row-dense auto-rows-[minmax(14rem,auto)]"
     >
-      {opportunities.map((opportunity) => (
+      {displayOrder.map(({ opportunity, size }) => (
         <li
+          class={gridSpanClasses(size)}
           data-opportunity
           data-type={opportunity.type}
           data-category={opportunity.category}
@@ -142,7 +236,7 @@ function shortDate(iso: string): string {
           data-club-fit={opportunity.ratings.clubFit}
           data-search={searchText(opportunity)}
         >
-          <OpportunityCard opportunity={opportunity} />
+          <OpportunityCard opportunity={opportunity} tileSize={size} />
         </li>
       ))}
     </ul>

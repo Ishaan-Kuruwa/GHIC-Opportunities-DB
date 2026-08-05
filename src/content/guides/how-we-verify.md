@@ -21,3 +21,6 @@ description: Our methodology -- official sources only, an annual August audit, a
 - **Found something wrong?** [Open an issue on GitHub](https://github.com/Ishaan-Kuruwa/GHIC-Opportunities-DB/issues)
   — anyone can, no account required beyond a free GitHub login. If you don't have one, email
   `[PLACEHOLDER CLUB EMAIL]` instead and we'll fix it in the next update.
+- **The homepage's tile sizes aren't hand-picked.** A bigger tile means a higher prestige rating
+  (already shown on every entry), or a confirmed deadline in the next 30 days — both computed
+  straight from the data, the same way everything else on this page is.
