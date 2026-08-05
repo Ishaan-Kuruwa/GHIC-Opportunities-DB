@@ -55,20 +55,27 @@ const factRows: [string, string][] = [
     </nav>
 
     <article class="mt-6">
-      <h1 class="font-serif text-3xl font-semibold text-ink">{opportunity.name}</h1>
+      {/* Heavy weight, mixed case -- same data-driven exception as the card:
+          names run up to 95 characters and can't be shortened, so they never
+          go uppercase even though this is the page's H1. */}
+      <h1 class="font-black text-3xl text-ink">{opportunity.name}</h1>
       <p class="mt-2 text-ink-muted">
         {opportunity.type} &middot; {opportunity.category} &middot; {opportunity.organizer}
       </p>
 
       <p class="mt-3">
-        <span class="inline-block rounded-sm bg-pill-fill px-2 py-0.5 text-xs font-medium text-ink-muted">
+        <span class="inline-block border-4 border-ink bg-pill-fill px-2 py-0.5 text-xs font-medium text-ink">
           {opportunity.prestigeTier}
         </span>
       </p>
 
       {!opportunity.verified && (
-        <div class="mt-6 rounded-sm border border-caution-border bg-caution-fill p-4 text-sm text-caution-text">
-          <p class="font-semibold">Not yet verified</p>
+        // Border stays amber (not black) on purpose: every other box on this
+        // page now has a thick black border, so a black border here would
+        // blend in. Keeping the border amber, on top of the amber fill,
+        // keeps this box doubly distinct as "this one's different."
+        <div class="mt-6 border-4 border-caution-border bg-caution-fill p-4 text-sm text-caution-text">
+          <p class="font-extrabold uppercase tracking-tight text-caution-text">Not yet verified</p>
           <p class="mt-1">
             This entry hasn't been confirmed against the organizer's official site recently.
             Please double-check deadlines, eligibility, and cost yourself before relying on it.
@@ -85,7 +92,7 @@ const factRows: [string, string][] = [
           href={opportunity.url}
           target="_blank"
           rel="noopener noreferrer"
-          class="mt-4 inline-block rounded-sm bg-accent px-4 py-2 font-semibold text-surface hover:bg-accent-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+          class="shadow-brutal mt-4 inline-block border-4 border-ink bg-accent px-4 py-2 font-extrabold uppercase tracking-tight text-surface hover:bg-accent-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
           Visit the official site
         </a>
@@ -93,26 +100,29 @@ const factRows: [string, string][] = [
 
       <p class="mt-8 whitespace-pre-line text-ink">{opportunity.description}</p>
 
-      {/* Hairline-ruled rows rather than boxed cards -- reads as a reference
-          entry, and keeps the eye moving down one column on a phone. */}
-      <dl class="mt-10 border-t border-rule">
+      {/* Each fact is its own bordered block, stacked -- a shared hairline-
+          ruled list read as "reference entry" under the old design, but
+          under thick black borders everywhere else on the page, a single
+          rule-divided list would be the odd one out. Static content, so no
+          shadow-brutal (that's reserved for things you can click). */}
+      <dl class="mt-10 flex flex-col gap-4">
         {factRows.map(([label, value]) => (
-          <div class="grid grid-cols-1 gap-1 border-b border-rule py-3 sm:grid-cols-[10rem_1fr] sm:gap-6">
-            <dt class="text-sm font-semibold text-ink-faint">{label}</dt>
-            <dd class="text-ink">{value}</dd>
+          <div class="border-4 border-ink bg-surface p-4">
+            <dt class="text-xs font-extrabold uppercase tracking-tight text-ink-faint">{label}</dt>
+            <dd class="mt-1 text-ink">{value}</dd>
           </div>
         ))}
       </dl>
 
       {opportunity.notes && (
         <div class="mt-8">
-          <h2 class="font-serif text-lg font-semibold text-ink">Notes</h2>
+          <h2 class="font-extrabold text-lg uppercase tracking-tight text-ink">Notes</h2>
           <p class="mt-2 text-ink">{opportunity.notes}</p>
         </div>
       )}
 
       <div class="mt-10">
-        <h2 class="font-serif text-lg font-semibold text-ink">Ratings</h2>
+        <h2 class="font-extrabold text-lg uppercase tracking-tight text-ink">Ratings</h2>
         <div class="mt-4">
           <RatingMeter
             ratings={opportunity.ratings}
@@ -125,21 +135,21 @@ const factRows: [string, string][] = [
 
     <nav
       aria-label="Opportunity navigation"
-      class="mt-12 grid grid-cols-2 gap-6 border-t border-rule pt-6"
+      class="mt-12 grid grid-cols-2 gap-6 border-t-4 border-ink pt-6"
     >
       <a
         href={`/opportunity/${previous.id}`}
-        class="rounded-sm p-2 text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+        class="shadow-brutal border-4 border-ink bg-surface p-3 text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
       >
-        <span class="block text-ink-faint">&larr; Previous</span>
-        <span class="mt-1 block font-medium text-accent">{previous.name}</span>
+        <span class="block text-xs font-extrabold uppercase tracking-tight text-ink-faint">&larr; Previous</span>
+        <span class="mt-1 block font-black text-accent">{previous.name}</span>
       </a>
       <a
         href={`/opportunity/${next.id}`}
-        class="rounded-sm p-2 text-right text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+        class="shadow-brutal border-4 border-ink bg-surface p-3 text-right text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
       >
-        <span class="block text-ink-faint">Next &rarr;</span>
-        <span class="mt-1 block font-medium text-accent">{next.name}</span>
+        <span class="block text-xs font-extrabold uppercase tracking-tight text-ink-faint">Next &rarr;</span>
+        <span class="mt-1 block font-black text-accent">{next.name}</span>
       </a>
     </nav>
   </main>

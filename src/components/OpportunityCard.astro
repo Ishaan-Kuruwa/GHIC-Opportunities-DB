@@ -9,12 +9,19 @@ interface Props {
 const { opportunity } = Astro.props;
 ---
 
-<article class="h-full rounded-sm border border-rule bg-surface transition-colors hover:border-accent">
+<article class="h-full">
   <a
     href={`/opportunity/${opportunity.id}`}
-    class="block h-full rounded-sm p-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+    class="shadow-brutal block h-full border-4 border-ink bg-surface p-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
   >
-    <h2 class="font-serif text-lg leading-snug font-semibold text-ink">{opportunity.name}</h2>
+    {/*
+      Heavy weight, but deliberately NOT uppercase: names come straight from
+      opportunities.json and run up to 95 characters (confirmed against the
+      real data) -- full-caps at display weight would hurt legibility and
+      risk ugly wrapping. Chrome labels (buttons, section headers) get
+      uppercase; anything pulled from the data file never does.
+    */}
+    <h2 class="text-lg leading-snug font-black text-ink">{opportunity.name}</h2>
 
     <p class="mt-1 text-sm text-ink-muted">
       {opportunity.type} &middot; {opportunity.category}
@@ -27,7 +34,11 @@ const { opportunity } = Astro.props;
       moment someone words a tier differently.
     */}
     <p class="mt-3">
-      <span class="inline-block rounded-sm bg-pill-fill px-2 py-0.5 text-xs font-medium text-ink-muted">
+      {/* Same data-driven exception as the name above -- this field runs up
+          to 63 characters of free-text commentary, so it stays regular
+          weight and mixed case, not uppercase, even though it's now a
+          bordered chip instead of a soft pill. */}
+      <span class="inline-block border-4 border-ink bg-pill-fill px-2 py-0.5 text-xs font-medium text-ink">
         {opportunity.prestigeTier}
       </span>
     </p>
